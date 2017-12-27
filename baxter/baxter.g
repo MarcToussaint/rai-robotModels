@@ -28,6 +28,7 @@ Edit left_w1 { q=1.02 }
 Edit right_w2 { q=0.5 }
 Edit left_w2 { q=-0.5 }
 
+Edit joint { ctrl_H=1. }
 
 ## extra shapes to mimick pr2
 
