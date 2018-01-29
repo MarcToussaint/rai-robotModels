@@ -13,20 +13,20 @@ shape (head){ type=0 size=[0.27 0.19 0.03 0] rel=<T -0.0157421 0 -0.119839 0.154
 
 ## zero position
 
-Edit right_s0 { q= 0.08 }
-Edit left_s0 { q=-0.08 }
-Edit right_s1 { q=-1 }
-Edit left_s1 { q=-1 }
-Edit right_e0 { q= 1.17 }
-Edit left_e0 { q=-1.17 }
-Edit right_e1 { q=1.94 }
-Edit left_e1 { q=1.94 }
-Edit right_w0 { q=-0.67 }
-Edit left_w0 { q=0.67 }
-Edit right_w1 {q=1.02 }
-Edit left_w1 { q=1.02 }
-Edit right_w2 { q=0.5 }
-Edit left_w2 { q=-0.5 }
+Edit right_s0 { q= 0.08, robot }
+Edit left_s0 { q=-0.08, robot }
+Edit right_s1 { q=-1, robot }
+Edit left_s1 { q=-1, robot }
+Edit right_e0 { q= 1.17, robot }
+Edit left_e0 { q=-1.17, robot }
+Edit right_e1 { q=1.94, robot }
+Edit left_e1 { q=1.94, robot }
+Edit right_w0 { q=-0.67, robot }
+Edit left_w0 { q=0.67, robot }
+Edit right_w1 { q=1.02, robot }
+Edit left_w1 { q=1.02, robot }
+Edit right_w2 { q=0.5, robot }
+Edit left_w2 { q=-0.5, robot }
 
 Edit joint { ctrl_H=1. }
 
