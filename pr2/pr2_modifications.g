@@ -55,6 +55,7 @@
 # Edit l_gripper_l_finger_tip_link_0 { contact }
 # Edit l_gripper_r_finger_tip_link_0 { contact }
 
+## BASE
 Edit worldTranslationRotation { gains=[1 1] ctrl_limits=[1 1 1] ctrl_H=10 base }
 
 ## TORS0
@@ -95,8 +96,10 @@ Edit l_gripper_r_finger_joint { gripL }
 Edit r_gripper_l_finger_tip_joint { gripR }
 Edit r_gripper_r_finger_tip_joint { gripR }
 Edit l_gripper_l_finger_tip_joint { gripL }
-Edot l_gripper_r_finger_tip_joint { gripL }
+Edit l_gripper_r_finger_tip_joint { gripL }
 
+## LASER
+Edit laser_tilt_mount_joint { laser }
 
 ## FT sensors
 shape r_ft_sensor (r_wrist_roll_link){ rel=<T t(.01 0 0) d(-90 0 1 0) d(70.015 0 0 1)> type=4 color=[1 0 0] size=[.0 .0 .0356 .02] }
