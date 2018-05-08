@@ -4,6 +4,12 @@
 Marc Toussaint <marc.toussaint@informatik.uni-stuttgart.de>
 Andrei Haidu <a.haidu@gmail.com>
 
+!(bremenKitchen.png)
+
+The model is articulated (fridge, oven and cabinet doors, drawers,
+faucet), includes fancy textured models in the fridge and cabinet
+(milk carton, cereals), and plates and cutlery in some drawers.
+
 The design and mesh models are from University Bremen, used in the
 EASE (http://ease-crc.org/) and openEASE (http://www.open-ease.org/)
 projects.
