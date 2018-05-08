@@ -4,7 +4,7 @@
 Marc Toussaint <marc.toussaint@informatik.uni-stuttgart.de>
 Andrei Haidu <a.haidu@gmail.com>
 
-!(bremenKitchen.png)
+!(https://github.com/MarcToussaint/rai-robotModels/raw/master/bremenKitchen/bremenKitchen.png)
 
 The model is articulated (fridge, oven and cabinet doors, drawers,
 faucet), includes fancy textured models in the fridge and cabinet
