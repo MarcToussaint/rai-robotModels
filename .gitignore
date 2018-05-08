@@ -1,0 +1,11 @@
+%% BACKUP/temporary files
+*.tmp
+*.dat
+nogit*
+*~
+z.*
+z/
+MT.log
+.#*#
+.#*
+#*#
