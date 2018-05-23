@@ -1,5 +1,5 @@
 cp -f iiwa14_primitive_collision.urdf z.urdf
-../../bin/urdf2ors.py > z.1.g
+../../rai/bin/urdf2rai.py > z.1.g
 sed 's/\.\.\/meshes/kuka_meshes/g' z.1.g > z.2.g
 sed 's/\.obj/_x\.tri/g' z.2.g > z.3.g
 sed 's/Grey/[0.4 0.4 0.4 1.0]/g' z.3.g > z.4.g
