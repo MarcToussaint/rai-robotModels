@@ -121,8 +121,8 @@ shape endeffLaser(laser_tilt_mount_link){ rel=<T t(-0.00300578 0.00167121 0.0122
 
 #shape endeffL(l_wrist_roll_link){ rel=<T t(.2 0 0)> type=5 color=[1 0 0] size=[.05 0 0 0]}
 #shape endeffR(r_wrist_roll_link){ rel=<T t(.2 0 0)> type=5 color=[1 0 0] size=[.05 0 0 0]}
-shape pr2R (r_wrist_roll_link){ rel=<T d(-90 0 1 0) d(-90 0 0 1) t(0 0 -.18)> type=ST_ssBox size=[.03 .03 .05 .01] color=[1 1 0] }
-shape pr2L (l_wrist_roll_link) { rel=<T d(-90 0 1 0) d(-90 0 0 1) t(0 0 -.18)> type=ST_ssBox size=[.03 .03 .05 .01] color=[1 1 0] }
+shape pr2R (r_wrist_roll_link){ rel=<T d(-90 0 1 0) d(-90 0 0 1) t(0 0 -.18)> type=ssBox size=[.03 .03 .05 .01] color=[1 1 0] }
+shape pr2L (l_wrist_roll_link) { rel=<T d(-90 0 1 0) d(-90 0 0 1) t(0 0 -.18)> type=ssBox size=[.03 .03 .05 .01] color=[1 1 0] }
 
 #shape endeffForceL(l_wrist_roll_link){ rel=<T t(.20 0 0) d(-90 0 1 0) d(70.015 0 0 1)> type=5 color=[0 1 1] size=[.05 0 0 0]}
 #shape endeffForceR(r_wrist_roll_link){ rel=<T t(.20 0 0) d(-90 0 1 0) d(70.015 0 0 1)> type=5 color=[0 1 1] size=[.05 0 0 0]}

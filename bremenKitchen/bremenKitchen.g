@@ -145,35 +145,35 @@ pi2p { mesh:"meshes/pi2p.arr" X:<-4.18 -1.82 0.19 1 0 0 0> class:"CupEspresso" }
 XLb9 { mesh:"meshes/XLb9.arr" X:<-4.12 -1.36 0.9 0.707108 0 0 0.707106> class:"Tray" }
 R1bF { mesh:"meshes/R1bF.arr" X:<-4.27002 -0.468434 0.950258 0.573575 0 0 0.819153> class:"FaucetSpout" }
 RZbC { mesh:"meshes/RZbC.arr" X:<-4.14797 -0.452313 0.805258 0 0 0 1> class:"KitchenSink" }
-nhwy-H0F7(nhwy) { joint:JT_transX ctrl_H:1 limits:[ 0 0.45 ] }
-nhwy-RI87(nhwy) { joint:JT_transX ctrl_H:1 limits:[ 0 0.45 ] }
-nhwy-MAIo(nhwy) { joint:JT_transX ctrl_H:1 limits:[ 0 0.45 ] }
-nhwy-WrSn(nhwy) { joint:JT_transX ctrl_H:1 limits:[ 0 0.45 ] }
-nhwy-jCRF(nhwy) { joint:JT_transX ctrl_H:1 limits:[ 0 0.45 ] }
-nhwy-74ia(nhwy) { joint:JT_transX ctrl_H:1 limits:[ 0 0.45 ] }
-VTnI-RC8E(VTnI) { joint:JT_transX ctrl_H:1 limits:[ 0 0.45 ] }
-VTnI-jzxy(VTnI) { joint:JT_transX ctrl_H:1 limits:[ 0 0.45 ] }
-VTnI-x0PN(VTnI) { joint:JT_transX ctrl_H:1 limits:[ 0 0.45 ] }
-VTnI-pd6Y(VTnI) { joint:JT_transX ctrl_H:1 limits:[ 0 0.45 ] }
+nhwy-H0F7(nhwy) { joint:transX ctrl_H:1 limits:[ 0 0.45 ] }
+nhwy-RI87(nhwy) { joint:transX ctrl_H:1 limits:[ 0 0.45 ] }
+nhwy-MAIo(nhwy) { joint:transX ctrl_H:1 limits:[ 0 0.45 ] }
+nhwy-WrSn(nhwy) { joint:transX ctrl_H:1 limits:[ 0 0.45 ] }
+nhwy-jCRF(nhwy) { joint:transX ctrl_H:1 limits:[ 0 0.45 ] }
+nhwy-74ia(nhwy) { joint:transX ctrl_H:1 limits:[ 0 0.45 ] }
+VTnI-RC8E(VTnI) { joint:transX ctrl_H:1 limits:[ 0 0.45 ] }
+VTnI-jzxy(VTnI) { joint:transX ctrl_H:1 limits:[ 0 0.45 ] }
+VTnI-x0PN(VTnI) { joint:transX ctrl_H:1 limits:[ 0 0.45 ] }
+VTnI-pd6Y(VTnI) { joint:transX ctrl_H:1 limits:[ 0 0.45 ] }
 BgAr(GrLO) { mesh:"meshes/BgAr.arr" Q:<-0.01 0 -0.242 1 0 0 0> class:"FridgeGlassShelf" }
 rxnK(GrLO) { mesh:"meshes/rxnK.arr" Q:<0.06 0 -0.34 1 0 0 0> class:"FridgeHumidityDrawer" }
 FJJG(GrLO) { mesh:"meshes/FJJG.arr" Q:<0 0 0.261 1 0 0 0> class:"FridgeShelf" }
-GrLO-Rxc8(GrLO) { joint:JT_hingeZ ctrl_H:1 limits:[ 0 1.5708 ] Q:<0.269997 0.310003 0.02 -1 0 0 0> }
+GrLO-Rxc8(GrLO) { joint:hingeZ ctrl_H:1 limits:[ 0 1.5708 ] Q:<0.269997 0.310003 0.02 -1 0 0 0> }
 5T5t(3SkZ) { mesh:"meshes/5T5t.arr" class:"OvenRack" }
 vJqw(3SkZ) { mesh:"meshes/vJqw.arr" Q:<0.3 -0.24 0.23 1 0 0 0> class:"ButtonCooktopTopLeft" }
 Tm8e(3SkZ) { mesh:"meshes/Tm8e.arr" Q:<0.3 -0.04 0.23 1 0 0 0> class:"ButtonCooktopBottomLeft" }
 O8GK(3SkZ) { mesh:"meshes/O8GK.arr" Q:<0.3 -0.140319 0.23 1 0 0 0> class:"ButtonCooktopTopRight" }
 3olf(3SkZ) { mesh:"meshes/3olf.arr" Q:<0.3 0.2 0.23 1 0 0 0> class:"ButtonOven" }
 bN1b(3SkZ) { mesh:"meshes/bN1b.arr" Q:<0.3 0.06 0.23 1 0 0 0> class:"ButtonCooktopBottomRight" }
-3SkZ-u6B8(3SkZ) { joint:JT_hingeY ctrl_H:1 limits:[ 0 1.5708 ] Q:<0.271 0 -0.275 -1 0 0 0> }
-ZwYW-gMgJ(ZwYW) { joint:JT_transX ctrl_H:1 limits:[ 0 0.4 ] }
-TTwL-mYT5(TTwL) { joint:JT_hingeY ctrl_H:1 limits:[ 0 1.5708 ] Q:<0.23056 0.01 -0.258155 -1 0 0 0> }
-TTwL-F6ep(TTwL) { joint:JT_transX ctrl_H:1 limits:[ 0 0.6 ] }
-TTwL-qPc0(TTwL) { joint:JT_transX ctrl_H:1 limits:[ 0 0.6 ] }
-pY2k-jqU4(pY2k) { joint:JT_transX ctrl_H:1 limits:[ 0 0.45 ] }
-pY2k-S9r7(pY2k) { joint:JT_transX ctrl_H:1 limits:[ 0 0.45 ] }
-pY2k-05qp(pY2k) { joint:JT_transX ctrl_H:1 limits:[ 0 0.45 ] }
-pY2k-TRZQ(pY2k) { joint:JT_transX ctrl_H:1 limits:[ 0 0.45 ] }
+3SkZ-u6B8(3SkZ) { joint:hingeY ctrl_H:1 limits:[ 0 1.5708 ] Q:<0.271 0 -0.275 -1 0 0 0> }
+ZwYW-gMgJ(ZwYW) { joint:transX ctrl_H:1 limits:[ 0 0.4 ] }
+TTwL-mYT5(TTwL) { joint:hingeY ctrl_H:1 limits:[ 0 1.5708 ] Q:<0.23056 0.01 -0.258155 -1 0 0 0> }
+TTwL-F6ep(TTwL) { joint:transX ctrl_H:1 limits:[ 0 0.6 ] }
+TTwL-qPc0(TTwL) { joint:transX ctrl_H:1 limits:[ 0 0.6 ] }
+pY2k-jqU4(pY2k) { joint:transX ctrl_H:1 limits:[ 0 0.45 ] }
+pY2k-S9r7(pY2k) { joint:transX ctrl_H:1 limits:[ 0 0.45 ] }
+pY2k-05qp(pY2k) { joint:transX ctrl_H:1 limits:[ 0 0.45 ] }
+pY2k-TRZQ(pY2k) { joint:transX ctrl_H:1 limits:[ 0 0.45 ] }
 RZ2F(RZbC) { mesh:"meshes/RZ2F.arr" Q:<0.159702 0.0979996 0.142 0 0 0 1> class:"FaucetBody" }
 RZbE(RZbC) { mesh:"meshes/RZbE.arr" Q:<0.00203061 0.097687 0.071742 0 0 0 1> class:"SinkAirGap" }
 RZbD(RZbC) { mesh:"meshes/RZbD.arr" Q:<0.00203157 -0.142313 -0.125258 0 0 0 1> class:"SinkStrainer" }
@@ -217,6 +217,6 @@ d4Gj(pY2k-S9r7) { mesh:"meshes/d4Gj.arr" Q:<0.42 -0.63 -0.08 -1 0 0 0> class:"Si
 YOA4(pY2k-05qp) { mesh:"meshes/YOA4.arr" Q:<0.42 -0.63 0.37 -1 0 0 0> class:"SinkDrawerLeftTopHandle" }
 TRZQ(pY2k-TRZQ) { mesh:"meshes/TRZQ.arr" Q:<0.1 0.705 -0.065 -1 0 0 0> class:"TrashDrawer" }
 zjgY(pY2k-TRZQ) { mesh:"meshes/zjgY.arr" Q:<0.41 0.705 0.215 -1 0 0 0> class:"TrashDrawerHandle" }
-RZ2F-RZbG(RZ2F) { joint:JT_hingeZ ctrl_H:1 limits:[ 0 1.5708 ] Q:<-0.001585 -0.00110699 0.029008 0.939692 0 0 0.342022> }
+RZ2F-RZbG(RZ2F) { joint:hingeZ ctrl_H:1 limits:[ 0 1.5708 ] Q:<-0.001585 -0.00110699 0.029008 0.939692 0 0 0.342022> }
 RZbG(RZ2F-RZbG) { mesh:"meshes/RZbG.arr" Q:<0.0160141 0.0010617 0.017992 -0.906308 0 0 -0.422619> class:"FaucetHandle" }
 
