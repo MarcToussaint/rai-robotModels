@@ -116,7 +116,7 @@ shape endeffWorkspace(torso_lift_link){ rel=<T d(90 0 1 0) t(.6 0 -.1) d(-90 0 0
 shape endeffEyes(head_tilt_link){ rel=<T t(0 -.05 .12) d(180 0 0 1) d(-90 1 0 0)> type=5 color=[1 1 0] size=[.1 0 0 0]}
 #shape endeffKinect(head_tilt_link){ rel=<T t(-0.018 0.147 0.292) d(180 0 0 1) d(-90 1 0 0) t(-0.006 0.016 0.052) t(-0.00091 0.00227 -0.0023) t(0.000267 -0.000206 0.000627)> type=5 color=[1 0 0] size=[.1 0 0 0]}
 #taken from shape head_mount_kinect_rgb_link_1 (head_tilt_link){ type=sphere rel=<T 0.0125 0.147067 0.291953 -0.707107 0 0 0.707107 >  size=[ 0 0 0 0.0005 ]  }
-shape endeffKinect(head_tilt_link){ rel=<T t(-0.0175 0.147067 0.291953) d(180 0 0 1) d(-90 1 0 0) > type=5 color=[1 0 0] size=[.1 0 0 0]}
+shape endeffKinect(head_tilt_link){ rel=<T t(-0.0175 0.147067 0.291953) d(180 0 0 1) d(90 1 0 0) > type=5 color=[1 0 0] size=[.1 0 0 0]}
 shape endeffLaser(laser_tilt_mount_link){ rel=<T t(-0.00300578 0.00167121 0.0122175) d(180 0 0 1) d(-90 1 0 0)> type=5 color=[1 1 1] size=[.1 0 0 0]}
 
 #shape endeffL(l_wrist_roll_link){ rel=<T t(.2 0 0)> type=5 color=[1 0 0] size=[.05 0 0 0]}
