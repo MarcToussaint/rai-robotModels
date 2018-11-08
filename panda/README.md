@@ -1,4 +1,4 @@
-# Fanka Emika Panda
+# Franka Emika Panda
 
 ![pic of Panda](https://github.com/MarcToussaint/rai-robotModels/raw/master/panda/panda.png)
 
