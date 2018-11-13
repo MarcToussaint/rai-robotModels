@@ -34,7 +34,7 @@ frame panda_hand_0(panda_joint7) 	{  shape:mesh  color:[ 0.8 0.2 0.2 0.5 ]  mesh
 frame panda_hand>panda_finger_joint1(panda_joint7) 	{  Q:<0.1654 0 2.37588e-17 -0.653281 -0.270598 -0.653281 -0.270598> }
 frame panda_hand>panda_finger_joint2(panda_joint7) 	{  Q:<0.1654 0 2.37588e-17 -0.270598 0.653281 -0.270598 0.653281> }
 frame panda_finger_joint1(panda_hand>panda_finger_joint1) 	{  joint:transX ctrl_H:1 limits=[  0 0.04 0.2 20 1  ]  ctrl_limits:[ 0.2 20 1 ] }
-frame panda_finger_joint2(panda_hand>panda_finger_joint2) 	{  joint:transX ctrl_H:1 limits=[  0 0.04 0.2 20 1  ] mimic:panda_finger_joint1  mimic:panda_finger_joint1  ctrl_limits:[ 0.2 20 1 ] }
+frame panda_finger_joint2(panda_hand>panda_finger_joint2) 	{  joint:transX ctrl_H:1 limits=[  0 0.04 0.2 20 1  ] mimic:(panda_finger_joint1) ctrl_limits:[ 0.2 20 1 ] }
 frame panda_leftfinger_1(panda_finger_joint1) 	{  shape:mesh  mesh:'meshes/visual/finger_x.tri' Q:<-0 -0 -0 -0.707107 0 0 0.707107> }
 frame panda_leftfinger_0(panda_finger_joint1) 	{  shape:mesh  color:[ 0.8 0.2 0.2 0.5 ]  mesh:'meshes/collision/finger.stl' contact,  Q:<-0 -0 -0 -0.707107 0 0 0.707107> }
 frame panda_rightfinger_1(panda_finger_joint2) 	{  shape:mesh  mesh:'meshes/visual/finger_x.tri' Q:<-0 -0 -0 -0.707107 0 0 -0.707107> }
