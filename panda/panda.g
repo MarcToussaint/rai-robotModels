@@ -1,5 +1,7 @@
 Include='panda_clean.g'
 
+Include 'panda_simplerCollisionModels.g'
+
 ## zero position
 
 Edit panda_joint1 { q= 0.0 }
