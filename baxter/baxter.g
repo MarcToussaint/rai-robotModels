@@ -1,4 +1,4 @@
-Include = 'baxter-clean.g'
+Include = 'baxter_clean.g'
 
 Delete shape visual
 #Delete shape collision
