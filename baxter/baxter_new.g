@@ -1,5 +1,5 @@
 Include = 'baxter_clean2.g'
-
+        
 Delete collision_head_link_1
 Delete collision_head_link_1_1
 Delete collision_head_link_1_0
@@ -14,6 +14,12 @@ Delete screen_0
 Delete display_1
 
 Edit screen_1 { Q:<t(0 -0.00953 -0.0347) d(-90 0 1 0)> }
+
+Edit left_gripper_base_1 { Q:<d(90 1 0 0)> }
+Delete left_gripper_base_0
+
+Edit right_gripper_base_1 { Q:<d(90 1 0 0)> }
+Delete right_gripper_base_0
 
 ## zero position
 

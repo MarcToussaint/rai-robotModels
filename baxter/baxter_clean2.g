@@ -5,7 +5,7 @@ torso_t0 (base) 	{  joint:rigid ctrl_H:1 limits:[ -3.01 3.01 ]  ctrl_limits:[100
 collision_head_1 (base>collision_head_1) 	{  joint:rigid ctrl_H:1  }
 collision_head_2 (base>collision_head_2) 	{  joint:rigid ctrl_H:1  }
 torso (torso_t0) 	{  mass:35.3365 inertiaTensor:[1.84916, -0.000354, -0.154188, 1.66267, 0.003292, 0.802239] }
-torso_1 (torso_t0) 	{  shape:mesh mesh:'torso/base_link.ply' visual:True }
+torso_1 (torso_t0) 	{  shape:mesh color:[0.2, 0.2, 0.2, 1] mesh:'torso/base_link.ply' colorName:darkgray visual:True }
 torso_0 (torso_t0) 	{  shape:mesh color:[0.8, 0.2, 0.2, 0.5] mesh:'torso/base_link_collision.ply' contact:-2 }
 torso>left_torso_itb_fixed (torso_t0) 	{  Q:<-0.08897 0.15593 0.389125 3.2758e-05 -3.2758e-05 0.707107 0.707107> }
 torso>right_torso_itb_fixed (torso_t0) 	{  Q:<-0.08897 -0.15593 0.389125 0.707107 0.707107 0 0> }
@@ -22,7 +22,7 @@ collision_head_link_2_0 (collision_head_2) 	{  shape:sphere size:[ 0 0 0 0.22 ] 
 pedestal_fixed (torso) 	{  joint:rigid ctrl_H:1  }
 left_torso_itb_fixed (torso>left_torso_itb_fixed) 	{  joint:rigid ctrl_H:1  }
 right_torso_itb_fixed (torso>right_torso_itb_fixed) 	{  joint:rigid ctrl_H:1  }
-head_pan (torso>head_pan) 	{  joint:hingeX ctrl_H:1 limits:[ -1.5708 1.5708 10000 50000 1 ]  ctrl_limits:[10000, 50000, 1] }
+head_pan (torso>head_pan) 	{  joint:hingeX ctrl_H:1 limits:[ -1.3963 1.3963 10000 50000 1 ]  ctrl_limits:[10000, 50000, 1] }
 sonar_s0 (torso>sonar_s0) 	{  joint:rigid ctrl_H:1  }
 right_torso_arm_mount (torso>right_torso_arm_mount) 	{  joint:rigid ctrl_H:1  }
 left_torso_arm_mount (torso>left_torso_arm_mount) 	{  joint:rigid ctrl_H:1  }
@@ -63,8 +63,8 @@ left_upper_shoulder_1 (left_s0) 	{  shape:mesh color:[0.5, 0.1, 0.1, 1] mesh:'up
 left_upper_shoulder_0 (left_s0) 	{  shape:cylinder size:[ 0 0 0.2722 0.06 ] color:[0.8, 0.2, 0.2, 0.5] contact:-2 Q:<0.1361 0 3.02203e-17 -0.707107 0 -0.707107 0> }
 left_upper_shoulder>left_s1 (left_s0) 	{  Q:<0.27035 0 -0.069 -0.707107 1.11022e-16 -5.55112e-17 -0.707107> }
 display_joint (screen>display_joint) 	{  joint:rigid ctrl_H:1  }
-right_s1 (right_upper_shoulder>right_s1) 	{  joint:hingeX ctrl_H:1 limits:[ -2.147 1.047 1.5 100 1 ]  ctrl_limits:[1.5, 100, 1] }
-left_s1 (left_upper_shoulder>left_s1) 	{  joint:hingeX ctrl_H:1 limits:[ -2.147 1.047 1.5 100 1 ]  ctrl_limits:[1.5, 100, 1] }
+right_s1 (right_upper_shoulder>right_s1) 	{  joint:hingeX ctrl_H:1 limits:[ -2.147 1.047 1.5 50 1 ]  ctrl_limits:[1.5, 50, 1] }
+left_s1 (left_upper_shoulder>left_s1) 	{  joint:hingeX ctrl_H:1 limits:[ -2.147 1.047 1.5 50 1 ]  ctrl_limits:[1.5, 50, 1] }
 display (display_joint) 	{  mass:0.0001 inertiaTensor:[1e-08, 0, 0, 1e-08, 0, 1e-08] }
 display_1 (display_joint) 	{  shape:box size:[ 0.218 0.16 0.001 0 ] color:[0, 0, 0, 1] colorName:black visual:True }
 right_lower_shoulder (right_s1) 	{  mass:3.22698 Q:<-0 -0 -0 -0.707107 0 -0.707107 0> inertiaTensor:[0.0117521, -0.000300964, 0.00207676, 0.027886, -0.00018822, 0.0207875] }
@@ -155,25 +155,24 @@ right_hand>right_hand_camera (right_hand) 	{  Q:<0.015355 0.012 -0.03825 -0.5 0.
 right_hand>right_hand_camera_axis (right_hand) 	{  Q:<0.015355 0.012 -0.03825 -0.707107 0 -0.707107 0> }
 right_hand>right_hand_range (right_hand) 	{  Q:<0.0288 -0.020245 -0.032 -0.707107 0.707107 -1.73112e-12 1.73128e-12> }
 right_hand>right_hand_accelerometer (right_hand) 	{  Q:<-0.0146 0.000133 -0.00198 -0.707107 0 -0.707107 0> }
+right_hand>right_gripper_base (right_hand) 	{  Q:<0.025 0 5.55112e-18 -0.707107 0 -0.707107 0> }
 left_hand (left_hand) 	{  mass:0.19125 Q:<-0 -0 -0 -0.707107 0 -0.707107 0> inertiaTensor:[0.00017588, 1.47073e-06, 2.43633e-05, 0.000211664, 1.72689e-06, 0.000237454] }
 left_hand_0 (left_hand) 	{  shape:cylinder size:[ 0 0 0.0464 0.04 ] color:[0.8, 0.2, 0.2, 0.5] contact:-2 Q:<-0.0232 -0 -5.15143e-18 -0.707107 0 -0.707107 0> }
 left_hand>left_hand_camera (left_hand) 	{  Q:<0.015355 0.012 -0.03825 -0.5 0.5 -0.5 0.5> }
 left_hand>left_hand_camera_axis (left_hand) 	{  Q:<0.015355 0.012 -0.03825 -0.707107 0 -0.707107 0> }
 left_hand>left_hand_range (left_hand) 	{  Q:<0.0288 -0.020245 -0.032 -0.707107 0.707107 -1.73112e-12 1.73128e-12> }
 left_hand>left_hand_accelerometer (left_hand) 	{  Q:<-0.0146 0.000133 -0.00198 -0.707107 0 -0.707107 0> }
-right_gripper_base (right_hand) 	{  joint:rigid ctrl_H:1  }
+left_hand>left_gripper_base (left_hand) 	{  Q:<0.025 0 5.55112e-18 -0.707107 0 -0.707107 0> }
 right_hand_camera (right_hand>right_hand_camera) 	{  joint:rigid ctrl_H:1  }
 right_hand_camera_axis (right_hand>right_hand_camera_axis) 	{  joint:rigid ctrl_H:1  }
 right_hand_range (right_hand>right_hand_range) 	{  joint:rigid ctrl_H:1  }
 right_hand_accelerometer (right_hand>right_hand_accelerometer) 	{  joint:rigid ctrl_H:1  }
-left_gripper_base (left_hand) 	{  joint:rigid ctrl_H:1  }
+right_gripper_base (right_hand>right_gripper_base) 	{  joint:rigid ctrl_H:1  }
 left_hand_camera (left_hand>left_hand_camera) 	{  joint:rigid ctrl_H:1  }
 left_hand_camera_axis (left_hand>left_hand_camera_axis) 	{  joint:rigid ctrl_H:1  }
 left_hand_range (left_hand>left_hand_range) 	{  joint:rigid ctrl_H:1  }
 left_hand_accelerometer (left_hand>left_hand_accelerometer) 	{  joint:rigid ctrl_H:1  }
-right_gripper_base (right_gripper_base) 	{  mass:0.0001 inertiaTensor:[1e-08, 0, 0, 1e-08, 0, 1e-08] }
-right_gripper_base_1 (right_gripper_base) 	{  shape:box size:[ 0.025 0.075 0.035 0 ] color:[0.5, 0.1, 0.1, 1] Q:<0 0 -0.02 1 0 0 0> colorName:darkred visual:True }
-right_gripper_base>right_endpoint (right_gripper_base) 	{  Q:<0 0 0.025 1 0 0 0> }
+left_gripper_base (left_hand>left_gripper_base) 	{  joint:rigid ctrl_H:1  }
 right_hand_camera (right_hand_camera) 	{  mass:0.0001 inertiaTensor:[1e-08, 0, 0, 1e-08, 0, 1e-08] }
 right_hand_camera_1 (right_hand_camera) 	{  shape:cylinder size:[ 0 0 0.01 0.02 ] color:[0, 0, 1, 0.8] colorName:blue visual:True }
 right_hand_camera_axis (right_hand_camera_axis) 	{  mass:0.0001 inertiaTensor:[1e-08, 0, 0, 1e-08, 0, 1e-08] }
@@ -181,9 +180,12 @@ right_hand_range (right_hand_range) 	{  mass:0.0001 inertiaTensor:[1e-08, 0, 0, 
 right_hand_range_1 (right_hand_range) 	{  shape:box size:[ 0.005 0.02 0.005 0 ] color:[0, 0, 1, 0.8] colorName:blue visual:True }
 right_hand_accelerometer (right_hand_accelerometer) 	{  mass:0.0001 inertiaTensor:[1e-08, 0, 0, 1e-08, 0, 1e-08] }
 right_hand_accelerometer_1 (right_hand_accelerometer) 	{  shape:box size:[ 0.01 0.01 0.01 0 ] color:[0, 0, 0, 1] colorName:black visual:True }
-left_gripper_base (left_gripper_base) 	{  mass:0.0001 inertiaTensor:[1e-08, 0, 0, 1e-08, 0, 1e-08] }
-left_gripper_base_1 (left_gripper_base) 	{  shape:box size:[ 0.025 0.075 0.035 0 ] color:[0.5, 0.1, 0.1, 1] Q:<0 0 -0.02 1 0 0 0> colorName:darkred visual:True }
-left_gripper_base>left_endpoint (left_gripper_base) 	{  Q:<0 0 0.025 1 0 0 0> }
+right_gripper_base (right_gripper_base) 	{  mass:0.3 inertiaTensor:[2e-08, 0, 0, 3e-08, 0, 2e-08] }
+right_gripper_base_1 (right_gripper_base) 	{  shape:mesh mesh:'electric_gripper/electric_gripper_base.ply' visual:True }
+right_gripper_base_0 (right_gripper_base) 	{  shape:cylinder size:[ 0 0 0.1 0.029 ] color:[0.8, 0.2, 0.2, 0.5] contact:-2 colorName:darkred }
+right_gripper_base>right_endpoint (right_gripper_base) 	{  Q:<0 0 0.1327 1 0 0 0> }
+right_gripper_base>r_gripper_l_finger_joint (right_gripper_base) 	{  Q:<0 -0.0015 0.02 0.707107 0 0 0.707107> }
+right_gripper_base>r_gripper_r_finger_joint (right_gripper_base) 	{  Q:<0 0.0015 0.02 0.707107 0 0 -0.707107> }
 left_hand_camera (left_hand_camera) 	{  mass:0.0001 inertiaTensor:[1e-08, 0, 0, 1e-08, 0, 1e-08] }
 left_hand_camera_1 (left_hand_camera) 	{  shape:cylinder size:[ 0 0 0.01 0.02 ] color:[0, 0, 1, 0.8] colorName:blue visual:True }
 left_hand_camera_axis (left_hand_camera_axis) 	{  mass:0.0001 inertiaTensor:[1e-08, 0, 0, 1e-08, 0, 1e-08] }
@@ -191,10 +193,54 @@ left_hand_range (left_hand_range) 	{  mass:0.0001 inertiaTensor:[1e-08, 0, 0, 1e
 left_hand_range_1 (left_hand_range) 	{  shape:box size:[ 0.005 0.02 0.005 0 ] color:[0, 0, 1, 0.8] colorName:blue visual:True }
 left_hand_accelerometer (left_hand_accelerometer) 	{  mass:0.0001 inertiaTensor:[1e-08, 0, 0, 1e-08, 0, 1e-08] }
 left_hand_accelerometer_1 (left_hand_accelerometer) 	{  shape:box size:[ 0.01 0.01 0.01 0 ] color:[0, 0, 0, 1] colorName:black visual:True }
+left_gripper_base (left_gripper_base) 	{  mass:0.3 inertiaTensor:[2e-08, 0, 0, 3e-08, 0, 2e-08] }
+left_gripper_base_1 (left_gripper_base) 	{  shape:mesh mesh:'electric_gripper/electric_gripper_base.ply' visual:True }
+left_gripper_base_0 (left_gripper_base) 	{  shape:cylinder size:[ 0 0 0.1 0.029 ] color:[0.8, 0.2, 0.2, 0.5] contact:-2 colorName:darkred }
+left_gripper_base>left_endpoint (left_gripper_base) 	{  Q:<0 0 0.1327 1 0 0 0> }
+left_gripper_base>l_gripper_l_finger_joint (left_gripper_base) 	{  Q:<0 -0.0015 0.02 0.707107 0 0 0.707107> }
+left_gripper_base>l_gripper_r_finger_joint (left_gripper_base) 	{  Q:<0 0.0015 0.02 0.707107 0 0 -0.707107> }
 right_endpoint (right_gripper_base>right_endpoint) 	{  joint:rigid ctrl_H:1  }
+r_gripper_l_finger_joint (right_gripper_base>r_gripper_l_finger_joint) 	{  joint:transX ctrl_H:1 limits:[ 0 0.020833 5 20 1 ]  ctrl_limits:[5, 20, 1] }
+r_gripper_r_finger_joint (right_gripper_base>r_gripper_r_finger_joint) 	{  joint:transX ctrl_H:1 limits:[ -0.020833 0 5 20 1 ] mimic:(r_gripper_l_finger_joint)  ctrl_limits:[5, 20, 1] }
 left_endpoint (left_gripper_base>left_endpoint) 	{  joint:rigid ctrl_H:1  }
-right_gripper (right_endpoint) 	{  mass:0.0001 inertiaTensor:[1e-08, 0, 0, 1e-08, 0, 1e-08] }
-right_gripper_1 (right_endpoint) 	{  shape:box size:[ 0.01 0.01 0.01 0 ] color:[0, 0, 0, 1] colorName:black visual:True }
-left_gripper (left_endpoint) 	{  mass:0.0001 inertiaTensor:[1e-08, 0, 0, 1e-08, 0, 1e-08] }
-left_gripper_1 (left_endpoint) 	{  shape:box size:[ 0.01 0.01 0.01 0 ] color:[0, 0, 0, 1] colorName:black visual:True }
+l_gripper_l_finger_joint (left_gripper_base>l_gripper_l_finger_joint) 	{  joint:transX ctrl_H:1 limits:[ 0 0.020833 5 20 1 ]  ctrl_limits:[5, 20, 1] }
+l_gripper_r_finger_joint (left_gripper_base>l_gripper_r_finger_joint) 	{  joint:transX ctrl_H:1 limits:[ -0.020833 0 5 20 1 ] mimic:(l_gripper_l_finger_joint)  ctrl_limits:[5, 20, 1] }
+right_gripper (right_endpoint) 	{  mass:0.0001 inertiaTensor:[0, 0, 0, 0, 0, 0] }
+r_gripper_l_finger (r_gripper_l_finger_joint) 	{  mass:0.02 Q:<-0 -0 -0 -0.707107 0 0 0.707107> inertiaTensor:[0.01, 0, 0, 0.01, 0, 0.01] }
+r_gripper_l_finger_1 (r_gripper_l_finger_joint) 	{  shape:mesh mesh:'electric_gripper/fingers/extended_narrow.ply' Q:<-0 -0 -0 -0.707107 0 0 0.707107> visual:True }
+r_gripper_l_finger_0 (r_gripper_l_finger_joint) 	{  shape:box size:[ 0.01 0.0135 0.1127 0 ] color:[0.8, 0.2, 0.2, 0.5] contact:-2 Q:<0.01725 3.83027e-18 0.0615 -0.707107 0 0 0.707107> }
+r_gripper_l_finger_0 (r_gripper_l_finger_joint) 	{  shape:box size:[ 0.01 0.05 0.017 0 ] color:[0.8, 0.2, 0.2, 0.5] contact:-2 Q:<-0.003 0.005 0.0083 -0.707107 0 0 0.707107> }
+r_gripper_l_finger>r_gripper_l_finger_tip_joint (r_gripper_l_finger_joint) 	{  Q:<0.01725 3.83027e-18 0.1127 -0.707107 0 0 0.707107> }
+r_gripper_r_finger (r_gripper_r_finger_joint) 	{  mass:0.02 Q:<-0 -0 -0 -0.707107 0 0 0.707107> inertiaTensor:[0.01, 0, 0, 0.01, 0, 0.01] }
+r_gripper_r_finger_1 (r_gripper_r_finger_joint) 	{  shape:mesh mesh:'electric_gripper/fingers/extended_narrow.ply' Q:<-0 -0 -0 -0.707107 0 0 0.707107> visual:True }
+r_gripper_r_finger_0 (r_gripper_r_finger_joint) 	{  shape:box size:[ 0.01 0.0135 0.1127 0 ] color:[0.8, 0.2, 0.2, 0.5] contact:-2 Q:<-0.01725 -3.83027e-18 0.0615 -0.707107 0 0 0.707107> }
+r_gripper_r_finger_0 (r_gripper_r_finger_joint) 	{  shape:box size:[ 0.01 0.05 0.017 0 ] color:[0.8, 0.2, 0.2, 0.5] contact:-2 Q:<0.003 -0.005 0.0083 -0.707107 0 0 0.707107> }
+r_gripper_r_finger>r_gripper_r_finger_tip_joint (r_gripper_r_finger_joint) 	{  Q:<-0.01725 -3.83027e-18 0.1127 -0.707107 0 0 0.707107> }
+left_gripper (left_endpoint) 	{  mass:0.0001 inertiaTensor:[0, 0, 0, 0, 0, 0] }
+l_gripper_l_finger (l_gripper_l_finger_joint) 	{  mass:0.02 Q:<-0 -0 -0 -0.707107 0 0 0.707107> inertiaTensor:[0.01, 0, 0, 0.01, 0, 0.01] }
+l_gripper_l_finger_1 (l_gripper_l_finger_joint) 	{  shape:mesh mesh:'electric_gripper/fingers/extended_narrow.ply' Q:<-0 -0 -0 -0.707107 0 0 0.707107> visual:True }
+l_gripper_l_finger_0 (l_gripper_l_finger_joint) 	{  shape:box size:[ 0.01 0.0135 0.1127 0 ] color:[0.8, 0.2, 0.2, 0.5] contact:-2 Q:<0.01725 3.83027e-18 0.0615 -0.707107 0 0 0.707107> }
+l_gripper_l_finger_0 (l_gripper_l_finger_joint) 	{  shape:box size:[ 0.01 0.05 0.017 0 ] color:[0.8, 0.2, 0.2, 0.5] contact:-2 Q:<-0.003 0.005 0.0083 -0.707107 0 0 0.707107> }
+l_gripper_l_finger>l_gripper_l_finger_tip_joint (l_gripper_l_finger_joint) 	{  Q:<0.01725 3.83027e-18 0.1127 -0.707107 0 0 0.707107> }
+l_gripper_r_finger (l_gripper_r_finger_joint) 	{  mass:0.02 Q:<-0 -0 -0 -0.707107 0 0 0.707107> inertiaTensor:[0.01, 0, 0, 0.01, 0, 0.01] }
+l_gripper_r_finger_1 (l_gripper_r_finger_joint) 	{  shape:mesh mesh:'electric_gripper/fingers/extended_narrow.ply' Q:<-0 -0 -0 -0.707107 0 0 0.707107> visual:True }
+l_gripper_r_finger_0 (l_gripper_r_finger_joint) 	{  shape:box size:[ 0.01 0.0135 0.1127 0 ] color:[0.8, 0.2, 0.2, 0.5] contact:-2 Q:<-0.01725 -3.83027e-18 0.0615 -0.707107 0 0 0.707107> }
+l_gripper_r_finger_0 (l_gripper_r_finger_joint) 	{  shape:box size:[ 0.01 0.05 0.017 0 ] color:[0.8, 0.2, 0.2, 0.5] contact:-2 Q:<0.003 -0.005 0.0083 -0.707107 0 0 0.707107> }
+l_gripper_r_finger>l_gripper_r_finger_tip_joint (l_gripper_r_finger_joint) 	{  Q:<-0.01725 -3.83027e-18 0.1127 -0.707107 0 0 0.707107> }
+r_gripper_l_finger_tip_joint (r_gripper_l_finger>r_gripper_l_finger_tip_joint) 	{  joint:rigid ctrl_H:1  }
+r_gripper_r_finger_tip_joint (r_gripper_r_finger>r_gripper_r_finger_tip_joint) 	{  joint:rigid ctrl_H:1  }
+l_gripper_l_finger_tip_joint (l_gripper_l_finger>l_gripper_l_finger_tip_joint) 	{  joint:rigid ctrl_H:1  }
+l_gripper_r_finger_tip_joint (l_gripper_r_finger>l_gripper_r_finger_tip_joint) 	{  joint:rigid ctrl_H:1  }
+r_gripper_l_finger_tip (r_gripper_l_finger_tip_joint) 	{  mass:0.01 inertiaTensor:[0.01, 0, 0, 0.01, 0, 0.01] }
+r_gripper_l_finger_tip_1 (r_gripper_l_finger_tip_joint) 	{  shape:mesh mesh:'electric_gripper/fingers/half_round_tip.ply' visual:True }
+r_gripper_l_finger_tip_0 (r_gripper_l_finger_tip_joint) 	{  shape:cylinder size:[ 0 0 0.037 0.008 ] color:[0.8, 0.2, 0.2, 0.5] contact:-2 Q:<0 -0.0045 -0.015 1 0 0 0> }
+r_gripper_r_finger_tip (r_gripper_r_finger_tip_joint) 	{  mass:0.01 inertiaTensor:[0.01, 0, 0, 0.01, 0, 0.01] }
+r_gripper_r_finger_tip_1 (r_gripper_r_finger_tip_joint) 	{  shape:mesh mesh:'electric_gripper/fingers/half_round_tip.ply' visual:True }
+r_gripper_r_finger_tip_0 (r_gripper_r_finger_tip_joint) 	{  shape:cylinder size:[ 0 0 0.037 0.008 ] color:[0.8, 0.2, 0.2, 0.5] contact:-2 Q:<0 0.0045 -0.015 1 0 0 0> }
+l_gripper_l_finger_tip (l_gripper_l_finger_tip_joint) 	{  mass:0.01 inertiaTensor:[0.01, 0, 0, 0.01, 0, 0.01] }
+l_gripper_l_finger_tip_1 (l_gripper_l_finger_tip_joint) 	{  shape:mesh mesh:'electric_gripper/fingers/paddle_tip.ply' visual:True }
+l_gripper_l_finger_tip_0 (l_gripper_l_finger_tip_joint) 	{  shape:box size:[ 0.042 0.0065 0.037 0 ] color:[0.8, 0.2, 0.2, 0.5] contact:-2 Q:<0 -0.0045 -0.015 1 0 0 0> }
+l_gripper_r_finger_tip (l_gripper_r_finger_tip_joint) 	{  mass:0.01 inertiaTensor:[0.01, 0, 0, 0.01, 0, 0.01] }
+l_gripper_r_finger_tip_1 (l_gripper_r_finger_tip_joint) 	{  shape:mesh mesh:'electric_gripper/fingers/paddle_tip.ply' visual:True }
+l_gripper_r_finger_tip_0 (l_gripper_r_finger_tip_joint) 	{  shape:box size:[ 0.042 0.0065 0.037 0 ] color:[0.8, 0.2, 0.2, 0.5] contact:-2 Q:<0 0.0045 -0.015 1 0 0 0> }
 
