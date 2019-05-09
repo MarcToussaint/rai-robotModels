@@ -46,5 +46,5 @@ body base_footprint { mass=100 }
 shape base_footprint(base_footprint) { type=5 size=[.1 0 0 0] } #marker
 joint (base_footprint base){ type=rigid A=<T t(0 0 1)> }
 
-shape baxterR (right_wrist){ rel=<T d(-90 0 1 0) d(-90 0 0 1) t(0 0 -.26)> type=5 size=[.1 0 0 0] color=[1 1 0] }
-shape baxterL (left_wrist) { rel=<T d(-90 0 1 0) d(-90 0 0 1) t(0 0 -.26)> type=5 size=[.1 0 0 0] color=[1 1 0] }
+shape baxterR (right_wrist){ rel=<T t(0 0 .26) d(180 0 1 0) d(-90 0 0 1)> type=5 size=[.1 0 0 0] color=[1 1 0] }
+shape baxterL (left_wrist) { rel=<T t(0 0 .26) d(180 0 1 0) d(-90 0 0 1)> type=5 size=[.1 0 0 0] color=[1 1 0] }
