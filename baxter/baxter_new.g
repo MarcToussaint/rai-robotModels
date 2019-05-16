@@ -23,16 +23,16 @@ Delete right_gripper_base_0
 
 ## zero position
 
-Edit right_s0 { q= 0.08, robot }
-Edit left_s0 { q=-0.08, robot }
-Edit right_s1 { q=-1, robot }
-Edit left_s1 { q=-1, robot }
-Edit right_e0 { q= 1.17, robot }
-Edit left_e0 { q=-1.17, robot }
-Edit right_e1 { q=1.94, robot }
-Edit left_e1 { q=1.94, robot }
-Edit right_w0 { q=-0.67, robot }
-Edit left_w0 { q=0.67, robot }
+Edit right_s0 { q= -0.37, robot }
+Edit left_s0 { q=0.37, robot }
+Edit right_s1 { q=-0.66, robot }
+Edit left_s1 { q=-0.66, robot }
+Edit right_e0 { q= 1.30, robot }
+Edit left_e0 { q=-1.30, robot }
+Edit right_e1 { q=1.74, robot }
+Edit left_e1 { q=1.74, robot }
+Edit right_w0 { q=-0.27, robot }
+Edit left_w0 { q=0.27, robot }
 Edit right_w1 { q=1.02, robot }
 Edit left_w1 { q=1.02, robot }
 Edit right_w2 { q=0.5, robot }
