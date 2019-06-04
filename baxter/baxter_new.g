@@ -48,3 +48,6 @@ joint (base_footprint base){ type=rigid A=<T t(0 0 1) d(90 0 0 1)> }
 
 frame baxterR (right_wrist){ shape:marker Q:<T t(0 0 .26) d(180 0 1 0) d(-90 0 0 1)> size:[.05] color:[1 1 0] }
 frame baxterL (left_wrist) { shape:marker Q:<T t(0 0 .19) d(180 0 1 0) d(-90 0 0 1)> size=[.05] color:[1 1 0] }
+
+## extra fake joint for the pneumatic ee
+frame l_gripper_l_finger_joint(left_gripper_base){ shape:marker Q:<T t(.1 0 0) > size=[.05] color:[1 1 0] joint:transX }
