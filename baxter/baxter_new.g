@@ -1,4 +1,4 @@
-Include = 'baxter_clean2.g'
+Include = 'baxter_clean3.g'
         
 Delete collision_head_link_1
 Delete collision_head_link_1_1
@@ -15,7 +15,7 @@ Delete display_1
 
 Edit screen_1 { Q:<t(0 -0.00953 -0.0347) d(-90 0 1 0)> }
 
-Edit left_gripper_base_1 { Q:<d(90 1 0 0)> }
+Edit left_gripper_base_1 { Q:<d(-90 0 1 0) d(180 0 0 1)> }
 Delete left_gripper_base_0
 
 Edit right_gripper_base_1 { Q:<d(90 1 0 0)> }
@@ -47,4 +47,4 @@ shape base_footprint(base_footprint) { type=5 size=[.1 0 0 0] } #marker
 joint (base_footprint base){ type=rigid A=<T t(0 0 1) d(90 0 0 1)> }
 
 frame baxterR (right_wrist){ shape:marker Q:<T t(0 0 .26) d(180 0 1 0) d(-90 0 0 1)> size:[.05] color:[1 1 0] }
-frame baxterL (left_wrist) { shape:marker Q:<T t(0 0 .26) d(180 0 1 0) d(-90 0 0 1)> size=[.05] color:[1 1 0] }
+frame baxterL (left_wrist) { shape:marker Q:<T t(0 0 .19) d(180 0 1 0) d(-90 0 0 1)> size=[.05] color:[1 1 0] }
