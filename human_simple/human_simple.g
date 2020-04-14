@@ -1,7 +1,7 @@
 
 ## torso & arms
 
-body waist { X=<T t(0 0 1.) > rel=<T d(90 0 1 0)> type=2 mass=1 size=[0. 0. .2 .15] }
+body waist { X=<T t(0 0 1.) d(180 0 0 1)>  type=2 mass=1 size=[0. 0. .2 .15] }
 
 body back     { type=2 mass=1 size=[0. 0. .15 .15] }
 body chest    { type=2 mass=1 size=[0. 0. .3 .15] }
