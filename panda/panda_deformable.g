@@ -32,7 +32,8 @@ panda_joint6(deform6) 	{  joint:hingeX ctrl_H:1 limits=[  -0.0175 3.7525 2.61 12
 panda_link6_1(panda_joint6) 	{  shape:mesh  mesh:'meshes/visual/link6.ply' Q:<0 0 0 -0.707107 0 -0.707107 0>  color:[.9 .9 .9] }
 
 panda_link6>panda_joint7(panda_joint6) 	{  Q:<1.95399e-17 0 -0.088 -0.707107 0 0 0.707107> }
-panda_joint7(panda_link6>panda_joint7) 	{  joint:hingeX ctrl_H:1 limits=[  -2.8973 2.8973 2.61 12 1  ]  ctrl_limits:[ 2.61 12 1 ] }
+deform7(panda_link6>panda_joint7){ shape:marker, size:[.05] }
+panda_joint7(deform7) 	{  joint:hingeX ctrl_H:1 limits=[  -2.8973 2.8973 2.61 12 1  ]  ctrl_limits:[ 2.61 12 1 ] }
 panda_link7_1(panda_joint7) 	{  shape:mesh  mesh:'meshes/visual/link7.ply' Q:<0 0 0 -0.707107 0 -0.707107 0>  color:[.9 .9 .9] }
 
 panda_link7>panda_joint8(panda_joint7) 	{  Q:<0.107 0 2.37588e-17 -0.707107 0 -0.707107 0> }
