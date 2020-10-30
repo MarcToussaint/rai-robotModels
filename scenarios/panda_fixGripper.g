@@ -35,22 +35,18 @@ Edit panda_finger_joint1 { q=.05 }
 
 ## delete original gripper
 
-Delete panda_hand_joint
-Delete panda_hand_1
 Delete panda_hand_0
-Delete panda_hand>panda_finger_joint1
-Delete panda_hand>panda_finger_joint2
-Delete panda_finger_joint1
-Delete panda_finger_joint2
-Delete panda_leftfinger_1
 Delete panda_leftfinger_0
-Delete panda_rightfinger_1
 Delete panda_rightfinger_0
 
-Include: 'gripper.g'
+#Include: 'gripper.g'
 
-Edit gripper (panda_joint7){ Q:<d(-90 0 1 0) d(135 0 0 1) t(0 0 -.155)> }
-       
-Edit finger1{ joint:transX Q:<> A:<t(+.07 0 -.05)> limits: [-.05 0.02], contact: -2, shape:capsule, size:[.02, .02] }
-Edit finger2{ joint:transX mimic:(finger1) Q:<> A:<d(180 0 0 1) t(+.07 0 -.05)>, limits: [-.05 0.02] contact: -2, shape:capsule, size:[.02, .02]}
+gripper (panda_joint7){ Q:<d(-90 0 1 0) d(135 0 0 1) t(0 0 -.155)> }
+gripperCenter (gripper){ shape:marker, size:[.03], color:[.9 .9 .9], Q:<t(0 0 -.05)> }
+
+Edit panda_finger_joint1{ Q:<t(.05 0 0)> joint:rigid }
+Edit panda_finger_joint2{ joint:rigid }
+
+finger1(panda_finger_joint1){ Q:<t(.018 0 .035)> contact: -2, shape:capsule, size:[.02, .02], color:[.9 .9 .9 .5] }
+finger2(panda_finger_joint2){ Q:<t(.018 0 .035)>contact: -2, shape:capsule, size:[.02, .02], color:[.9 .9 .9 .5]}
         

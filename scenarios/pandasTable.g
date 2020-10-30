@@ -9,10 +9,10 @@ table (world){
 #L_lift (table){ joint:transZ, limits:[0 .5] }
 
 Prefix: "L_"
-Include: 'panda_moveGripper.g'
+Include: 'panda_fixGripper.g'
 
 Prefix: "R_"
-Include: 'panda_moveGripper.g'
+Include: 'panda_fixGripper.g'
 
 Prefix!
 

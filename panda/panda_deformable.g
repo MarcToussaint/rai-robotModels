@@ -49,6 +49,25 @@ panda_leftfinger_1(panda_finger_joint1) 	{  shape:mesh  mesh:'meshes/visual/fing
 panda_rightfinger_1(panda_finger_joint2) 	{  shape:mesh  mesh:'meshes/visual/finger.ply' Q:<0 0 0 -0.707107 0 0 0.707107>  color:[.9 .9 .9] }
 
 
+## collision models
+
+#panda_coll1(panda_joint1)	{ shape:sphere color:[1.,1.,1.,.2] size:[.1] Q:<t(-.1 0 0)>, contact:1 }
+#panda_coll2(panda_joint2)	{ shape:sphere color:[1.,1.,1.,.2] size:[.1] Q:<t(0 0 0)>, contact:1  }
+#panda_coll3(panda_joint4)	{ shape:sphere color:[1.,1.,1.,.2] size:[.1] Q:<t(0 0 0)>, contact:1  }
+#panda_coll4(panda_joint6)	{ shape:sphere color:[1.,1.,1.,.2] size:[.1] Q:<t(0 0 0)>, contact:1  }
+
+#panda_coll4(panda_joint2)	{ shape:capsule color:[1.,1.,1.,.2] size:[.12 .08] Q:<d(90 0 1 0) t(0 0 .0)>, noVisual, contact:-2  }
+#panda_coll5(panda_joint4)	{ shape:capsule color:[1.,1.,1.,.2] size:[.12 .08] Q:<d(90 0 1 0) t(0 0 .0)>, noVisual, contact:-2  }
+#panda_coll6(panda_joint6)	{ shape:capsule color:[1.,1.,1.,.2] size:[.1 .07] Q:<d(90 0 1 0) t(0 .0 -.04)>, noVisual, contact:-2  }
+#panda_coll7(panda_joint7)	{ shape:capsule color:[1.,1.,1.,.2] size:[.1 .07] Q:<d(90 0 1 0) t(0 .0 .01)>, noVisual, contact:-2  }
+
+#panda_coll_hand(panda_hand_joint)	{ shape:capsule color:[1.,1.,1.,.2] size:[.15 .06] Q:<d(90 1 0 0) t(0 .01 .0)>, noVisual, contact:-2  }
+
+#panda_coll_finger1(panda_finger_joint1)	{ shape:capsule color:[1.,1.,1.,.2] size:[.03 .015] Q:<d(0 1 0 0) t(.015 .0 .03)>, noVisual, contact:-2  }
+#panda_coll_finger2(panda_finger_joint2)	{ shape:capsule color:[1.,1.,1.,.2] size:[.03 .015] Q:<d(0 1 0 0) t(.015 .0 .03)>, noVisual, contact:-2  }
+
+
+        
 ## zero position
 
 Edit panda_joint1 { q= 0.0 }
