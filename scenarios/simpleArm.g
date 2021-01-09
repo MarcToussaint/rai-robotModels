@@ -31,5 +31,6 @@ joint7(joint6) {
     shape:ssBox mass:1 size:[0.1 0.1 .25 .03], contact:-1 }
 
 endeff(joint7) {
-    shape:marker Q:<t(0 0 .15) d(180 1 0 0)> size:[.02] color:[1. 1. 0], contact:-1 }
+#    Q:<t(0 0 .15) d(180 1 0 0)> shape:marker size:[.02] color:[1. 1. 0], contact:-1 }
+    Q:<t(0 0 .15) d(180 1 0 0)> shape:ssBox size:[.03 .03 .05 .01] color:[1. 1. 0], contact:-1 }
 
