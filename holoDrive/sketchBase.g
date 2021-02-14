@@ -14,10 +14,10 @@ mobileBase (world) { joint:transXYPhi, ctrl_H:0.01 }
 
 (mobileBase){ Q:<t(0 0 .2)>, shape:ssBox, size:[.5, .5, .04, .01] }
         
-Prefix: "W1_", Include: 'wheel.g'
-Prefix: "W2_", Include: 'wheel.g'
-Prefix: "W3_", Include: 'wheel.g'
-Prefix: "W4_", Include: 'wheel.g'
+Prefix: "W1_", Include: 'sketchWheel.g'
+Prefix: "W2_", Include: 'sketchWheel.g'
+Prefix: "W3_", Include: 'sketchWheel.g'
+Prefix: "W4_", Include: 'sketchWheel.g'
 Prefix!
         
 Edit W1_base (mobileBase) { Q:<t(.27 .27 .15)> }
