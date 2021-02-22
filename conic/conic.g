@@ -1,8 +1,11 @@
+## this must stritly be a chain! otherwise the rerooting when switching (following line in komo.cpp) does not work!
+## rai::Frame *childOfSwitch = toBeSwitched->getDownwardLink(true);
+
 handA { shape:capsule, size:[.04 .02], color:[1 1 .6] }
 
-p0End (handA) { Q:<d(-45 0 1 0) t(.045 0 .055) > }
-handAmesh (p0End) {
-    Q:<d(180 0 1 0)> mesh:'coneyEnd.ply' color:[.9 .9 .9] }
+p0pre (handA) { Q:<d(-45 0 1 0) t(.045 0 .055) d(180 0 1 0)> }
+p0 (p0pre) { mesh:'coneyEnd.ply' color:[.9 .9 .9] }
+p0End (p0) { Q:<d(-180 0 1 0)> }
 
 p1 (p0End) { joint:hingeZ q:-.0 mesh:'coney.ply' color:[.9 .9 .9] }
 p1End (p1) { Q:<t(.1 0 .1) d(90 0 1 0) d(180 0 0 1)> }

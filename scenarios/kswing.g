@@ -9,9 +9,6 @@ back (world){ shape:ssBox, Q:<t(-2. 0 1.5)>, size:[.1 6.1 3. .02], color:[.3 .3 
 #right(world){ shape:ssBox, Q:<t(0 1.75 1.)>, size:[4.1 .1 2. .02], color:[.9 .9 .9 .2] }
 
 
-Include: '../conic/conic.g'
-Edit handA(floor){ joint:rigid, Q:<t(-.6 .5 .05) d(90 0 0 1)> }
-
 box1 (floor){
     shape:ssBox, Q:<t(1. -2.5 .35) d(20 0 0 1) d(90 0 0 1)>, size:[.2 .4 .6 .02], color:[.6 .6 .6]
     joint:rigid
@@ -55,17 +52,17 @@ stick2 (floor){
         }
 
 pend1anchor (roof){ Q:<t(.5 -.5 0)> }
-pend1joint (pend1anchor){ joint:quatBall }
+pend1joint (pend1anchor){ joint:rigid }
 pend1(pend1joint){ Q:<t(0 0 -.8)> shape:capsule size:[1.6 .02] color:[.6 .6 .6]
 }
 
 pend2anchor (roof){ Q:<t(1.3 1 0)> }
-pend2joint (pend2anchor){ joint:quatBall ctrl_H:0.01 }
+pend2joint (pend2anchor){ joint:quatBall ctrl_H:0 }
 pend2(pend2joint){ Q:<t(0 0 -.6)> shape:capsule size:[1.2 .02] color:[.6 .6 .6]
 }
 
 pend3anchor (roof){ Q:<t(0 2 0)> }
-pend3joint (pend3anchor){ joint:quatBall }
+pend3joint (pend3anchor){ joint:rigid }
 pend3(pend3joint){ Q:<t(0 0 -.6)> shape:capsule size:[1.2 .02] color:[.6 .6 .6]
 }
 
