@@ -12,6 +12,9 @@ back (world){ shape:ssBox, Q:<t(-2. 0 1.5)>, size:[.1 6.1 3. .02], color:[.3 .3 
 Include: '../conic/conic.g'
 Edit handA(floor){ joint:rigid, Q:<t(-.6 .5 .05) d(90 0 0 1)> }
 
+hooverJoint(floor){ joint:transXY }
+hoover(hooverJoint){ Q:[0 0 .15], shape:ssBox, size:[.4 .4 .2 .02], color:[.9 .9 .9] }
+
 box1 (floor){
     shape:ssBox, Q:<t(1. -2.5 .35) d(20 0 0 1) d(90 0 0 1)>, size:[.2 .4 .6 .02], color:[.6 .6 .6]
     joint:rigid
@@ -49,7 +52,7 @@ stick1 (floor){
         }
 
 stick2 (floor){
-    shape:capsule, Q:<t(-1.5 -.9 .07) d(10 0 0 1) d(90 1 0 0) >, size:[.8 .02], color:[.6 .6 .6]
+    shape:capsule, Q:<t(-1. -.5 .07) d(10 0 0 1) d(90 1 0 0) >, size:[.8 .02], color:[.6 .6 .6]
     joint:rigid
     friction:.1
         }
@@ -68,6 +71,9 @@ pend3anchor (roof){ Q:<t(0 2 0)> }
 pend3joint (pend3anchor){ joint:quatBall }
 pend3(pend3joint){ Q:<t(0 0 -.6)> shape:capsule size:[1.2 .02] color:[.6 .6 .6]
 }
+
+ball0 (floor){ joint:rigid Q:[.5 -.2 .1]
+            shape:sphere size:[.05] color:[1 1 .6] }
 
 ball1 (pend3){ joint:rigid Q:[0 0 -.6]
             shape:sphere size:[.05] color:[1 1 .6] }
