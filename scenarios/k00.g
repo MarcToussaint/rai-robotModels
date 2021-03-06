@@ -63,7 +63,7 @@ pend1(pend1joint){ Q:<t(0 0 -.8)> shape:capsule size:[1.6 .02] color:[.6 .6 .6]
 }
 
 pend2anchor (roof){ Q:<t(1.3 1 0)> }
-pend2joint (pend2anchor){ joint:quatBall ctrl_H:0.01 }
+pend2joint (pend2anchor){ joint:quatBall ctrl_H:0.01 q:[1.,.5,0.2,0.] }
 pend2(pend2joint){ Q:<t(0 0 -.6)> shape:capsule size:[1.2 .02] color:[.6 .6 .6]
 }
 
