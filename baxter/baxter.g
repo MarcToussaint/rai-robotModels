@@ -5,11 +5,11 @@ Delete visual
 
 #Delete shape collision (head)
 
-#shape (head){ type=3 size=[1 1 1 1] rel=<T -0.0319886 -2.26154e-05 -0.00274816 -0.707107 0 -0.707107 0 >  mesh='head/H0.STL'  color=[ 0.2 0.2 0.2 1 ]  rel_includes_mesh_center,  }
-#shape (head){ type=0 size=[0.218 0.16 0.001 0] rel=<T -0.0157421 1.40048e-14 -0.119839 0.154854 -0.689942 -0.689942 0.154854 >  color=[ 0 0 0 1 ]  }
-#shape (head){ type=3 size=[1 1 1 1] rel=<T -0.0055038 -0.000139031 -0.0938075 -0.453099 -0.453099 -0.542864 0.542864 >  mesh='head/H1.STL'  color=[ 0.5 0.1 0.1 1 ]  rel_includes_mesh_center,  }
+#shape (head){ shape:mesh size=[1 1 1 1] rel=<T -0.0319886 -2.26154e-05 -0.00274816 -0.707107 0 -0.707107 0 >  mesh='head/H0.STL'  color=[ 0.2 0.2 0.2 1 ]  rel_includes_mesh_center,  }
+#shape (head){ shape:box size=[0.218 0.16 0.001 0] rel=<T -0.0157421 1.40048e-14 -0.119839 0.154854 -0.689942 -0.689942 0.154854 >  color=[ 0 0 0 1 ]  }
+#shape (head){ shape:mesh size=[1 1 1 1] rel=<T -0.0055038 -0.000139031 -0.0938075 -0.453099 -0.453099 -0.542864 0.542864 >  mesh='head/H1.STL'  color=[ 0.5 0.1 0.1 1 ]  rel_includes_mesh_center,  }
 
-shape (head){ type=0 size=[0.27 0.19 0.03 0] rel=<T -0.0157421 0 -0.119839 0.154854 -0.689942 -0.689942 0.154854 >  color=[ 1 0 0 ]  }
+shape (head){ shape:box size=[0.27 0.19 0.03 0] rel=<T -0.0157421 0 -0.119839 0.154854 -0.689942 -0.689942 0.154854 >  color=[ 1 0 0 ]  }
 
 ## zero position
 
@@ -33,20 +33,20 @@ Edit joint { ctrl_H=1. }
 ## extra shapes to mimick pr2
 
 body base_footprint { mass=100 }
-shape base_footprint(base_footprint) { type=5 size=[.1 0 0 0] } #marker
-joint (base_footprint base){ type=10 A=<T t(0 0 1)> }
-shape torso_lift_link_0 (base) { type=5 size=[.3 .3 .3 0] }
+shape base_footprint(base_footprint) { shape:marker size=[.1 0 0 0] } #marker
+joint (base_footprint base){ joint:rigid A=<T t(0 0 1)> }
+shape torso_lift_link_0 (base) { shape:marker size=[.3 .3 .3 0] }
 
 ## extra shapes
-#shape endeffBase(torso_lift_link){ rel=<T d(90 0 1 0) t(.2 0 0)> type=5 color=[1 0 0] size=[.1 0 0 0]}
-shape endeffHead(head){ rel=<T  d(-90 0 0 1) d(-15 1 0 0)> type=5 color=[1 0 0] size=[.2 0 0 0]}
-#shape endeffWorkspace(torso_lift_link){ rel=<T d(90 0 1 0) t(.7 0 -.1) d(-90 0 0 1) > type=5 color=[1 0 0] size=[.1 0 0 0] }
+#shape endeffBase(torso_lift_link){ rel=<T d(90 0 1 0) t(.2 0 0)> shape:marker color=[1 0 0] size=[.1 0 0 0]}
+shape endeffHead(head){ rel=<T  d(-90 0 0 1) d(-15 1 0 0)> shape:marker color=[1 0 0] size=[.2 0 0 0]}
+#shape endeffWorkspace(torso_lift_link){ rel=<T d(90 0 1 0) t(.7 0 -.1) d(-90 0 0 1) > shape:marker color=[1 0 0] size=[.1 0 0 0] }
 
-shape baxterR (right_wrist){ rel=<T d(-90 0 1 0) d(-90 0 0 1) t(0 0 -.26)> type=5 size=[.1 0 0 0] color=[1 1 0] }
-shape baxterL (left_wrist) { rel=<T d(-90 0 1 0) d(-90 0 0 1) t(0 0 -.26)> type=5 size=[.1 0 0 0] color=[1 1 0] }
+shape baxterR (right_wrist){ rel=<T d(-90 0 1 0) d(-90 0 0 1) t(0 0 -.26)> shape:marker size=[.1 0 0 0] color=[1 1 0] }
+shape baxterL (left_wrist) { rel=<T d(-90 0 1 0) d(-90 0 0 1) t(0 0 -.26)> shape:marker size=[.1 0 0 0] color=[1 1 0] }
 
-shape elbowL(left_lower_shoulder){ rel=<T d(180 1 0 0) t(0 0 .42)> type=5 color=[1 0 0] size=[.2 0 0 0]}
-shape elbowR(right_lower_shoulder){ rel=<T d(180 1 0 0) t(0 0 .42)> type=5 color=[1 0 0] size=[.2 0 0 0]}
+shape elbowL(left_lower_shoulder){ rel=<T d(180 1 0 0) t(0 0 .42)> shape:marker color=[1 0 0] size=[.2 0 0 0]}
+shape elbowR(right_lower_shoulder){ rel=<T d(180 1 0 0) t(0 0 .42)> shape:marker color=[1 0 0] size=[.2 0 0 0]}
 
-shape wristR(right_upper_forearm){ rel=<T d(180 1 0 0) t(0 0 .0)> type=5 color=[1 0 0] size=[.4 0 0 0]}
-shape wristL(left_upper_forearm){ rel=<T d(180 1 0 0) t(0 0 .0)> type=5 color=[1 0 0] size=[.4 0 0 0]}
+shape wristR(right_upper_forearm){ rel=<T d(180 1 0 0) t(0 0 .0)> shape:marker color=[1 0 0] size=[.4 0 0 0]}
+shape wristL(left_upper_forearm){ rel=<T d(180 1 0 0) t(0 0 .0)> shape:marker color=[1 0 0] size=[.4 0 0 0]}

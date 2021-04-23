@@ -102,30 +102,30 @@ Edit l_gripper_r_finger_tip_joint { gripL }
 Edit laser_tilt_mount_joint { laser }
 
 ## FT sensors
-shape r_ft_sensor (r_wrist_roll_link){ rel=<T t(.01 0 0) d(-90 0 1 0) d(70.015 0 0 1)> type=4 color=[1 0 0] size=[.0 .0 .0356 .02] }
-shape l_ft_sensor (l_wrist_roll_link){ rel=<T t(.01 0 0) d(-90 0 1 0) d(70.015 0 0 1)> type=4 color=[1 0 0] size=[.0 .0 .0356 .02] }
+shape r_ft_sensor (r_wrist_roll_link){ rel=<T t(.01 0 0) d(-90 0 1 0) d(70.015 0 0 1)> shape:cylinder color=[1 0 0] size=[.0 .0 .0356 .02] }
+shape l_ft_sensor (l_wrist_roll_link){ rel=<T t(.01 0 0) d(-90 0 1 0) d(70.015 0 0 1)> shape:cylinder color=[1 0 0] size=[.0 .0 .0356 .02] }
 Edit r_wrist_roll_joint{ to=<T t(.0356 0 0)> }
 Edit l_wrist_roll_joint{ to=<T t(.0356 0 0)> }
 
 ## extra shapes
-shape base_footprint(base_footprint){ rel=<T > type=5 color=[1 0 0] size=[.5 0 0 0]}
-shape endeffBase(torso_lift_link){ rel=<T d(90 0 1 0) t(.2 0 0)> type=5 color=[1 0 0] size=[.1 0 0 0]}
-shape endeffHead(head_tilt_link){ rel=<T  d(-90 0 0 1) t(.08 0 .12) d(-90 0 1 0) d(-90 0 0 1)> type=5 color=[1 0 0] size=[.1 0 0 0]}
-shape endeffWorkspace(torso_lift_link){ rel=<T d(90 0 1 0) t(.6 0 -.1) d(-90 0 0 1) > type=5 color=[1 0 0] size=[.1 0 0 0] }
+shape base_footprint(base_footprint){ rel=<T > shape:marker color=[1 0 0] size=[.5 0 0 0]}
+shape endeffBase(torso_lift_link){ rel=<T d(90 0 1 0) t(.2 0 0)> shape:marker color=[1 0 0] size=[.1 0 0 0]}
+shape endeffHead(head_tilt_link){ rel=<T  d(-90 0 0 1) t(.08 0 .12) d(-90 0 1 0) d(-90 0 0 1)> shape:marker color=[1 0 0] size=[.1 0 0 0]}
+shape endeffWorkspace(torso_lift_link){ rel=<T d(90 0 1 0) t(.6 0 -.1) d(-90 0 0 1) > shape:marker color=[1 0 0] size=[.1 0 0 0] }
 
-shape endeffEyes(head_tilt_link){ rel=<T t(0 -.05 .12) d(180 0 0 1) d(-90 1 0 0)> type=5 color=[1 1 0] size=[.1 0 0 0]}
-#shape endeffKinect(head_tilt_link){ rel=<T t(-0.018 0.147 0.292) d(180 0 0 1) d(-90 1 0 0) t(-0.006 0.016 0.052) t(-0.00091 0.00227 -0.0023) t(0.000267 -0.000206 0.000627)> type=5 color=[1 0 0] size=[.1 0 0 0]}
-#taken from shape head_mount_kinect_rgb_link_1 (head_tilt_link){ type=sphere rel=<T 0.0125 0.147067 0.291953 -0.707107 0 0 0.707107 >  size=[ 0 0 0 0.0005 ]  }
-shape endeffKinect(head_tilt_link){ rel=<T t(-0.0175 0.147067 0.291953) d(180 0 0 1) d(90 1 0 0) > type=5 color=[1 0 0] size=[.1 0 0 0]}
-shape endeffLaser(laser_tilt_mount_link){ rel=<T t(-0.00300578 0.00167121 0.0122175) d(180 0 0 1) d(-90 1 0 0)> type=5 color=[1 1 1] size=[.1 0 0 0]}
+shape endeffEyes(head_tilt_link){ rel=<T t(0 -.05 .12) d(180 0 0 1) d(-90 1 0 0)> shape:marker color=[1 1 0] size=[.1 0 0 0]}
+#shape endeffKinect(head_tilt_link){ rel=<T t(-0.018 0.147 0.292) d(180 0 0 1) d(-90 1 0 0) t(-0.006 0.016 0.052) t(-0.00091 0.00227 -0.0023) t(0.000267 -0.000206 0.000627)> shape:marker color=[1 0 0] size=[.1 0 0 0]}
+#taken from shape head_mount_kinect_rgb_link_1 (head_tilt_link){ shape:sphere rel=<T 0.0125 0.147067 0.291953 -0.707107 0 0 0.707107 >  size=[ 0 0 0 0.0005 ]  }
+shape endeffKinect(head_tilt_link){ rel=<T t(-0.0175 0.147067 0.291953) d(180 0 0 1) d(90 1 0 0) > shape:marker color=[1 0 0] size=[.1 0 0 0]}
+shape endeffLaser(laser_tilt_mount_link){ rel=<T t(-0.00300578 0.00167121 0.0122175) d(180 0 0 1) d(-90 1 0 0)> shape:marker color=[1 1 1] size=[.1 0 0 0]}
 
-#shape endeffL(l_wrist_roll_link){ rel=<T t(.2 0 0)> type=5 color=[1 0 0] size=[.05 0 0 0]}
-#shape endeffR(r_wrist_roll_link){ rel=<T t(.2 0 0)> type=5 color=[1 0 0] size=[.05 0 0 0]}
-shape pr2R (r_wrist_roll_link){ rel=<T d(-90 0 1 0) d(-90 0 0 1) t(0 0 -.18)> type=ssBox size=[.03 .03 .05 .01] color=[1 1 0] logical:{ gripper } }
-shape pr2L (l_wrist_roll_link) { rel=<T d(-90 0 1 0) d(-90 0 0 1) t(0 0 -.18)> type=ssBox size=[.03 .03 .05 .01] color=[1 1 0] logical:{ gripper } }
+#shape endeffL(l_wrist_roll_link){ rel=<T t(.2 0 0)> shape:marker color=[1 0 0] size=[.05 0 0 0]}
+#shape endeffR(r_wrist_roll_link){ rel=<T t(.2 0 0)> shape:marker color=[1 0 0] size=[.05 0 0 0]}
+shape pr2R (r_wrist_roll_link){ rel=<T d(-90 0 1 0) d(-90 0 0 1) t(0 0 -.18)> shape:ssBox size=[.03 .03 .05 .01] color=[1 1 0] logical:{ gripper } }
+shape pr2L (l_wrist_roll_link) { rel=<T d(-90 0 1 0) d(-90 0 0 1) t(0 0 -.18)> shape:ssBox size=[.03 .03 .05 .01] color=[1 1 0] logical:{ gripper } }
 
-#shape endeffForceL(l_wrist_roll_link){ rel=<T t(.20 0 0) d(-90 0 1 0) d(70.015 0 0 1)> type=5 color=[0 1 1] size=[.05 0 0 0]}
-#shape endeffForceR(r_wrist_roll_link){ rel=<T t(.20 0 0) d(-90 0 1 0) d(70.015 0 0 1)> type=5 color=[0 1 1] size=[.05 0 0 0]}
+#shape endeffForceL(l_wrist_roll_link){ rel=<T t(.20 0 0) d(-90 0 1 0) d(70.015 0 0 1)> shape:marker color=[0 1 1] size=[.05 0 0 0]}
+#shape endeffForceR(r_wrist_roll_link){ rel=<T t(.20 0 0) d(-90 0 1 0) d(70.015 0 0 1)> shape:marker color=[0 1 1] size=[.05 0 0 0]}
 
-#shape wrenchDispL(l_wrist_roll_link){ rel=<T t(.25 0 0)> type=5 color=[1 1 0] size=[.1 0 0 0]}
-#shape wrenchDispR(r_wrist_roll_link){ rel=<T t(.25 0 0)> type=5 color=[1 1 0] size=[.1 0 0 0]}
+#shape wrenchDispL(l_wrist_roll_link){ rel=<T t(.25 0 0)> shape:marker color=[1 1 0] size=[.1 0 0 0]}
+#shape wrenchDispR(r_wrist_roll_link){ rel=<T t(.25 0 0)> shape:marker color=[1 1 0] size=[.1 0 0 0]}
