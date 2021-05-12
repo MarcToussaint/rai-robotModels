@@ -12,8 +12,7 @@ Delete panda_rightfinger_0
 
 #Include: 'gripper.g'
 
-gripper (panda_joint7){    shape:ssBox, size:[.21 .04 .04 .01], color:[.9 .9 .9 .5]
- Q:<d(-90 0 1 0) d(135 0 0 1) t(0 0 -.155)> }
+gripper (panda_joint7){ Q:<d(-90 0 1 0) d(135 0 0 1) t(0 0 -.155)> }
 gripperCenter (gripper){ shape:marker, size:[.03], color:[.9 .9 .9], Q:<t(0 0 -.055)> }
 
 Edit panda_finger_joint1{ Q:<t(.05 0 0)> joint:rigid }
