@@ -43,8 +43,8 @@ Edit joint { ctrl_H=1. }
 ## extra shapes to mimick pr2
 
 body base_footprint { mass=100 }
-shape base_footprint(base_footprint) { type=5 size=[.1 0 0 0] } #marker
-joint (base_footprint base){ type=rigid A=<T t(0 0 1) d(90 0 0 1)> }
+shape base_footprint(base_footprint) { shape:marker size=[.1 0 0 0] } #marker
+joint (base_footprint base){ joint:rigid A=<T t(0 0 1) d(90 0 0 1)> }
 
 frame baxterR (right_wrist){ shape:marker Q:<T t(0 0 .26) d(180 0 1 0) d(-90 0 0 1)> size:[.05] color:[1 1 0] }
 frame baxterL (left_wrist) { shape:marker Q:<T t(0 0 .19) d(180 0 1 0) d(-90 0 0 1)> size=[.05] color:[1 1 0] }
