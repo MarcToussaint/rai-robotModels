@@ -26,9 +26,9 @@ Edit R_base_origin (world) { Q:[ .4 -.4 .15] }
 
 
 ### tables
-table1 (world){ shape:ssBox, Q:[-1.5 0. .5], size:[.8 6. .1 .02], color:[.3 .3 .3], friction:.1 }
-table2 (world){ shape:ssBox, Q:[+1.5 0. .5], size:[.8 6. .1 .02], color:[.3 .3 .3], friction:.1 }
-#table3 (world){ shape:ssBox, Q:[0 -2.5 .5], size:[2. .8 .1 .02], color:[.3 .3 .3], friction:.1 }
+table1 (world){ shape:ssBox, Q:[-1.5 0. .5], size:[.8 6. .1 .02], color:[.3 .3 .3], friction:.1, logical:{table} }
+table2 (world){ shape:ssBox, Q:[+1.5 0. .5], size:[.8 6. .1 .02], color:[.3 .3 .3], friction:.1, logical:{table} }
+#table3 (world){ shape:ssBox, Q:[0 -2.5 .5], size:[2. .8 .1 .02], color:[.3 .3 .3], friction:.1, logical:{table} }
 
   
 block1 (table2){ joint:rigid, shape:ssBox, Q:[0 0 .095 1 0 0 1], size:[.06 .15 .09 .01], color:[.6 .6 .6] }
@@ -43,7 +43,7 @@ board2 (table2){ joint:rigid, shape:ssBox, Q:[-.25 -2.2 .095], size:[.5 .15 .03 
 board3 (table2){ joint:rigid, shape:ssBox, Q:[-.25 -2 .095], size:[.5 .15 .03 .01], color:[.6 .6 .6] }
 board4 (table2){ joint:rigid, shape:ssBox, Q:[-.25 -1.8 .095], size:[.5 .15 .03 .01], color:[.6 .6 .6] }
 board5 (table2){ joint:rigid, shape:ssBox, Q:[-.25 -1.6 .095], size:[.5 .15 .03 .01], color:[.6 .6 .6] }
-board5 (table2){ joint:rigid, shape:ssBox, Q:[-.25 -1.4 .095], size:[.5 .15 .03 .01], color:[.6 .6 .6] }
+board6 (table2){ joint:rigid, shape:ssBox, Q:[-.25 -1.4 .095], size:[.5 .15 .03 .01], color:[.6 .6 .6] }
 
 stick1 (table1){ joint:rigid shape:capsule, Q:<t(.25 -2.4 .07) d(90 0 1 0) >, size:[.5 .02], color:[.6 .6 .6] }
 stick2 (table1){ joint:rigid shape:capsule, Q:<t(.25 -2.2 .07) d(90 0 1 0) >, size:[.5 .02], color:[.6 .6 .6] }
@@ -55,20 +55,20 @@ stick6 (table1){ joint:rigid shape:capsule, Q:<t(.25 -1.  .07) d(45 0 0 1) d(90 
 Include:'ringBox.g'
 Edit box (table1){ joint:rigid, Q:<t(0 0 .15) d(45 0 0 1)> }
         
-box4 (floor){
+box1 (floor){
     shape:ssBox, Q:[-.5 1 .35], size:[.4 .2 .6 .02], color:[.6 .6 .6]
     joint:rigid
     friction:.1
 }
 
-box5 (floor){
+box2 (floor){
     shape:ssBox, Q:[.5 1.6 .25], size:[1. .2 .4 .02], color:[.6 .6 .6]
     joint:rigid
     friction:.1
 }
 
 
-ball0 (table1){ joint:rigid Q:[.0 1. .1]
+ball1 (table1){ joint:rigid Q:[.0 1. .1]
             shape:sphere size:[.05] color:[1 1 .6] }
 
 ball2 (table2){ joint:rigid Q:[0 2.5 .1]
