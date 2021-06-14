@@ -13,16 +13,16 @@ back (world){ shape:ssBox, Q:<t(-2. 0 1.)>, size:[.1 6.1 2. .02], color:[.3 .3 .
 
 ### two pandas
 
-Prefix: "L_"
+Prefix: "l_"
 Include: 'panda_mobile.g'
 
-Prefix: "R_"
+Prefix: "r_"
 Include: 'panda_mobile.g'
 
 Prefix!
 
-Edit L_base_origin (world) { Q:[-.4 -.4 .15] }
-Edit R_base_origin (world) { Q:[ .4 -.4 .15] }
+Edit l_base_origin (world) { Q:[-.4 -.4 .15] }
+Edit r_base_origin (world) { Q:[ .4 -.4 .15] }
 
 
 ### tables
