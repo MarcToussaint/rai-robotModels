@@ -21,7 +21,7 @@ frame panda_coll4(panda_joint4)	{ shape:capsule color:[1.,1.,1.,.2] size:[.12 .0
 frame panda_coll6(panda_joint6)	{ shape:capsule color:[1.,1.,1.,.2] size:[.1 .07] Q:<d(90 0 1 0) t(0 .0 -.04)>, noVisual, contact:-2  }
 frame panda_coll7(panda_joint7)	{ shape:capsule color:[1.,1.,1.,.2] size:[.1 .07] Q:<d(90 0 1 0) t(0 .0 .01)>, noVisual, contact:-2  }
 
-frame panda_coll_hand(panda_hand_joint)	{ shape:capsule color:[1.,1.,1.,.2] size:[.15 .06] Q:<d(90 1 0 0) t(0 .01 .0)>, noVisual, contact:-3  }
+frame panda_coll_hand(panda_hand_joint)	{ shape:capsule color:[1.,1.,1.,.2] size:[.14 .05] Q:<d(90 1 0 0) t(0 .02 .0)>, noVisual, contact:-3  }
 
 frame panda_coll_finger1(panda_finger_joint1)	{ shape:capsule color:[1.,1.,1.,.2] size:[.03 .015] Q:<d(0 1 0 0) t(.015 .0 .03)>, noVisual, contact:-2  }
 frame panda_coll_finger2(panda_finger_joint2)	{ shape:capsule color:[1.,1.,1.,.2] size:[.03 .015] Q:<d(0 1 0 0) t(.015 .0 .03)>, noVisual, contact:-2  }
