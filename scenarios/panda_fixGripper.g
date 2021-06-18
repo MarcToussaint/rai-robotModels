@@ -17,8 +17,8 @@ gripper (panda_joint7){ Q:<d(-90 0 1 0) d(135 0 0 1) t(0 0 -.155)>  logical:{gri
 gripperCenter (gripper){ shape:marker, size:[.03], color:[.9 .9 .9], Q:<t(0 0 -.055)> }
 
 # make fingers rigidly attached
-Edit panda_finger_joint1{ Q:<t(.05 0 0)> joint! }
-Edit panda_finger_joint2{ Q:<t(.05 0 0)> joint! }
+Edit panda_finger_joint1{ Q:<t(.05 0 0)> joint:none }
+Edit panda_finger_joint2{ Q:<t(.05 0 0)> joint:none }
 
 # define better finger collision shapes
 Delete panda_coll_finger1
