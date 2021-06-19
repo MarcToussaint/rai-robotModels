@@ -1,36 +1,41 @@
 world {}
 
+### table
+
 table (world){
-    shape:ssBox, Q:<t(0 0. .6)>, size:[2. 2. .1 .02], color:[.3 .3 .3]
+    shape:ssBox, Q:<t(0 0. .6)>, size:[3. 2. .1 .02], color:[.3 .3 .3]
     contact, logical:{ }
     friction:.1
 }
 
-#L_lift (table){ joint:transZ, limits:[0 .5] }
+### two pandas
 
-Prefix: "L_"
+Prefix: "l_"
 Include: 'panda_fixGripper.g'
 
-Prefix: "R_"
+Prefix: "r_"
 Include: 'panda_fixGripper.g'
 
 Prefix!
 
-L_workspace (L_panda_link0) {
-            Q:<t(.4 0 .4)>
-    shape:ssBox, size:[.4 .6 .4 .02], color:[.5 .5 .5 .2] }
-R_workspace (R_panda_link0) {
-            Q:<t(.4 0 .4)>
-    shape:ssBox, size:[.4 .6 .4 .02], color:[.5 .5 .5 .2] }
-L_gripperPregrasp (L_gripper) {
-            Q:<t(0 0 -.1)>
-    shape:ssBox, size:[.05 .05 .25 .02], color:[.5 .5 .5 .2] }
-R_gripperPregrasp (R_gripper) {
-            Q:<t(0 0 -.1)>
-    shape:ssBox, size:[.05 .05 .25 .02], color:[.5 .5 .5 .2] }
+Edit l_panda_link0 (table) { Q:<t(-.5 -.3 .1) d(90 0 0 1)> }
+Edit r_panda_link0 (table) { Q:<t( .5 -.3 .1) d(90 0 0 1)> }
+        
+# l_workspace (l_panda_link0) {
+#             Q:<t(.4 0 .4)>
+#     shape:ssBox, size:[.4 .6 .4 .02], color:[.5 .5 .5 .2] }
+# r_workspace (r_panda_link0) {
+#             Q:<t(.4 0 .4)>
+#     shape:ssBox, size:[.4 .6 .4 .02], color:[.5 .5 .5 .2] }
+#l_gripperPregrasp (l_gripper) {
+#            Q:<t(0 0 -.1)>
+#    shape:ssBox, size:[.05 .05 .25 .02], color:[.5 .5 .5 .2] }
+#r_gripperPregrasp (r_gripper) {
+#            Q:<t(0 0 -.1)>
+#    shape:ssBox, size:[.05 .05 .25 .02], color:[.5 .5 .5 .2] }
 
-Edit L_panda_link0 (table) { Q:<t(-.4 -.4 .1) d(90 0 0 1)> }
-Edit R_panda_link0 (table)  { Q:<t( .4 -.4 .1) d(90 0 0 1)> }
+
+### camera
 
 camera(world){
     Q:<t(-0.01 -.2 1.8) d(30 1 0 0)>,

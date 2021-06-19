@@ -9,6 +9,7 @@ Include: 'panda_fixGripper.g'
 
 Edit panda_link0 (base)  { Q:<t(0 0 .05) d(90 0 0 1)> }
 
+# add E.T. hooks
 hookA (panda_joint5){ Q:[0 .2 0] shape:sphere, size:[.025], color:[.6 .9 .9] }
 (hookA){ Q:[0 -.05 0 1 1 0 0] shape:capsule, size:[.075 .01], color:[.9 .9 .9] }
 
