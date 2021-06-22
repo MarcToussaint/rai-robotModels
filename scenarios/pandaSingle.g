@@ -1,7 +1,7 @@
 world {}
 
 table (world){
-    shape:ssBox, Q:<t(0 0. .6)>, size:[2. 2. .06 .02], color:[.3 .3 .3]
+    shape:ssBox, Q:<t(0 0. .6)>, size:[2.5 2.5 .06 .02], color:[.3 .3 .3]
     friction:.1
     contact
 }
@@ -11,7 +11,7 @@ Include: 'panda_fixGripper.g'
 
 Prefix!
 
-Edit R_panda_link0 (table)  { Q:<t(0 -.4 .03) d(90 0 0 1)> }
+Edit R_panda_link0 (table)  { Q:<t(0 -.2 .03) d(90 0 0 1)> }
 
 camera(world){
     Q:<t(-0.01 -.2 1.8) d(30 1 0 0)>,
