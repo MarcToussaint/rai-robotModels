@@ -3,6 +3,7 @@ world {}
 table (world){
     shape:ssBox, Q:<t(0 0. .6)>, size:[2. 2. .06 .02], color:[.3 .3 .3]
     friction:.1
+    contact
 }
 
 Prefix: "R_"
