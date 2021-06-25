@@ -11,10 +11,15 @@ Edit panda_joint4 { q= -2 }
 Delete panda_hand_0
 Delete panda_leftfinger_0
 Delete panda_rightfinger_0
+
+# kill rigid hand joints
+Edit panda_joint8 { joint:none }
+Edit panda_hand_joint { joint:none }
         
 # define a gripper center and proper orientation
-gripper (panda_joint7){ Q:<d(-90 0 1 0) d(135 0 0 1) t(0 0 -.155)>  logical:{gripper:True} }
-gripperCenter (gripper){ shape:marker, size:[.03], color:[.9 .9 .9], Q:<t(0 0 -.055)> }
+gripper (panda_joint7){
+    Q:<d(-90 0 1 0) d(135 0 0 1) t(0 0 -.21)>  logical:{gripper:True}
+    shape:marker, size:[.03], color:[.9 .9 .9] }
 
 # make fingers part of the gripper link
 Edit panda_finger_joint1{ Q:<t(.05 0 0)> joint:none }
