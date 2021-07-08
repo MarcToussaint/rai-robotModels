@@ -16,9 +16,12 @@ box2 (table){
     friction:.1
 }
 
-block1 (table){ joint:rigid, shape:ssBox, Q:[1 0 .095 1 0 0 1], size:[.06 .15 .09 .01], color:[.6 .6 .6], contact }
-block2 (table){ joint:rigid, shape:ssBox, Q:[1 -.2 .095 1 0 0 1], size:[.06 .15 .09 .01], color:[.6 .6 .6], contact }
-block3 (table){ joint:rigid, shape:ssBox, Q:[1 -.4 .095 1 0 0 1], size:[.06 .15 .09 .01], color:[.6 .6 .6], contact }
+block1 (table){ joint:rigid, shape:ssBox, Q:[1 .2 .095 1 0 0 1], size:[.06 .15 .09 .01], color:[.6 .6 .6], contact }
+block2 (table){ joint:rigid, shape:ssBox, Q:[1 0 .095 1 0 0 1], size:[.06 .15 .09 .01], color:[.6 .6 .6], contact }
+block3 (table){ joint:rigid, shape:ssBox, Q:[1 -.2 .095 1 0 0 1], size:[.06 .15 .09 .01], color:[.6 .6 .6], contact }
+block4 (table){ joint:rigid, shape:ssBox, Q:[1 -.4 .095 1 0 0 1], size:[.06 .15 .09 .01], color:[.6 .6 .6], contact }
+block5 (table){ joint:rigid, shape:ssBox, Q:[1 -.6 .095 1 0 0 1], size:[.06 .15 .09 .01], color:[.6 .6 .6], contact }
+block6 (table){ joint:rigid, shape:ssBox, Q:[1 -.8 .095 1 0 0 1], size:[.06 .15 .09 .01], color:[.6 .6 .6], contact }
 
 board1 (box2){ joint:rigid, shape:ssBox, Q:[.0 -.2 .215], size:[.5 .15 .03 .01], color:[.6 .6 .6], contact }
 board2 (box2){ joint:rigid, shape:ssBox, Q:[.0 -.0 .215], size:[.5 .15 .03 .01], color:[.6 .6 .6], contact }
@@ -32,7 +35,7 @@ hook(table) { joint:rigid type:ssBox Q:[-.2 -.6 .07] size:[.03 .8 .04 .01] color
 hookTip (hook) { Q:[.085 -.385 0] type:ssBox size:[.2 .03 .04 .01] color:[.6 .6 .6], contact, logical:{ object, pusher } }
 
 Include:'ringBox.g'
-Edit box (table){ joint:rigid, Q:<t(1.2 -.7 .15) d(45 0 0 1)> }
+Edit box (table){ joint:rigid, Q:<t(1.25 -.7 .15) d(45 0 0 1)> }
 
 drawer (table){ Q:[-1.2 .5 .1] }
 drawerA (drawer){ shape:ssBox size:[.45 .05 .1 .02] Q:[0 -.15 0] color:[.6 .6 .6], contact }
