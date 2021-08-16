@@ -18,8 +18,8 @@ Include: 'panda_fixGripper.g'
 
 Prefix!
 
-Edit l_panda_link0 (table) { Q:<t(-.5 -.3 .1) d(90 0 0 1)> }
-Edit r_panda_link0 (table) { Q:<t( .5 -.3 .1) d(90 0 0 1)> }
+Edit l_panda_link0 (table) { Q:<t(-.5 -.3 .05) d(90 0 0 1)> }
+Edit r_panda_link0 (table) { Q:<t( .5 -.3 .05) d(90 0 0 1)> }
         
 # l_workspace (l_panda_link0) {
 #             Q:<t(.4 0 .4)>
