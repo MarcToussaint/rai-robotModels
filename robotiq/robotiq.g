@@ -19,3 +19,5 @@ Edit robotiq_arg2f_base_link (robotiq_base) {}
 ftsensor (robotiq_base) { Q:[0 0 -.035], shape:mesh, color:[0.2, 0.2, 0.2], mesh:'meshes/robotiq_ft300.ply' }
         
         
+Edit left_inner_finger_pad_joint { joint:none }
+Edit right_inner_finger_pad_joint { joint:none }

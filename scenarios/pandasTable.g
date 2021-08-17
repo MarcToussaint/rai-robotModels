@@ -11,29 +11,16 @@ table (world){
 ### two pandas
 
 Prefix: "l_"
-Include: 'panda_fixGripper.g'
+Include: 'panda_fixRobotiq.g'
 
 Prefix: "r_"
-Include: 'panda_fixGripper.g'
+Include: 'panda_fixRobotiq.g'
 
 Prefix!
 
 Edit l_panda_link0 (table) { Q:<t(-.5 -.3 .1) d(90 0 0 1)> }
 Edit r_panda_link0 (table) { Q:<t( .5 -.3 .1) d(90 0 0 1)> }
         
-# l_workspace (l_panda_link0) {
-#             Q:<t(.4 0 .4)>
-#     shape:ssBox, size:[.4 .6 .4 .02], color:[.5 .5 .5 .2] }
-# r_workspace (r_panda_link0) {
-#             Q:<t(.4 0 .4)>
-#     shape:ssBox, size:[.4 .6 .4 .02], color:[.5 .5 .5 .2] }
-#l_gripperPregrasp (l_gripper) {
-#            Q:<t(0 0 -.1)>
-#    shape:ssBox, size:[.05 .05 .25 .02], color:[.5 .5 .5 .2] }
-#r_gripperPregrasp (r_gripper) {
-#            Q:<t(0 0 -.1)>
-#    shape:ssBox, size:[.05 .05 .25 .02], color:[.5 .5 .5 .2] }
-
 
 ### camera
 
