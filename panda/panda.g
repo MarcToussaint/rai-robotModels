@@ -45,12 +45,12 @@ gripper (panda_joint7){
     Q:<d(-90 0 1 0) d(135 0 0 1) t(0 0 -.21)>
     shape:marker, size:[.03], color:[.9 .9 .9], logical:{gripper:True} }
 palm (panda_hand_joint)	{
-    Q:<d(90 1 0 0) t(0 .02 .0)>
-    shape:capsule color:[1.,1.,1.,.2] size:[.14 .05], contact:-1 }
+    Q:<d(90 1 0 0) t(0 .0 .0)>
+    shape:capsule color:[1.,1.,1.,.2] size:[.14 .07], contact:-1 }
 finger1 (panda_finger_joint1){
-    Q:<t(.018 0 .035)> 
-    shape:capsule, size:[.02, .02], color:[1. 1. 1. .2], contact:-2 }
+    Q:<t(.028 0 .035)> 
+    shape:capsule, size:[.02, .03], color:[1. 1. 1. .2], contact:-2 }
 finger2 (panda_finger_joint2){
-    Q:<t(.018 0 .035)>
-    shape:capsule, size:[.02, .02], color:[1. 1. 1. .2], contact:-2 }
+    Q:<t(.028 0 .035)>
+    shape:capsule, size:[.02, .03], color:[1. 1. 1. .2], contact:-2 }
 
