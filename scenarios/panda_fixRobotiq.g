@@ -35,6 +35,9 @@ Delete finger2
 Include: '../robotiq/robotiq.g'
 Edit robotiq_base (panda_joint8) { Q:[0 0 .035] }
 
+# add extra collision object for panda wrist
+panda_coll7b(panda_joint7)	{ shape:capsule color:[1.,1.,1.,.2] size:[.05 .05] Q:<t(.08 .0 .0) d(45 1 0 0) t(0 0 -.025)>, contact:-2  }
+        
 # kill the finger joint
 Edit panda_joint8 { joint:none }
 Edit finger_joint { joint:none }
