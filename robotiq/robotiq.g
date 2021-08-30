@@ -29,7 +29,7 @@ ftsensor (robotiq_base) { Q:[0 0 -.035], shape:mesh, color:[0.2, 0.2, 0.2], mesh
 # define a gripper, palm and fingers
 
 gripper (robotiq_base){
-    Q:<d(180 0 1 0) d(90 0 0 1) t(0 0 -.135)>
+    Q:<d(180 0 1 0) d(90 0 0 1) t(0 0 -.155)>
     shape:marker, size:[.03], color:[.9 .9 .9], logical:{gripper:True} }
 palm (robotiq_base)	{
     Q:<d(90 1 0 0) t(0 .075 .0)>,
