@@ -16,18 +16,7 @@ Delete panda_rightfinger_0
 Edit panda_joint8 { joint:none }
 Edit panda_hand_joint { joint:none }
         
-# define a gripper center and proper orientation
-gripper (panda_joint7){
-    Q:<d(-90 0 1 0) d(135 0 0 1) t(0 0 -.21)>  logical:{gripper:True}
-    shape:marker, size:[.03], color:[.9 .9 .9] }
-
 # make fingers part of the gripper link
 Edit panda_finger_joint1{ Q:<t(.05 0 0)> joint:none }
 Edit panda_finger_joint2{ Q:<t(.05 0 0)> joint:none }
-
-# define better finger collision shapes
-Delete panda_coll_finger1
-Delete panda_coll_finger2
-finger1(panda_finger_joint1){ Q:<t(.018 0 .035)> contact: -2, shape:capsule, size:[.02, .02], color:[1. 1. 1. .2] }
-finger2(panda_finger_joint2){ Q:<t(.018 0 .035)>contact: -2, shape:capsule, size:[.02, .02], color:[1. 1. 1. .2]}
 
