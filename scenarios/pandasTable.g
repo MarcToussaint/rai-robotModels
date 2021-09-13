@@ -2,8 +2,12 @@ world {}
 
 ### table
 
-table (world){
-    shape:ssBox, Q:<t(0 0. .6)>, size:[3. 2. .1 .02], color:[.3 .3 .3]
+table_base (world) {
+    Q:[0 0 .6]
+    shape:marker, size:[.03],
+}
+table (table_base){
+    shape:ssBox, Q:[0 0 -.05], size:[3. 2. .1 .02], color:[.3 .3 .3]
     contact, logical:{ }
     friction:.1
 }
@@ -18,8 +22,8 @@ Include: 'panda_fixRobotiq.g'
 
 Prefix!
 
-Edit l_panda_base (table) { Q:<t(-.4 -.3 .05) d(90 0 0 1)> }
-Edit r_panda_base (table) { Q:<t( .4 -.3 .05) d(90 0 0 1)> }
+Edit l_panda_base (table_base) { Q:<t(-.4 -.3 .0) d(90 0 0 1)> }
+Edit r_panda_base (table_base) { Q:<t( .4 -.3 .0) d(90 0 0 1)> }
         
 
 ### camera
