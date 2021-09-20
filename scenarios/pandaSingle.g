@@ -15,7 +15,7 @@ Include: 'panda_fixGripper.g'
 
 Prefix!
 
-Edit l_panda_link0 (table)  { Q:<t(0 -.2 .05) d(90 0 0 1)> }
+Edit l_panda_base (table)  { Q:<t(0 -.2 .05) d(90 0 0 1)> }
 
 ### camera
 

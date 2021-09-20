@@ -1,5 +1,8 @@
-Include='panda_clean.g'
+## create standard base frame before including
 
+panda_base {}
+Include='panda_clean.g'
+Edit panda_link0 (panda_base) {}
 
 ## simpler collision models
 
