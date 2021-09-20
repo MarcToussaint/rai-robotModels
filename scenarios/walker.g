@@ -1,6 +1,6 @@
 handA {
     X:<t(0 0 .05) d(180 0 0 1)>
-    shape:marker size:[.06], contact:-1,
+    shape:marker size:[.06],
     logical:{gripper} }
 
 palmA(handA) { Q:[0 0 .075] shape:ssBox size:[.2 .1 .05 .02], contact:-1 }
@@ -27,7 +27,7 @@ arm2(mid2) {
 
 handB(arm2) {
     joint:hingeZ A:<t(0 0 .185) d(180 0 1 0)>
-    shape:marker size:[.06], contact:-1,
+    shape:marker size:[.06],
     logical:{gripper} }
 
 palmB(handB) { Q:[0 0 .075] shape:ssBox size:[.2 .1 .05 .02], contact:-1 }
