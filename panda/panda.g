@@ -18,8 +18,8 @@ Delete panda_hand_0
 Delete panda_leftfinger_0
 Delete panda_rightfinger_0
 
-panda_coll0(panda_link0)	{ shape:capsule color:[1.,1.,1.,.2] size:[.1 .1] Q:<t(-.04 .0 .03) d(90 0 1 0)>, contact:-2  }
-panda_coll0b(panda_link0)	{ shape:capsule color:[1.,1.,1.,.2] size:[.4 .1] Q:<t(-.3 -.12 .0) d(90 0 1 0)>, contact:-2  }
+panda_coll0(panda_link0)	{ shape:capsule color:[1.,1.,1.,.2] size:[.1 .15] Q:<t(-.04 .0 .03) d(90 0 1 0)>, contact:-2  }
+panda_coll0b(panda_link0)	{ shape:capsule color:[1.,1.,1.,.2] size:[.2 .1] Q:<t(-.2 -.12 .0) d(90 0 1 0)>, contact:-2  }
 
 panda_coll1(panda_joint1)	{ shape:capsule color:[1.,1.,1.,.2] size:[.2 .08] Q:<d(90 0 1 0) t(0 0 -.15)>, contact:-2  }
 panda_coll3(panda_joint3)	{ shape:capsule color:[1.,1.,1.,.2] size:[.2 .08] Q:<d(90 0 1 0) t(0 0 -.15)>, contact:-2  }
