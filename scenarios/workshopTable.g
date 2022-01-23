@@ -27,11 +27,11 @@ board1 (box2){ joint:rigid, shape:ssBox, Q:[.0 -.2 .215], size:[.5 .15 .03 .01],
 board2 (box2){ joint:rigid, shape:ssBox, Q:[.0 -.0 .215], size:[.5 .15 .03 .01], color:[.6 .6 .6], contact }
 board3 (box2){ joint:rigid, shape:ssBox, Q:[.0  .2 .215], size:[.5 .15 .03 .01], color:[.6 .6 .6], contact }
 
-stick1 (table){ joint:rigid shape:capsule, Q:<t(.2 -.9 .07) d(90 1 0 0) >, size:[.5 .02], color:[.6 .6 .6], contact }
-stick2 (table){ joint:rigid shape:capsule, Q:<t(.4 -.9 .07) d(90 1 0 0) >, size:[.5 .02], color:[.6 .6 .6], contact }
-stick3 (table){ joint:rigid shape:capsule, Q:<t(.6 -.9  .07) d(90 1 0 0) >, size:[.5 .02], color:[.6 .6 .6], contact }
+stick1 (table){ joint:rigid shape:capsule, Q:<t(.1 -.5 .07) d(90 1 0 0) >, size:[.5 .02], color:[.6 .6 .6], contact }
+#stick2 (table){ joint:rigid shape:capsule, Q:<t(.4 -.9 .07) d(90 1 0 0) >, size:[.5 .02], color:[.6 .6 .6], contact }
+#stick3 (table){ joint:rigid shape:capsule, Q:<t(.6 -.9  .07) d(90 1 0 0) >, size:[.5 .02], color:[.6 .6 .6], contact }
 
-hook(table) { joint:rigid type:ssBox Q:[-.2 -.6 .07] size:[.03 .8 .04 .01] color:[.6 .6 .6], contact, logical:{ object } }
+hook(table) { joint:rigid type:ssBox Q:[-.1 -.6 .07] size:[.03 .8 .04 .01] color:[.6 .6 .6], contact, logical:{ object } }
 hookTip (hook) { Q:[.085 -.385 0] type:ssBox size:[.2 .03 .04 .01] color:[.6 .6 .6], contact, logical:{ object, pusher } }
 
 Include:'ringBox.g'
@@ -42,7 +42,7 @@ drawerA (drawer){ shape:ssBox size:[.45 .05 .1 .02] Q:[0 -.15 0] color:[.6 .6 .6
 drawerB (drawer){ shape:ssBox size:[.05 .35 .1 .02] Q:[-.2 0 0] color:[.6 .6 .6], contact }
 drawerC (drawer){ shape:ssBox size:[.05 .35 .1 .02] Q:[.2 0 0] color:[.6 .6 .6], contact }
 
-bucket (table){ Q:[.7 .6 .15] }
+bucket (table){ Q:[.5 1. .15] }
 bucketA (bucket){ shape:ssBox size:[.33 .33 .03 .01] Q:[0 0 -.075] color:[.6 .6 .6], contact }
 bucketA (bucket){ shape:ssBox size:[.33 .03 .15 .01] Q:[0 -.15 0] color:[.6 .6 .6], contact }
 bucketA (bucket){ shape:ssBox size:[.33 .03 .15 .01] Q:[0  .15 0] color:[.6 .6 .6], contact }
@@ -53,7 +53,7 @@ bucketC (bucket){ shape:ssBox size:[.03 .33 .15 .01] Q:[.15 0 0] color:[.6 .6 .6
 ball1 (drawer){ joint:rigid Q:[.0 0. .0]
             shape:sphere size:[.05] color:[1 1 .6] }
 
-ball2 (table){ joint:rigid Q:[1.2 .7 .1]
+ball2 (table){ joint:rigid Q:[.8 .5 .1]
             shape:sphere size:[.05] color:[1 1 .6] }
 
 ball3 (bucket){ joint:rigid Q:[0 0 0]

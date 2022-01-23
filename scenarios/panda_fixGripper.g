@@ -17,6 +17,6 @@ Edit panda_joint8 { joint:none }
 Edit panda_hand_joint { joint:none }
         
 # make fingers part of the gripper link
-Edit panda_finger_joint1{ Q:<t(.05 0 0)> joint:none }
-Edit panda_finger_joint2{ Q:<t(.05 0 0)> joint:none }
+Edit panda_finger_joint1{ Q:<t(.05 0 0)> joint:rigid }
+Edit panda_finger_joint2{ Q:<t(.05 0 0)> joint:rigid }
 

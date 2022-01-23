@@ -7,6 +7,7 @@ Include: '../panda/panda.g'
 
 Edit panda_joint2 { q= -.5 }
 Edit panda_joint4 { q= -2 }
+Edit panda_joint7 { q=-.5 }
 
 # delete original gripper
 

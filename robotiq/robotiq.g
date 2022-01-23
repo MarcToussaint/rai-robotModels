@@ -43,5 +43,7 @@ finger2 (left_inner_finger){
 
 Edit right_inner_finger { limits:[-.1, .1] }        
 Edit left_inner_finger { limits:[-.1, .1] }        
+Edit right_outer_finger_joint { limits:[-.1, .1] }
+Edit left_outer_finger_joint { limits:[-.1, .1] }
         
 robotiq_optitrackMarker (robotiq_base) { Q:[0 .0485 0.0025] shape:sphere size:[.0049] }
