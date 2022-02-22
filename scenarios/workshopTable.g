@@ -1,21 +1,21 @@
 Include: 'pandasTable.g'
 
+# add E.T. hooks
+l_hookA (l_panda_joint5){ Q:[0 .2 0] shape:sphere, size:[.025], color:[.6 .9 .9] }
+(l_hookA){ Q:[0 -.05 0 1 1 0 0] shape:capsule, size:[.075 .01], color:[.9 .9 .9] }
+
+l_hookB (l_gripper){ Q:[.13 0 .15] shape:sphere, size:[.025], color:[.6 .9 .9] }
+(l_hookB){ Q:[-.05 0 0 1 0 1 0] shape:capsule, size:[.075 .01], color:[.9 .9 .9] }
+
 railA(table){  shape:ssBox size:[3.05 .05 .1 .02] Q:[0 1. .1] color:[.6 .6 .6], contact }
 railB(table){  shape:ssBox size:[.05 2.05 .1 .02] Q:[-1.5 0 .1] color:[.6 .6 .6], contact }
 railC(table){  shape:ssBox size:[.05 2.05 .1 .02] Q:[1.5 0 .1] color:[.6 .6 .6], contact }
 
-box1 (table){
-    joint:rigid
-    shape:ssBox, Q:<t(-.2 .6 .25) d(-45 0 0 1)>, size:[.6 .2 .4 .02], color:[.6 .6 .6], contact
-    friction:.1
-}
-
-box2 (table){
-    joint:rigid
-    shape:ssBox, Q:[-1.3 -.5 .25], size:[.2 1. .4 .02], color:[.6 .6 .6], contact
-    friction:.1
-}
-
+box1 (table){ joint:rigid, shape:ssBox, Q:<t(-.2 .6 .25) d(-45 0 0 1)>, size:[.6 .2 .4 .02], color:[.6 .6 .6], contact }
+box2 (table){ joint:rigid, shape:ssBox, Q:[-1.3 -.5 .25], size:[.2 1. .4 .02], color:[.6 .6 .6], contact }
+cyl1 (table){ joint:rigid, shape:ssCylinder, Q:[.2 .7 .13], size:[.16 .16 .02], color:[.6 .6 .6], contact }
+cyl2 (table){ joint:rigid, shape:ssCylinder, Q:[-.6 .5 .13], size:[.16 .16 .02], color:[.6 .6 .6], contact }
+        
 block1 (table){ joint:rigid, shape:ssBox, Q:[1 .2 .095 1 0 0 1], size:[.06 .15 .09 .01], color:[.6 .6 .6], contact }
 block2 (table){ joint:rigid, shape:ssBox, Q:[1 0 .095 1 0 0 1], size:[.06 .15 .09 .01], color:[.6 .6 .6], contact }
 block3 (table){ joint:rigid, shape:ssBox, Q:[1 -.2 .095 1 0 0 1], size:[.06 .15 .09 .01], color:[.6 .6 .6], contact }
