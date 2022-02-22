@@ -23,7 +23,7 @@ panda_coll0b(panda_link0)	{ shape:capsule color:[1.,1.,1.,.2] size:[.2 .1] Q:<t(
 
 panda_coll1(panda_joint1)	{ shape:capsule color:[1.,1.,1.,.2] size:[.2 .08] Q:<d(90 0 1 0) t(0 0 -.15)>, contact:-2  }
 panda_coll3(panda_joint3)	{ shape:capsule color:[1.,1.,1.,.2] size:[.2 .08] Q:<d(90 0 1 0) t(0 0 -.15)>, contact:-2  }
-panda_coll5(panda_joint5)	{ shape:capsule color:[1.,1.,1.,.2] size:[.22 .08] Q:<d(90 0 1 0) t(0 .02 -.2)>, contact:-2  }
+panda_coll5(panda_joint5)	{ shape:capsule color:[1.,1.,1.,.2] size:[.22 .09] Q:<d(90 0 1 0) t(0 .02 -.2)>, contact:-2  }
 
 panda_coll2(panda_joint2)	{ shape:capsule color:[1.,1.,1.,.2] size:[.12 .11] Q:<d(90 0 1 0) t(0 0 .0)>, contact:-2  }
 panda_coll4(panda_joint4)	{ shape:capsule color:[1.,1.,1.,.2] size:[.12 .08] Q:<d(90 0 1 0) t(0 0 .0)>, contact:-2  }

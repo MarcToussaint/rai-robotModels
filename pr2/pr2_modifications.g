@@ -56,7 +56,7 @@
 # Edit l_gripper_r_finger_tip_link_0 { contact }
 
 ## BASE
-Edit worldTranslationRotation { Q:<d(90 0 0 1)> gains=[1 1] ctrl_limits=[1 1 1] ctrl_H=10 base }
+Edit worldTranslationRotation { Q:<d(90 0 0 1)> gains=[1 1] limits:[-10 10 -10 10 -6 6] ctrl_limits=[1 1 1] ctrl_H=10 base }
 
 ## TORS0
 Edit torso_lift_joint { q=.1    ctrl_H=3000  gains=[0 0] gains=[100000 10] torso }

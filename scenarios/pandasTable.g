@@ -9,7 +9,6 @@ table_base (world) {
 table (table_base){
     shape:ssBox, Q:[0 0 -.05], size:[2.3 1.24 .1 .02], color:[.3 .3 .3]
     contact, logical:{ }
-    friction:.1
 }
 
 ### two pandas
