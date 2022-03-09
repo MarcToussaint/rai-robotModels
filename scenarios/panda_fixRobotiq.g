@@ -42,6 +42,7 @@ Edit panda_coll7 { Q:<d(90 0 1 0) t(0 .0 .07)> size:[.22 .07] }
 panda_coll7b(panda_joint7)	{ shape:capsule color:[1.,1.,1.,.2] size:[.05 .05] Q:<t(.08 .0 .0) d(45 1 0 0) t(0 0 -.03)>, contact:-2  }
         
 # kill the finger joint
+#Edit robotiq_arg2f_base_link { joint:none }
 Edit panda_joint8 { joint:none }
 Edit finger_joint { joint:none }
 Edit left_inner_knuckle_joint { joint:none }
@@ -49,4 +50,6 @@ Edit right_inner_knuckle_joint { joint:none }
 Edit right_outer_knuckle_joint { joint:none }
 Edit left_inner_finger_joint { joint:none }
 Edit right_inner_finger_joint { joint:none }
-        
+Edit left_outer_finger_joint { joint:none }
+Edit right_outer_finger_joint { joint:none }
+
