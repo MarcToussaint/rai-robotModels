@@ -46,7 +46,7 @@ Edit panda_finger_joint1 { q:.05 }
 ## define a gripper, palm and fingers
 
 gripper (panda_joint7){
-    Q:<d(-90 0 1 0) d(135 0 0 1) t(0 0 -.21)>
+    Q:<d(-90 0 1 0) d(135 0 0 1) t(0 0 -.22)>
     shape:marker, size:[.03], color:[.9 .9 .9], logical:{gripper:True} }
 palm (panda_hand_joint)	{
     Q:<d(90 1 0 0) t(0 .0 .0)>
