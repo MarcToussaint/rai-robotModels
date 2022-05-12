@@ -1,6 +1,6 @@
 FILE := bremenKitchen-meshes.tgz
 
-URL := http://ipvs.informatik.uni-stuttgart.de/mlr/marc/3dModels/bremenKitchen-meshes.tgz
+URL := https://www.user.tu-berlin.de/mtoussai/files/bremenKitchen-meshes.tgz
 
 default:
 	@if ! [ -d meshes ]; then \

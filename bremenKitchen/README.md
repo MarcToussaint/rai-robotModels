@@ -19,7 +19,7 @@ yaml-style. Here it is given as a simple, rai-native format
 bremenKitchen.g. The 3D models were originally loaded ussing assimp
 and are now saved as direct binaries to ensure very fast loading in
 the rai code. The large binary meshes are stored externally at
-[[http://ipvs.informatik.uni-stuttgart.de/mlr/marc/3dModels/bremenKitchen-meshes.tgz]]. Call
+https://www.user.tu-berlin.de/mtoussai/files/bremenKitchen-meshes.tgz. Call
 ```
 make
 ```
