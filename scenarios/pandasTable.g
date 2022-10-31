@@ -28,7 +28,7 @@ Edit r_panda_base (table_base) { Q:<t( .4 -.3 .0) d(90 0 0 1)> }
 ### camera
 
 camera(world){
-    Q:<t(-0.01 -.2 1.8) d(30 1 0 0)>,
+    Q:<t(-0.01 -.2 2.) d(30 1 0 0)>,
     shape:camera, size:[.1],
     focalLength:0.895, width:640, height:360, zRange:[.5 100]
 }
