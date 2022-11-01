@@ -21,8 +21,8 @@ Include: 'panda_fixRobotiq.g'
 
 Prefix!
 
-Edit l_panda_base (table_base) { Q:<t(-.4 -.3 .0) d(90 0 0 1)> }
-Edit r_panda_base (table_base) { Q:<t( .4 -.3 .0) d(90 0 0 1)> }
+Edit l_panda_base (table_base) { Q:<t(-.4 -.3 .0) d(90 0 0 1)>, motors, joint:rigid }
+Edit r_panda_base (table_base) { Q:<t( .4 -.3 .0) d(90 0 0 1)>, motors, joint:rigid }
         
 
 ### camera
