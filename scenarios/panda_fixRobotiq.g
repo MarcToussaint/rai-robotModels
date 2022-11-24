@@ -53,3 +53,8 @@ Edit right_inner_finger_joint { joint:none }
 Edit left_outer_finger_joint { joint:none }
 Edit right_outer_finger_joint { joint:none }
 
+
+Edit right_inner_finger_joint { Q:<d(-90 0 0 1)> }
+Edit left_inner_finger_joint { Q:<d(-90 0 0 1)> }
+Edit right_inner_finger { joint:none, limits:[-.042 .0], Q:<d(-90 0 0 1)> }
+Edit left_inner_finger { joint:none, limits:[-.042 .0], Q:<d(-90 0 0 1)> }

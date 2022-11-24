@@ -21,8 +21,8 @@ Include: 'panda_fixRobotiq.g'
 
 Prefix!
 
-Edit l_panda_base (table_base) { Q:<t(-.4 -.3 .0) d(90 0 0 1)> }
-Edit r_panda_base (table_base) { Q:<t( .4 -.3 .0) d(90 0 0 1)> }
+Edit l_panda_base (table_base) { Q:<t(-.4 -.3 .0) d(90 0 0 1)>, motors, joint:rigid }
+Edit r_panda_base (table_base) { Q:<t( .4 -.3 .0) d(90 0 0 1)>, motors, joint:rigid }
         
 
 ### camera
@@ -31,4 +31,10 @@ camera(world){
     Q:<t(-0.01 -.2 2.) d(30 1 0 0)>,
     shape:camera, size:[.1],
     focalLength:0.895, width:640, height:360, zRange:[.5 100]
+}
+
+wristCam(r_panda_joint7){
+    Q:<t(.15 .0 -.07) d(-90 0 1 0) d(90 0 0 1)>,
+    shape:camera, size:[.1],
+    focalLength:1.5, width:640, height:360, zRange:[.1 10]
 }
