@@ -6,17 +6,17 @@ Edit panda_link0 (panda_base) {}
 
 ## simpler collision models
 
-Delete panda_link0_0
-Delete panda_link1_0
-Delete panda_link2_0
-Delete panda_link3_0
-Delete panda_link4_0
-Delete panda_link5_0
-Delete panda_link6_0
-Delete panda_link7_0
-Delete panda_hand_0
-Delete panda_leftfinger_0
-Delete panda_rightfinger_0
+#Delete panda_link0_0
+#Delete panda_link1_0
+#Delete panda_link2_0
+#Delete panda_link3_0
+#Delete panda_link4_0
+#Delete panda_link5_0
+#Delete panda_link6_0
+#Delete panda_link7_0
+#Delete panda_hand_0
+#Delete panda_leftfinger_0
+#Delete panda_rightfinger_0
 
 panda_coll0(panda_link0)	{ shape:capsule color:[1.,1.,1.,.2] size:[.1 .15] Q:<t(-.04 .0 .03) d(90 0 1 0)>, contact:-2  }
 panda_coll0b(panda_link0)	{ shape:capsule color:[1.,1.,1.,.2] size:[.2 .1] Q:<t(-.2 -.12 .0) d(90 0 1 0)>, contact:-2  }
