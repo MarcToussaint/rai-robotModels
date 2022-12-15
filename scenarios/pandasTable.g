@@ -34,7 +34,7 @@ camera(world){
 }
 
 wristCam(r_panda_joint7){
-    Q:<t(.15 .0 -.07) d(-90 0 1 0) d(90 0 0 1)>,
+    Q:<t(.2 .0 .045) d(-90 0 1 0) d(-90 0 0 1)>,
     shape:camera, size:[.1],
     focalLength:1.5, width:640, height:360, zRange:[.1 10]
 }
