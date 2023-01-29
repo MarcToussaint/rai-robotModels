@@ -2,6 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import trimesh
 
+def timeout(signum, frame):
+    raise Exception("timeout handler")
+
 def load_mesh(filename):
     try:
         scene_or_mesh = trimesh.load(filename, force='mesh')
@@ -36,7 +39,8 @@ def scale_and_center(mesh):
         scale = 1e-2
     elif mesh.scale > 1:
         scale = 1e-1
-    translate = -mesh.centroid
+    #translate = -mesh.centroid
+    translate = -.5*(mesh.bounds[0]+mesh.bounds[1])
     matrix = np.eye(4)
     matrix[0:3, 3] = translate
     matrix[0:3, 0:4] *= scale
@@ -55,14 +59,19 @@ def get_sdf(mesh, N=30):
     gridDim = (size / voxelSize).astype(int) + 2
     # change bounds[1] to be on the grid
     bounds[1] = bounds[0] + voxelSize * (gridDim - 1)
-    print('sdf bounding box:', bounds, 'voxelSize:', voxelSize, 'grid dim:', gridDim)
+    print('  sdf voxel:', voxelSize, 'dim:', gridDim, 'mem:', np.prod(gridDim))
     # create grid
     x_range = np.linspace(bounds[0, 0], bounds[1, 0], num=gridDim[0])
     y_range = np.linspace(bounds[0, 1], bounds[1, 1], num=gridDim[1])
     z_range = np.linspace(bounds[0, 2], bounds[1, 2], num=gridDim[2])
-    grid = np.stack(np.meshgrid(x_range, y_range, z_range, indexing='ij'), axis=-1).reshape(-1, 3)
+    grid = np.stack(np.meshgrid(x_range, y_range, z_range, indexing='ij'), axis=-1)
     # get sdf
-    sdf = -mesh.nearest.signed_distance(grid).reshape(gridDim)
+    #sdf = -mesh.nearest.signed_distance(grid).reshape(gridDim)
+    sdf = np.empty(gridDim)
+    for z in range(0, sdf.shape[2]):
+        print('\r  slice', z, end=' ', flush=True)
+        sdf[:,:,z] = -mesh.nearest.signed_distance(grid[:,:,z,:].reshape(-1, 3)).reshape(gridDim[:2])
+    print('- done')
     return [sdf, bounds]
 
 def display_sdf(sdf):
@@ -78,8 +87,15 @@ def display_sdf(sdf):
 
 def export_field(field, bounds, filename):
     fil = open(filename, 'wb')
-    fil.write(bytearray(f'bounds [<2,3> {bounds[0,0]} {bounds[0,1]} {bounds[0,2]} {bounds[1,0]} {bounds[1,1]} {bounds[1,2]}]\n'.encode('utf-8')))
+    fil.write(bytearray(f'bounds [<2 3> {bounds[0,0]} {bounds[0,1]} {bounds[0,2]} {bounds[1,0]} {bounds[1,1]} {bounds[1,2]}]\n'.encode('utf-8')))
     fil.write(bytearray(f'field <{field.shape[0]} {field.shape[1]} {field.shape[2]}>'.encode('utf-8')))
     fil.write(bytearray([0]))
     field.astype(np.float32).tofile(fil)
+    fil.write(bytearray([0]))
+
+def export_points(pts, filename):
+    fil = open(filename, 'wb')
+    fil.write(bytearray(f'<{pts.shape[0]} {pts.shape[1]}>'.encode('utf-8')))
+    fil.write(bytearray([0]))
+    pts.astype(np.float32).tofile(fil)
     fil.write(bytearray([0]))
