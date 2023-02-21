@@ -9,7 +9,7 @@ arm0 (base){
     Q:<t (0 0 .3)> shape:capsule size:[.4 .08], contact:-1 }
 
 joint1 (arm0) {
-    A:<t (0 0 .2)>
+    pre:<t (0 0 .2)>
     joint:hingeX limits:[-1. 2.] q:.5 }
 
 arm1 (joint1){
@@ -17,7 +17,7 @@ arm1 (joint1){
 arm1_coll(arm1){ shape:capsule, color:[1.,1.,1.,.2], size:[.8 .2], contact:-2 }
 
 joint2(arm1) {
-    A:<T t(0 0 .4)>
+    pre:<T t(0 0 .4)>
     joint:hingeX limits:[-1. 3.] q:1.5 }
 
 arm2(joint2){
@@ -26,7 +26,7 @@ arm2(joint2){
 arm2_coll(arm2){ shape:capsule, color:[1.,1.,1.,.2], size:[.25 .13], contact:-2 }
 
 joint2a(arm2) {
-    A:<T t(0 0 .25)>
+    pre:<T t(0 0 .25)>
     joint:hingeZ limits:[-2. 2.] q:0 }
 
 joint2b(joint2a) {
@@ -42,6 +42,6 @@ Include: 'gripper.g'
 
 Edit gripper(joint2c) { Q:<d(180 1 0 0)> }
 #joint joint3(arm2 gripper){
-#    joint:hingeZ limits:[-1, 1], A:<t(0 0 .25) d(180 1 0 0)> }
+#    joint:hingeZ limits:[-1, 1], pre:<t(0 0 .25) d(180 1 0 0)> }
 
 

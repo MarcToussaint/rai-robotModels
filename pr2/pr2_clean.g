@@ -97,31 +97,31 @@ shape l_gripper_frame (l_gripper_l_finger_tip_frame){ shape:marker rel=<T -0 -0 
 shape r_gripper_frame (r_gripper_l_finger_tip_frame){ shape:marker rel=<T -0 -0 -0 -0.707107 0 0 0.707107 >  size=[ 0.1 0 0 0 ]  }
 
 joint worldTranslationRotation (world base_footprint){ joint:transXYPhi  ctrl_H=20  }
-joint torso_lift_joint (base_footprint torso_lift_link){ joint:transX from=<T -0.05 0 0.790675 0.707107 0 -0.707107 0 >  limits=[ 0.0115 0.325 ]  limits=[ 0 0.33 ]  ctrl_limits=[ 0.013 10000 1 ]  }
-joint head_pan_joint (torso_lift_link head_pan_link){ joint:hingeX from=<T 0.38145 0 0.01707 -1 0 0 0 >  limits=[ -2.857 2.857 ]  limits=[ -3.007 3.007 ]  ctrl_limits=[ 6 2.645 0.5 ]  }
-joint laser_tilt_mount_joint (torso_lift_link laser_tilt_mount_link){ joint:hingeX from=<T 0.227 0 -0.09893 -0.5 -0.5 -0.5 -0.5 >  limits=[ -0.7354 1.43353 ]  limits=[ -0.7854 1.48353 ]  ctrl_limits=[ 10 0.65 1 ]  }
-joint r_shoulder_pan_joint (torso_lift_link r_shoulder_pan_link){ joint:hingeX from=<T -0 -0.188 0 -1 0 0 0 >  limits=[ -2.1354 0.564602 ]  limits=[ -2.2854 0.714602 ]  ctrl_limits=[ 2.088 30 4 ]  }
-joint l_shoulder_pan_joint (torso_lift_link l_shoulder_pan_link){ joint:hingeX from=<T 0 0.188 -0 -1 0 0 0 >  limits=[ -0.564602 2.1354 ]  limits=[ -0.714602 2.2854 ]  ctrl_limits=[ 2.088 30 4 ]  }
-joint head_tilt_joint (head_pan_link head_tilt_link){ joint:hingeX from=<T 1.5099e-17 -0 -0.068 -0.5 -0.5 -0.5 -0.5 >  limits=[ -0.3712 1.29626 ]  limits=[ -0.471238 1.39626 ]  ctrl_limits=[ 5 18 0.1 ]  }
-joint r_shoulder_lift_joint (r_shoulder_pan_link r_shoulder_lift_link){ joint:hingeX from=<T 2.22045e-17 -0 -0.1 -0.5 -0.5 -0.5 -0.5 >  limits=[ -0.3536 1.2963 ]  limits=[ -0.5236 1.3963 ]  ctrl_limits=[ 2.082 30 4 ]  }
-joint l_shoulder_lift_joint (l_shoulder_pan_link l_shoulder_lift_link){ joint:hingeX from=<T 2.22045e-17 -0 -0.1 -0.5 -0.5 -0.5 -0.5 >  limits=[ -0.3536 1.2963 ]  limits=[ -0.5236 1.3963 ]  ctrl_limits=[ 2.082 30 4 ]  }
-joint r_upper_arm_roll_joint (r_shoulder_lift_link r_upper_arm_roll_link){ joint:hingeX from=<T -0 -0 -0 -0.707107 0 0 0.707107 >  limits=[ -3.75 0.65 ]  limits=[ -3.9 0.8 ]  ctrl_limits=[ 3.27 30 4 ]  }
-joint l_upper_arm_roll_joint (l_shoulder_lift_link l_upper_arm_roll_link){ joint:hingeX from=<T -0 -0 -0 -0.707107 0 0 0.707107 >  limits=[ -0.65 3.75 ]  limits=[ -0.8 3.9 ]  ctrl_limits=[ 3.27 30 4 ]  }
-joint r_elbow_flex_joint (r_upper_arm_roll_link r_elbow_flex_link){ joint:hingeX from=<T 0.4 0 0 0.707107 0 0 0.707107 >  limits=[ -2.1213 -0.15 ]  limits=[ -2.3213 0 ]  ctrl_limits=[ 3.3 30 4 ]  }
-joint l_elbow_flex_joint (l_upper_arm_roll_link l_elbow_flex_link){ joint:hingeX from=<T 0.4 0 0 0.707107 0 0 0.707107 >  limits=[ -2.1213 -0.15 ]  limits=[ -2.3213 0 ]  ctrl_limits=[ 3.3 30 4 ]  }
-joint r_forearm_roll_joint (r_elbow_flex_link r_forearm_roll_link){ joint:hingeX from=<T -0 -0 -0 -0.707107 0 0 0.707107 >  limits:[-3 3] ctrl_limits=[ 3.6 30 2 ]  }
-joint l_forearm_roll_joint (l_elbow_flex_link l_forearm_roll_link){ joint:hingeX from=<T -0 -0 -0 -0.707107 0 0 0.707107 >  limits:[-3 3] ctrl_limits=[ 3.6 30 2 ]  }
-joint r_wrist_flex_joint (r_forearm_roll_link r_wrist_flex_link){ joint:hingeX from=<T 0.321 0 0 0.707107 0 0 0.707107 >  limits=[ -2 -0.1 ]  limits=[ -2.18 0 ]  ctrl_limits=[ 3.078 10 2 ]  }
-joint l_wrist_flex_joint (l_forearm_roll_link l_wrist_flex_link){ joint:hingeX from=<T 0.321 0 0 0.707107 0 0 0.707107 >  limits=[ -2 -0.1 ]  limits=[ -2.18 0 ]  ctrl_limits=[ 3.078 10 2 ]  }
-joint r_wrist_roll_joint (r_wrist_flex_link r_wrist_roll_link){ joint:hingeX from=<T -0 -0 -0 -0.707107 0 0 0.707107 >  limits:[-3 3] ctrl_limits=[ 3.6 10 2 ]  }
-joint l_wrist_roll_joint (l_wrist_flex_link l_wrist_roll_link){ joint:hingeX from=<T -0 -0 -0 -0.707107 0 0 0.707107 >  limits:[-3 3] ctrl_limits=[ 3.6 10 2 ]  }
-joint r_gripper_l_finger_joint (r_wrist_roll_link r_gripper_l_finger_link){ joint:hingeX from=<T 0.07691 0.01 0 0.707107 0 -0.707107 0 >  limits=[ 0 0.548 ]  ctrl_limits=[ 0.5 1000 1 ]  }
-joint r_gripper_r_finger_joint (r_wrist_roll_link r_gripper_r_finger_link){ joint:hingeX from=<T 0.07691 -0.01 0 0.707107 -0 0.707107 0 >  mimic="r_gripper_l_finger_joint"  limits=[ 0 0.548 ]  ctrl_limits=[ 0.5 1000 1 ]  }
-joint l_gripper_l_finger_joint (l_wrist_roll_link l_gripper_l_finger_link){ joint:hingeX from=<T 0.07691 0.01 0 0.707107 0 -0.707107 0 >  limits=[ 0 0.548 ]  ctrl_limits=[ 0.5 1000 1 ]  }
-joint l_gripper_r_finger_joint (l_wrist_roll_link l_gripper_r_finger_link){ joint:hingeX from=<T 0.07691 -0.01 0 0.707107 -0 0.707107 0 >  mimic="l_gripper_l_finger_joint"  limits=[ 0 0.548 ]  ctrl_limits=[ 0.5 1000 1 ]  }
-joint r_gripper_l_finger_tip_joint (r_gripper_l_finger_link r_gripper_l_finger_tip_link){ joint:hingeX from=<T 2.02882e-17 0.00495 -0.09137 -2.22045e-16 0 -1 0 >  mimic="r_gripper_l_finger_joint"  limits=[ 0 0.548 ]  ctrl_limits=[ 0.5 1000 1 ]  }
-joint r_gripper_r_finger_tip_joint (r_gripper_r_finger_link r_gripper_r_finger_tip_link){ joint:hingeX from=<T 2.02882e-17 -0.00495 0.09137 -2.22045e-16 0 1 0 >  mimic="r_gripper_l_finger_joint"  limits=[ 0 0.548 ]  ctrl_limits=[ 0.5 1000 1 ]  }
-joint l_gripper_l_finger_tip_joint (l_gripper_l_finger_link l_gripper_l_finger_tip_link){ joint:hingeX from=<T 2.02882e-17 0.00495 -0.09137 -2.22045e-16 0 -1 0 >  mimic="l_gripper_l_finger_joint"  limits=[ 0 0.548 ]  ctrl_limits=[ 0.5 1000 1 ]  }
-joint l_gripper_r_finger_tip_joint (l_gripper_r_finger_link l_gripper_r_finger_tip_link){ joint:hingeX from=<T 2.02882e-17 -0.00495 0.09137 -2.22045e-16 0 1 0 >  mimic="l_gripper_l_finger_joint"  limits=[ 0 0.548 ]  ctrl_limits=[ 0.5 1000 1 ]  }
-joint r_gripper_joint (r_gripper_r_finger_tip_link r_gripper_l_finger_tip_frame){ joint:transX from=<T -0 -0 -0 -0.5 -0.5 -0.5 -0.5 >  limits=[ -0.01 0.088 ]  limits=[ 0 0.09 ]  ctrl_limits=[ 0.2 1000 1 ]  }
-joint l_gripper_joint (l_gripper_r_finger_tip_link l_gripper_l_finger_tip_frame){ joint:transX from=<T -0 -0 -0 -0.5 -0.5 -0.5 -0.5 >  limits=[ -0.01 0.088 ]  limits=[ 0 0.09 ]  ctrl_limits=[ 0.2 1000 1 ]  }
+joint torso_lift_joint (base_footprint torso_lift_link){ joint:transX pre:<T -0.05 0 0.790675 0.707107 0 -0.707107 0 >  limits=[ 0.0115 0.325 ]  limits=[ 0 0.33 ]  ctrl_limits=[ 0.013 10000 1 ]  }
+joint head_pan_joint (torso_lift_link head_pan_link){ joint:hingeX pre:<T 0.38145 0 0.01707 -1 0 0 0 >  limits=[ -2.857 2.857 ]  limits=[ -3.007 3.007 ]  ctrl_limits=[ 6 2.645 0.5 ]  }
+joint laser_tilt_mount_joint (torso_lift_link laser_tilt_mount_link){ joint:hingeX pre:<T 0.227 0 -0.09893 -0.5 -0.5 -0.5 -0.5 >  limits=[ -0.7354 1.43353 ]  limits=[ -0.7854 1.48353 ]  ctrl_limits=[ 10 0.65 1 ]  }
+joint r_shoulder_pan_joint (torso_lift_link r_shoulder_pan_link){ joint:hingeX pre:<T -0 -0.188 0 -1 0 0 0 >  limits=[ -2.1354 0.564602 ]  limits=[ -2.2854 0.714602 ]  ctrl_limits=[ 2.088 30 4 ]  }
+joint l_shoulder_pan_joint (torso_lift_link l_shoulder_pan_link){ joint:hingeX pre:<T 0 0.188 -0 -1 0 0 0 >  limits=[ -0.564602 2.1354 ]  limits=[ -0.714602 2.2854 ]  ctrl_limits=[ 2.088 30 4 ]  }
+joint head_tilt_joint (head_pan_link head_tilt_link){ joint:hingeX pre:<T 1.5099e-17 -0 -0.068 -0.5 -0.5 -0.5 -0.5 >  limits=[ -0.3712 1.29626 ]  limits=[ -0.471238 1.39626 ]  ctrl_limits=[ 5 18 0.1 ]  }
+joint r_shoulder_lift_joint (r_shoulder_pan_link r_shoulder_lift_link){ joint:hingeX pre:<T 2.22045e-17 -0 -0.1 -0.5 -0.5 -0.5 -0.5 >  limits=[ -0.3536 1.2963 ]  limits=[ -0.5236 1.3963 ]  ctrl_limits=[ 2.082 30 4 ]  }
+joint l_shoulder_lift_joint (l_shoulder_pan_link l_shoulder_lift_link){ joint:hingeX pre:<T 2.22045e-17 -0 -0.1 -0.5 -0.5 -0.5 -0.5 >  limits=[ -0.3536 1.2963 ]  limits=[ -0.5236 1.3963 ]  ctrl_limits=[ 2.082 30 4 ]  }
+joint r_upper_arm_roll_joint (r_shoulder_lift_link r_upper_arm_roll_link){ joint:hingeX pre:<T -0 -0 -0 -0.707107 0 0 0.707107 >  limits=[ -3.75 0.65 ]  limits=[ -3.9 0.8 ]  ctrl_limits=[ 3.27 30 4 ]  }
+joint l_upper_arm_roll_joint (l_shoulder_lift_link l_upper_arm_roll_link){ joint:hingeX pre:<T -0 -0 -0 -0.707107 0 0 0.707107 >  limits=[ -0.65 3.75 ]  limits=[ -0.8 3.9 ]  ctrl_limits=[ 3.27 30 4 ]  }
+joint r_elbow_flex_joint (r_upper_arm_roll_link r_elbow_flex_link){ joint:hingeX pre:<T 0.4 0 0 0.707107 0 0 0.707107 >  limits=[ -2.1213 -0.15 ]  limits=[ -2.3213 0 ]  ctrl_limits=[ 3.3 30 4 ]  }
+joint l_elbow_flex_joint (l_upper_arm_roll_link l_elbow_flex_link){ joint:hingeX pre:<T 0.4 0 0 0.707107 0 0 0.707107 >  limits=[ -2.1213 -0.15 ]  limits=[ -2.3213 0 ]  ctrl_limits=[ 3.3 30 4 ]  }
+joint r_forearm_roll_joint (r_elbow_flex_link r_forearm_roll_link){ joint:hingeX pre:<T -0 -0 -0 -0.707107 0 0 0.707107 >  limits:[-3 3] ctrl_limits=[ 3.6 30 2 ]  }
+joint l_forearm_roll_joint (l_elbow_flex_link l_forearm_roll_link){ joint:hingeX pre:<T -0 -0 -0 -0.707107 0 0 0.707107 >  limits:[-3 3] ctrl_limits=[ 3.6 30 2 ]  }
+joint r_wrist_flex_joint (r_forearm_roll_link r_wrist_flex_link){ joint:hingeX pre:<T 0.321 0 0 0.707107 0 0 0.707107 >  limits=[ -2 -0.1 ]  limits=[ -2.18 0 ]  ctrl_limits=[ 3.078 10 2 ]  }
+joint l_wrist_flex_joint (l_forearm_roll_link l_wrist_flex_link){ joint:hingeX pre:<T 0.321 0 0 0.707107 0 0 0.707107 >  limits=[ -2 -0.1 ]  limits=[ -2.18 0 ]  ctrl_limits=[ 3.078 10 2 ]  }
+joint r_wrist_roll_joint (r_wrist_flex_link r_wrist_roll_link){ joint:hingeX pre:<T -0 -0 -0 -0.707107 0 0 0.707107 >  limits:[-3 3] ctrl_limits=[ 3.6 10 2 ]  }
+joint l_wrist_roll_joint (l_wrist_flex_link l_wrist_roll_link){ joint:hingeX pre:<T -0 -0 -0 -0.707107 0 0 0.707107 >  limits:[-3 3] ctrl_limits=[ 3.6 10 2 ]  }
+joint r_gripper_l_finger_joint (r_wrist_roll_link r_gripper_l_finger_link){ joint:hingeX pre:<T 0.07691 0.01 0 0.707107 0 -0.707107 0 >  limits=[ 0 0.548 ]  ctrl_limits=[ 0.5 1000 1 ]  }
+joint r_gripper_r_finger_joint (r_wrist_roll_link r_gripper_r_finger_link){ joint:hingeX pre:<T 0.07691 -0.01 0 0.707107 -0 0.707107 0 >  mimic="r_gripper_l_finger_joint"  limits=[ 0 0.548 ]  ctrl_limits=[ 0.5 1000 1 ]  }
+joint l_gripper_l_finger_joint (l_wrist_roll_link l_gripper_l_finger_link){ joint:hingeX pre:<T 0.07691 0.01 0 0.707107 0 -0.707107 0 >  limits=[ 0 0.548 ]  ctrl_limits=[ 0.5 1000 1 ]  }
+joint l_gripper_r_finger_joint (l_wrist_roll_link l_gripper_r_finger_link){ joint:hingeX pre:<T 0.07691 -0.01 0 0.707107 -0 0.707107 0 >  mimic="l_gripper_l_finger_joint"  limits=[ 0 0.548 ]  ctrl_limits=[ 0.5 1000 1 ]  }
+joint r_gripper_l_finger_tip_joint (r_gripper_l_finger_link r_gripper_l_finger_tip_link){ joint:hingeX pre:<T 2.02882e-17 0.00495 -0.09137 -2.22045e-16 0 -1 0 >  mimic="r_gripper_l_finger_joint"  limits=[ 0 0.548 ]  ctrl_limits=[ 0.5 1000 1 ]  }
+joint r_gripper_r_finger_tip_joint (r_gripper_r_finger_link r_gripper_r_finger_tip_link){ joint:hingeX pre:<T 2.02882e-17 -0.00495 0.09137 -2.22045e-16 0 1 0 >  mimic="r_gripper_l_finger_joint"  limits=[ 0 0.548 ]  ctrl_limits=[ 0.5 1000 1 ]  }
+joint l_gripper_l_finger_tip_joint (l_gripper_l_finger_link l_gripper_l_finger_tip_link){ joint:hingeX pre:<T 2.02882e-17 0.00495 -0.09137 -2.22045e-16 0 -1 0 >  mimic="l_gripper_l_finger_joint"  limits=[ 0 0.548 ]  ctrl_limits=[ 0.5 1000 1 ]  }
+joint l_gripper_r_finger_tip_joint (l_gripper_r_finger_link l_gripper_r_finger_tip_link){ joint:hingeX pre:<T 2.02882e-17 -0.00495 0.09137 -2.22045e-16 0 1 0 >  mimic="l_gripper_l_finger_joint"  limits=[ 0 0.548 ]  ctrl_limits=[ 0.5 1000 1 ]  }
+joint r_gripper_joint (r_gripper_r_finger_tip_link r_gripper_l_finger_tip_frame){ joint:transX pre:<T -0 -0 -0 -0.5 -0.5 -0.5 -0.5 >  limits=[ -0.01 0.088 ]  limits=[ 0 0.09 ]  ctrl_limits=[ 0.2 1000 1 ]  }
+joint l_gripper_joint (l_gripper_r_finger_tip_link l_gripper_l_finger_tip_frame){ joint:transX pre:<T -0 -0 -0 -0.5 -0.5 -0.5 -0.5 >  limits=[ -0.01 0.088 ]  limits=[ 0 0.09 ]  ctrl_limits=[ 0.2 1000 1 ]  }
