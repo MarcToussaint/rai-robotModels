@@ -8,7 +8,7 @@ files = sorted(glob.glob('ply/*.ply'))
 signal.signal(signal.SIGALRM, timeout)
 
 for file in files:
-    if file[:7]<'ply/000':
+    if file[:7]<'ply/106':
         continue
     
     print('file: ', file)
@@ -16,5 +16,7 @@ for file in files:
 
     os.system('meshTool ' + file + ' -decomp -hide -quiet'
               ' && mv z.ply ' + filebase + '-decomp.ply'
-              ' && mv z.arr ' + filebase + '-decomp.arr' ) 
+              ' && mv z.arr ' + filebase + '-decomp.arr' )
+
+    exit()
 

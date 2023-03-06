@@ -29,16 +29,16 @@ def load_mesh(filename):
 
 def scale_and_center(mesh):
     scale = 1
-    if mesh.scale > 10000:
-        scale = 1e-5
-    elif mesh.scale > 1000:
-        scale = 1e-4
-    elif mesh.scale > 100:
+    #if mesh.scale > 10000:
+    #    scale = 1e-5
+    #elif mesh.scale > 1000:
+    #    scale = 1e-4
+    if mesh.scale > 10:
         scale = 1e-3
-    elif mesh.scale > 10:
-        scale = 1e-2
-    elif mesh.scale > 1:
-        scale = 1e-1
+    #elif mesh.scale > 10:
+    #    scale = 1e-2
+    #elif mesh.scale > 1:
+    #    scale = 1e-1
     #translate = -mesh.centroid
     translate = -.5*(mesh.bounds[0]+mesh.bounds[1])
     matrix = np.eye(4)
@@ -46,7 +46,13 @@ def scale_and_center(mesh):
     matrix[0:3, 0:4] *= scale
     mesh.apply_transform(matrix)
 
+def scale_mesh(mesh, scale):
+    matrix = np.eye(4)
+    matrix[0:3, 0:4] *= scale
+    mesh.apply_transform(matrix)
+
 def get_sdf(mesh, N=30):
+    #scale_mesh(mesh, .1)
     # get bounds
     bounds = mesh.bounds.copy()
     size = bounds[1] - bounds[0]
@@ -72,6 +78,8 @@ def get_sdf(mesh, N=30):
         print('\r  slice', z, end=' ', flush=True)
         sdf[:,:,z] = -mesh.nearest.signed_distance(grid[:,:,z,:].reshape(-1, 3)).reshape(gridDim[:2])
     print('- done')
+    #scale_mesh(mesh, 10.)
+    #bounds *= 10.
     return [sdf, bounds]
 
 def display_sdf(sdf):
@@ -87,15 +95,15 @@ def display_sdf(sdf):
 
 def export_field(field, bounds, filename):
     fil = open(filename, 'wb')
-    fil.write(bytearray(f'bounds [<2 3> {bounds[0,0]} {bounds[0,1]} {bounds[0,2]} {bounds[1,0]} {bounds[1,1]} {bounds[1,2]}]\n'.encode('utf-8')))
-    fil.write(bytearray(f'field <{field.shape[0]} {field.shape[1]} {field.shape[2]}>'.encode('utf-8')))
+    fil.write(bytearray(f'bounds: [<2 3> {bounds[0,0]} {bounds[0,1]} {bounds[0,2]} {bounds[1,0]} {bounds[1,1]} {bounds[1,2]}]\n'.encode('utf-8')))
+    fil.write(bytearray(f'field: [f<{field.shape[0]} {field.shape[1]} {field.shape[2]}>'.encode('utf-8')))
     fil.write(bytearray([0]))
     field.astype(np.float32).tofile(fil)
-    fil.write(bytearray([0]))
+    fil.write(bytearray(b'\0]\n'))
 
 def export_points(pts, filename):
     fil = open(filename, 'wb')
-    fil.write(bytearray(f'<{pts.shape[0]} {pts.shape[1]}>'.encode('utf-8')))
+    fil.write(bytearray(f'[f<{pts.shape[0]} {pts.shape[1]}>'.encode('utf-8')))
     fil.write(bytearray([0]))
     pts.astype(np.float32).tofile(fil)
-    fil.write(bytearray([0]))
+    fil.write(bytearray(b'\0]\n'))

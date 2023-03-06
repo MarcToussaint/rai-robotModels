@@ -3,13 +3,15 @@ import glob
 import signal
 from mesh_helper import *
 
-files = sorted(glob.glob('models/*.obj'))
+files = sorted(glob.glob('models/*.ply'))
 
 signal.signal(signal.SIGALRM, timeout)
 
 for file in files:
-    if file[:10]<'models/138':
+    if file[-5]=='-':
         continue
+#    if file[:10]<'models/106':
+#        continue
     
     print('file: ', file)
 
@@ -36,8 +38,10 @@ for file in files:
     if not mesh.is_watertight or mesh.is_empty:
         continue
 
+    filebase = os.path.splitext(file)[0]
+
     ### export ply
-    filename = os.path.splitext(file)[0]+'.ply'
+    filename = filebase+'-.ply'
     print('  exporting:', filename)
     mesh.export(filename)
 
@@ -51,13 +55,22 @@ for file in files:
     signal.alarm(0)
     #display_sdf(sdf)
     #plt.waitforbuttonpress(-1)
-    filename = os.path.splitext(file)[0]+'.vol'
+    filename = filebase+'-.vol'
     print('  exporting:', filename)
     export_field(sdf, bounds, filename)
 
     ### create points
-    pts, _ = trimesh.sample.sample_surface(mesh, 20000)
-    filename = os.path.splitext(file)[0]+'.pts'
+    pts, faces = trimesh.sample.sample_surface(mesh, 20000)
+    normals = mesh.face_normals[faces]
+    #bary = trimesh.triangles.points_to_barycentric(mesh.triangles[faces], pts)
+    #normals = trimesh.unitize((mesh.vertex_normals[mesh.faces[faces]] *
+    #                          trimesh.unitize(bary).reshape((-1, 3, 1))).sum(axis=1))
+    filename = filebase+'-.pts'
     print('  exporting:', filename)
-    export_points(pts, filename)
+    export_points(np.hstack((pts, normals)), filename)
+    
+    ### create decomposition
+    os.system('meshTool ' + filebase+'-.ply' + ' -decomp -hide -quiet'
+              ' && mv z.arr ' + filebase + '-.arr' )
+
         
