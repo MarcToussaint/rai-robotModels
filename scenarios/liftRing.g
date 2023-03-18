@@ -40,4 +40,4 @@ target (table){
 
 Include 'panda_fixGripper.g'
 #Include 'panda_fixRobotiq.g'
-joint (table panda_base){ joint:rigid Q:<t(.3 .8 .05) d(-90 0 0 1)> }
+(table panda_base){ joint:rigid Q:<t(.3 .8 .05) d(-90 0 0 1)> }

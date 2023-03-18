@@ -21,14 +21,14 @@ Edit panda_link0 (panda_base) {}
 panda_coll0(panda_link0)	{ shape:capsule color:[1.,1.,1.,.2] size:[.1 .15] Q:<t(-.04 .0 .03) d(90 0 1 0)>, contact:-2  }
 panda_coll0b(panda_link0)	{ shape:capsule color:[1.,1.,1.,.2] size:[.2 .1] Q:<t(-.2 -.12 .0) d(90 0 1 0)>, contact:-2  }
 
-panda_coll1(panda_joint1)	{ shape:capsule color:[1.,1.,1.,.2] size:[.2 .08] Q:<d(90 0 1 0) t(0 0 -.15)>, contact:-2  }
-panda_coll3(panda_joint3)	{ shape:capsule color:[1.,1.,1.,.2] size:[.2 .08] Q:<d(90 0 1 0) t(0 0 -.15)>, contact:-2  }
-panda_coll5(panda_joint5)	{ shape:capsule color:[1.,1.,1.,.2] size:[.22 .09] Q:<d(90 0 1 0) t(0 .02 -.2)>, contact:-2  }
+panda_coll1(panda_joint1)	{ shape:capsule color:[1.,1.,1.,.2] size:[.2 .08] Q:<t(0 0 -.15)>, contact:-2  }
+panda_coll3(panda_joint3)	{ shape:capsule color:[1.,1.,1.,.2] size:[.2 .08] Q:<t(0 0 -.15)>, contact:-2  }
+panda_coll5(panda_joint5)	{ shape:capsule color:[1.,1.,1.,.2] size:[.22 .09] Q:<t(0 .02 -.2)>, contact:-2  }
 
-panda_coll2(panda_joint2)	{ shape:capsule color:[1.,1.,1.,.2] size:[.12 .11] Q:<d(90 0 1 0) t(0 0 .0)>, contact:-2  }
-panda_coll4(panda_joint4)	{ shape:capsule color:[1.,1.,1.,.2] size:[.12 .08] Q:<d(90 0 1 0) t(0 0 .0)>, contact:-2  }
-panda_coll6(panda_joint6)	{ shape:capsule color:[1.,1.,1.,.2] size:[.1 .07] Q:<d(90 0 1 0) t(0 .0 -.04)>, contact:-2  }
-panda_coll7(panda_joint7)	{ shape:capsule color:[1.,1.,1.,.2] size:[.1 .07] Q:<d(90 0 1 0) t(0 .0 .01)>, contact:-2  }
+panda_coll2(panda_joint2)	{ shape:capsule color:[1.,1.,1.,.2] size:[.12 .11] Q:<t(0 0 .0)>, contact:-2  }
+panda_coll4(panda_joint4)	{ shape:capsule color:[1.,1.,1.,.2] size:[.12 .08] Q:<t(0 0 .0)>, contact:-2  }
+panda_coll6(panda_joint6)	{ shape:capsule color:[1.,1.,1.,.2] size:[.1 .07] Q:<t(0 .0 -.04)>, contact:-2  }
+panda_coll7(panda_joint7)	{ shape:capsule color:[1.,1.,1.,.2] size:[.1 .07] Q:<t(0 .0 .01)>, contact:-2  }
 
 
 ## zero position
@@ -38,23 +38,23 @@ Edit panda_joint2 { q: -1. }
 Edit panda_joint3 { q: 0. }
 Edit panda_joint4 { q: -2. }
 Edit panda_joint5 { q: -0. }
-Edit panda_joint6 { q: 2. limits:[.5 3.}
+Edit panda_joint6 { q: 2. limits:[.5 3.]}
 Edit panda_joint7 { q: 0.0 }
-Edit panda_finger_joint1 { q:.05 }
+Edit panda_finger_joint1 { q:.03 }
 
 
 ## define a gripper, palm and fingers
 
 gripper (panda_joint7){
-    Q:<d(-90 0 1 0) d(135 0 0 1) t(0 0 -.22)>
+    Q: <d(180 0 1 0) d(135 0 0 1) t(0 0 -.22)>
     shape:marker, size:[.03], color:[.9 .9 .9], logical:{ is_gripper } }
 palm (panda_hand_joint)	{
-    Q:<d(90 1 0 0) t(0 .0 .0)>
+    Q: <d(90 1 0 0)>
     shape:capsule color:[1.,1.,1.,.2] size:[.14 .07], contact:-1 }
 finger1 (panda_finger_joint1){
-    Q:<t(.028 0 .035)> 
+    Q: [0 0.028 .035] 
     shape:capsule, size:[.02, .03], color:[1. 1. 1. .2], contact:-2 }
 finger2 (panda_finger_joint2){
-    Q:<t(.028 0 .035)>
+    Q: [0 -.028 .035]
     shape:capsule, size:[.02, .03], color:[1. 1. 1. .2], contact:-2 }
 

@@ -2,7 +2,7 @@ Include='kuka.g'
 Include='wsg.g'
 
 #this connects the kuka with the wsg (which is build on 'world')
-joint (iiwa_link_7 world){ Q=<T t(0 0 .045) E(0 -1.57079632679 0) t(0.005 0 0) E(1.57079632679 0.3926 1.57079632679) > joint:rigid }
+(iiwa_link_7 world){ Q=<T t(0 0 .045) E(0 -1.57079632679 0) t(0.005 0 0) E(1.57079632679 0.3926 1.57079632679) > joint:rigid }
 
 Edit wsg_50_base_joint_gripper_right { mimic="wsg_50_base_joint_gripper_left" }
 Edit wsg_50_base_joint_gripper_left { limits=[0 .08] }
