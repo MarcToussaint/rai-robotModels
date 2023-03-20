@@ -50,7 +50,7 @@ gripper (panda_joint7){
     shape:marker, size:[.03], color:[.9 .9 .9], logical:{ is_gripper } }
 palm (panda_hand_joint)	{
     Q: <d(90 1 0 0)>
-    shape:capsule color:[1.,1.,1.,.2] size:[.14 .07], contact:-1 }
+    shape:capsule color:[1.,1.,1.,.2] size:[.14 .06], contact:-3 }
 finger1 (panda_finger_joint1){
     Q: [0 0.028 .035] 
     shape:capsule, size:[.02, .03], color:[1. 1. 1. .2], contact:-2 }
