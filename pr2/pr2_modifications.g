@@ -32,8 +32,8 @@ Edit l_wrist_roll_joint {     q=.5  gains=[15 1] armL }
 #Edit l_gripper_l_finger_joint { q=.1 gripL }
 Edit r_gripper_joint {  gains=[1000 1] q=.01 gripR }
 Edit l_gripper_joint {  gains=[1000 1] q=.01 gripL }
-Edit r_gripper_l_finger_tip_frame { mass=.05 }
-Edit l_gripper_l_finger_tip_frame { mass=.05 }
+#Edit r_gripper_l_finger_tip_frame { mass=.05 }
+#Edit l_gripper_l_finger_tip_frame { mass=.05 }
 #mimicking joints...
 Edit r_gripper_r_finger_joint { gripR }
 Edit l_gripper_r_finger_joint { gripL }
