@@ -30,18 +30,21 @@ panda_coll4(panda_joint4)	{ shape:capsule color:[1.,1.,1.,.2] size:[.12 .08] Q:<
 panda_coll6(panda_joint6)	{ shape:capsule color:[1.,1.,1.,.2] size:[.1 .07] Q:<t(0 .0 -.04)>, contact:-2  }
 panda_coll7(panda_joint7)	{ shape:capsule color:[1.,1.,1.,.2] size:[.1 .07] Q:<t(0 .0 .01)>, contact:-2  }
 
-
 ## zero position
 
 Edit panda_joint1 { q: 0.0 }
-Edit panda_joint2 { q: -1. }
+Edit panda_joint2 { q: -.5 }
 Edit panda_joint3 { q: 0. }
 Edit panda_joint4 { q: -2. }
 Edit panda_joint5 { q: -0. }
 Edit panda_joint6 { q: 2. limits:[.5 3.]}
-Edit panda_joint7 { q: 0.0 }
+Edit panda_joint7 { q: -.5 }
 Edit panda_finger_joint1 { q:.03 }
 
+## kill rigid hand joints
+
+Edit panda_joint8 { joint:none }
+Edit panda_hand_joint { joint:none }
 
 ## define a gripper, palm and fingers
 
@@ -57,4 +60,3 @@ finger1 (panda_finger_joint1){
 finger2 (panda_finger_joint2){
     Q: [0 -.028 .035]
     shape:capsule, size:[.02, .03], color:[1. 1. 1. .2], contact:-2 }
-

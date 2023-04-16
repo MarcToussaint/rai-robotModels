@@ -11,6 +11,7 @@ table (world){
 ### one panda
 
 Prefix: "l_"
+#Include: 'panda_fixRobotiq.g'
 Include: 'panda_fixGripper.g'
 
 Prefix!

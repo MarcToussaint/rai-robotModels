@@ -33,8 +33,8 @@ camera(world){
     focalLength:0.895, width:640, height:360, zRange:[.5 100]
 }
 
-wristCam(r_panda_joint7){
-    Q:<t(.2 .0 .045) d(-90 0 1 0) d(-90 0 0 1)>,
-    shape:camera, size:[.1],
-    focalLength:1.5, width:640, height:360, zRange:[.1 10]
-}
+#wristCam(r_panda_joint7){
+#    Q:<t(.2 .0 .045) d(-90 0 1 0) d(-90 0 0 1)>,
+#    shape:camera, size:[.1],
+#    focalLength:1.5, width:640, height:360, zRange:[.1 10]
+#}

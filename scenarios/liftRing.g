@@ -38,6 +38,9 @@ target (table){
     shape:ssBox, Q:<t(-.2 0 .2)>, size:[.3 .3 .05 .02], color:[.3 .6 .3 1]
 }
 
-Include 'panda_fixGripper.g'
+#Include 'panda_fixGripper.g'
 #Include 'panda_fixRobotiq.g'
+Include '../panda/panda.g'
 (table panda_base){ joint:rigid Q:<t(.3 .8 .05) d(-90 0 0 1)> }
+
+Edit panda_finger_joint1 { joint_active: false }
