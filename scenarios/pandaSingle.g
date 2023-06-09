@@ -29,7 +29,7 @@ cameraTop(world){
 cameraWrist(l_panda_joint7){
   Q: <d(180 0 1 0) d(-45 0 0 1) t(-.03 -.045 -.16) t(0 0 .01) d(-3 1 0 0)>
   shape:camera, size:[.1],
-    focalLength:0.895, width:640, height:360, zRange:[.5 100]
+    focalLength:0.895, width:640, height:360, zRange:[.1 10]
 }
 
 bellybutton(l_panda_joint2) {
