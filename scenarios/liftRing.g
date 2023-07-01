@@ -10,7 +10,7 @@ box (table){
     shape:ssBox, Q:<t(.2 0. .15)>, size:[.2 .2 .2 .02], color:[.6 .6 .6]
     mass:1
     joint:rigid
-    friction:.1
+#    friction:.1
 }
 
 ring (box){

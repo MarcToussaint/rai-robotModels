@@ -96,14 +96,14 @@ def display_sdf(sdf):
 def export_field(field, bounds, filename):
     fil = open(filename, 'wb')
     fil.write(bytearray(f'bounds: [<2 3> {bounds[0,0]} {bounds[0,1]} {bounds[0,2]} {bounds[1,0]} {bounds[1,1]} {bounds[1,2]}]\n'.encode('utf-8')))
-    fil.write(bytearray(f'field: [f<{field.shape[0]} {field.shape[1]} {field.shape[2]}>'.encode('utf-8')))
+    fil.write(bytearray(f'field: [<f {field.shape[0]} {field.shape[1]} {field.shape[2]}>'.encode('utf-8')))
     fil.write(bytearray([0]))
     field.astype(np.float32).tofile(fil)
     fil.write(bytearray(b'\0]\n'))
 
 def export_points(pts, filename):
     fil = open(filename, 'wb')
-    fil.write(bytearray(f'[f<{pts.shape[0]} {pts.shape[1]}>'.encode('utf-8')))
+    fil.write(bytearray(f'[<f {pts.shape[0]} {pts.shape[1]}>'.encode('utf-8')))
     fil.write(bytearray([0]))
     pts.astype(np.float32).tofile(fil)
     fil.write(bytearray(b'\0]\n'))

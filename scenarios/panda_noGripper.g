@@ -21,6 +21,7 @@ Delete panda_finger_joint2
 Delete panda_leftfinger_0
 Delete panda_rightfinger_0
 Delete panda_coll_hand
+Delete panda_coll_finger1
 Delete panda_coll_finger2
 
 Delete gripper
