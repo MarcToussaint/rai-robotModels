@@ -33,13 +33,13 @@ panda_coll7(panda_joint7): { shape: capsule, color: [1.,1.,1.,.2], size: [.1 .07
 ## zero position
 
 Edit panda_joint1: { q: 0.0 }
-Edit panda_joint2: { q: -.5 }
+Edit panda_joint2: { q: -1. }
 Edit panda_joint3: { q: 0. }
 Edit panda_joint4: { q: -2. }
 Edit panda_joint5: { q: -0. }
-Edit panda_joint6: { q: 2., limits: [.5 3.]}
-Edit panda_joint7: { q: -.5 }
-Edit panda_finger_joint1: { q: .03 }
+Edit panda_joint6: { q: 2. limits:[.5 3.] }
+Edit panda_joint7: { q: 0.0 }
+Edit panda_finger_joint1: { q:.05 }
 
 ## kill rigid hand joints
 
@@ -53,7 +53,7 @@ gripper(panda_joint7): {
     , shape: marker, size: [.03], color: [.9 .9 .9], logical: { is_gripper } }
 palm(panda_hand_joint): {
     Q: <d(90 1 0 0)>
-   , shape: capsule, color: [1.,1.,1.,.2], size: [.14 .06], contact: -3 }
+   , shape: capsule, color: [1.,1.,1.,.2], size: [.14 .07], contact: -3 }
 finger1(panda_finger_joint1): {
     Q: [0 0.028 .035] 
    , shape: capsule, size: [.02, .03], color: [1. 1. 1. .2], contact: -2 }
