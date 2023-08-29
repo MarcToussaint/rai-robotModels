@@ -3,15 +3,15 @@ import glob
 import signal
 from mesh_helper import *
 
-files = sorted(glob.glob('models/*.ply'))
+files = sorted(glob.glob('ply/*.ply'))
 
 signal.signal(signal.SIGALRM, timeout)
 
 for file in files:
     if file[-5]=='-':
         continue
-#    if file[:10]<'models/106':
-#        continue
+    if file[:7]<'ply/528':
+        continue
     
     print('file: ', file)
 
@@ -45,7 +45,12 @@ for file in files:
     print('  exporting:', filename)
     mesh.export(filename)
 
+    ### export json mesh
+    export_mesh(mesh, filebase+'.mesh')
+    #test_read(filebase+'-.mesh')
+    
     ### create sdf
+    '''
     signal.alarm(120)
     try:
         [sdf, bounds] = get_sdf(mesh, 50)
@@ -58,6 +63,7 @@ for file in files:
     filename = filebase+'-.vol'
     print('  exporting:', filename)
     export_field(sdf, bounds, filename)
+    '''
 
     ### create points
     pts, faces = trimesh.sample.sample_surface(mesh, 20000)
@@ -65,12 +71,12 @@ for file in files:
     #bary = trimesh.triangles.points_to_barycentric(mesh.triangles[faces], pts)
     #normals = trimesh.unitize((mesh.vertex_normals[mesh.faces[faces]] *
     #                          trimesh.unitize(bary).reshape((-1, 3, 1))).sum(axis=1))
-    filename = filebase+'-.pts'
+    filename = filebase+'.points'
     print('  exporting:', filename)
-    export_points(np.hstack((pts, normals)), filename)
+    export_arr(np.hstack((pts, normals)), filename)
     
     ### create decomposition
     os.system('meshTool ' + filebase+'-.ply' + ' -decomp -hide -quiet'
-              ' && mv z.arr ' + filebase + '-.arr' )
-
-        
+              ' && mv z.arr ' + filebase + '.decomp' )
+    
+    #exit()

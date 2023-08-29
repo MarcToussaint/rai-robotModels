@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import trimesh
+import base64
+import hjson
 
 def timeout(signum, frame):
     raise Exception("timeout handler")
@@ -33,12 +35,12 @@ def scale_and_center(mesh):
     #    scale = 1e-5
     #elif mesh.scale > 1000:
     #    scale = 1e-4
-    if mesh.scale > 10:
+    if mesh.scale > 200:
         scale = 1e-3
-    #elif mesh.scale > 10:
-    #    scale = 1e-2
-    #elif mesh.scale > 1:
-    #    scale = 1e-1
+    elif mesh.scale > 20:
+        scale = 1e-2
+    elif mesh.scale > 2:
+        scale = 1e-1
     #translate = -mesh.centroid
     translate = -.5*(mesh.bounds[0]+mesh.bounds[1])
     matrix = np.eye(4)
@@ -92,7 +94,6 @@ def display_sdf(sdf):
         plt.colorbar(im, cax=cax)
         plt.pause(.2)
 
-
 def export_field(field, bounds, filename):
     fil = open(filename, 'wb')
     fil.write(bytearray(f'bounds: [<2 3> {bounds[0,0]} {bounds[0,1]} {bounds[0,2]} {bounds[1,0]} {bounds[1,1]} {bounds[1,2]}]\n'.encode('utf-8')))
@@ -101,9 +102,47 @@ def export_field(field, bounds, filename):
     field.astype(np.float32).tofile(fil)
     fil.write(bytearray(b'\0]\n'))
 
-def export_points(pts, filename):
+def export_points_bin(pts, filename):
     fil = open(filename, 'wb')
     fil.write(bytearray(f'[<f {pts.shape[0]} {pts.shape[1]}>'.encode('utf-8')))
     fil.write(bytearray([0]))
     pts.astype(np.float32).tofile(fil)
     fil.write(bytearray(b'\0]\n'))
+
+def write_arr(X, fil, type='float32'):
+    data = (type, list(X.shape), )
+    fil.write(f'[ "{type}", {list(X.shape)}, "')
+    fil.write(base64.b64encode(X.astype(type)).decode('utf-8'))
+    fil.write('" ]')
+
+def export_mesh(mesh, filename):
+    with open(filename, 'w', encoding='utf-8') as fil:
+        fil.write('{\nV: ')
+        write_arr(mesh.vertices, fil)
+        assert mesh.faces.shape[1]==3, 'can only export triangle meshes'
+        fil.write(', \nT: ')
+        if(mesh.vertices.shape[0]<65535):
+            write_arr(mesh.faces, fil, 'int16')
+        else:
+            write_arr(mesh.faces, fil, 'int32')
+        fil.write('\n}')
+
+def export_arr(X, filename):
+    with open(filename, 'w', encoding='utf-8') as fil:
+        write_arr(X,fil)
+
+def test_read(filename):
+    with open(filename, 'r', encoding='utf-8') as fil:
+        data = hjson.load(fil)
+    print(data)
+
+def import_arr(filename):
+    with open(filename, 'r', encoding='utf-8') as fil:
+        data = hjson.load(fil)
+    
+    assert data[0]=='float32'
+    X = np.frombuffer(base64.decodebytes(bytearray(data[2].encode('utf-8'))), dtype=np.float32)
+    X = X.reshape(data[1])
+    return X
+    
+        
