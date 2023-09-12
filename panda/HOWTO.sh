@@ -1,8 +1,3 @@
-urdf2rai.py panda_arm_hand.urdf > z.1.g
-sed 's/franka_description\/meshes\/visual/meshes/g' z.1.g > z.2.g
-sed 's/\.dae/.ply/g' z.2.g > z.3.g
-
-# DELETE the axis = [0 0 0] but by hand!!
-
-kinEdit -file z.3.g -cleanOnly
+urdf2rai.py panda_arm_hand.urdf -meshRemove 'package://franka_description/' -meshExt 'ply' > z.1.g
+kinEdit -file z.1.g -cleanOnly
 mv z.g z.panda.g
