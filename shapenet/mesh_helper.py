@@ -115,16 +115,21 @@ def write_arr(X, fil, type='float32'):
     fil.write(base64.b64encode(X.astype(type)).decode('utf-8'))
     fil.write('" ]')
 
-def export_mesh(mesh, filename):
+def export_mesh(mesh, filename, include_mass_properties=True):
     with open(filename, 'w', encoding='utf-8') as fil:
         fil.write('{\nV: ')
         write_arr(mesh.vertices, fil)
         assert mesh.faces.shape[1]==3, 'can only export triangle meshes'
         fil.write(', \nT: ')
         if(mesh.vertices.shape[0]<65535):
-            write_arr(mesh.faces, fil, 'int16')
+            write_arr(mesh.faces, fil, 'uint16')
         else:
-            write_arr(mesh.faces, fil, 'int32')
+            write_arr(mesh.faces, fil, 'uint32')
+        if include_mass_properties:
+            fil.write(f', \nmass: {mesh.mass}')
+            # fil.write(f', \nvolume: {mesh.volume}')
+            fil.write(f', \ncom: {mesh.center_mass.tolist()}')
+            fil.write(f', \ninertia: {mesh.moment_inertia.reshape([9]).tolist()}')
         fil.write('\n}')
 
 def export_arr(X, filename):

@@ -10,7 +10,7 @@ signal.signal(signal.SIGALRM, timeout)
 for file in files:
     if file[-5]=='-':
         continue
-    if file[:7]<'ply/528':
+    if file[:7]<'ply/ffe':
         continue
     
     print('file: ', file)
