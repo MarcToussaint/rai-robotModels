@@ -25,7 +25,7 @@ panda_coll1(panda_joint1): { shape: capsule, color: [1.,1.,1.,.2], size: [.2, .0
 panda_coll3(panda_joint3): { shape: capsule, color: [1.,1.,1.,.2], size: [.2, .08], Q: "t(0 0 -.15)", contact: -2 }
 panda_coll5(panda_joint5): { shape: capsule, color: [1.,1.,1.,.2], size: [.22, .09], Q: "t(0 .02 -.2)", contact: -2 }
 
-panda_coll2(panda_joint2): { shape: capsule, color: [1.,1.,1.,.2], size: [.12, .11], Q: "t(0 0 .0)", contact: -2 }
+panda_coll2(panda_joint2): { shape: capsule, color: [1.,1.,1.,.2], size: [.12, .12], Q: "t(0 0 .0)", contact: -2 }
 panda_coll4(panda_joint4): { shape: capsule, color: [1.,1.,1.,.2], size: [.12, .08], Q: "t(0 0 .0)", contact: -2 }
 panda_coll6(panda_joint6): { shape: capsule, color: [1.,1.,1.,.2], size: [.1, .07], Q: "t(0 .0 -.04)", contact: -2 }
 panda_coll7(panda_joint7): { shape: capsule, color: [1.,1.,1.,.2], size: [.1, .07], Q: "t(0 .0 .01)", contact: -2 }

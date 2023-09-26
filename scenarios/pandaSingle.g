@@ -37,6 +37,10 @@ cameraWrist(l_panda_joint7): {
  focalLength: 0.895, width: 640, height: 360, zRange: [.1, 10]
 }
 
+panda_collCameraWrist(cameraWrist): {
+ Q: "d(90 0 1 0) t(-.02 0 0)"
+ , shape: capsule, color: [1.,1.,1.,.2], size: [.05, .03], contact: -3 }
+        
 bellybutton(l_panda_joint2): {
  Q: "d(90 0 1 0) t(-.0184 .0 .0545)",
  shape: cylinder, size: [.001, .0125], color: [0, 0, 1]
