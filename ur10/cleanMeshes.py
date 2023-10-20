@@ -5,15 +5,18 @@ import glob
 import signal
 from mesh_helper import *
 
-files = sorted(glob.glob('*_description/meshes/*/*.dae'))
+files = sorted(glob.glob('*_description/meshes/ur10/*/*.dae'))
 
 signal.signal(signal.SIGALRM, timeout)
 
 for file in files:
     print('file: ', file)
 
+    ### load with mine
+    os.system('meshTool ' + file + ' -hide -quiet')
+
     ### load
-    mesh = load_mesh(file)
+    mesh = load_mesh('z.ply')
     if mesh==None:
         continue
 
