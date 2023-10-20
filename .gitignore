@@ -10,3 +10,4 @@ MT.log
 .#*
 #*#
 *.stl
+__pycache__
