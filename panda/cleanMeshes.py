@@ -29,6 +29,8 @@ for file in files:
     print('  watertight:', mesh.is_watertight)
     print('  oriented:', mesh.is_winding_consistent)
 
+    #mesh.visual.to_color()
+
     ## export
     filebase = os.path.splitext(file)[0]
     print('  exporting:', filebase)
