@@ -2,6 +2,7 @@ import os
 import glob
 import signal
 from mesh_helper import *
+from test_h5 import *
 
 files = sorted(glob.glob('ply/*.ply'))
 
@@ -47,6 +48,7 @@ for file in files:
 
     ### export json mesh
     export_mesh(mesh, filebase+'.mesh')
+    export_mesh_h5(mesh, filebase+'.h5')
     #test_read(filebase+'-.mesh')
     
     ### create sdf
@@ -76,7 +78,7 @@ for file in files:
     export_arr(np.hstack((pts, normals)), filename)
     
     ### create decomposition
-    os.system('meshTool ' + filebase+'-.ply' + ' -decomp -hide -quiet'
-              ' && mv z.arr ' + filebase + '.decomp' )
+#    os.system('meshTool ' + filebase+'-.ply' + ' -decomp -hide -quiet'
+#              ' && mv z.arr ' + filebase + '.decomp' )
     
     #exit()

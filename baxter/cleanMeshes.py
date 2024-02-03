@@ -4,19 +4,14 @@ import os
 import glob
 import signal
 from mesh_helper import *
-from test_h5 import *
 
-files = sorted(glob.glob('*_description/meshes/*/*.ply'))
+files = sorted(glob.glob('*_description/meshes/**/*.stl'))
 
 signal.signal(signal.SIGALRM, timeout)
 
 for file in files:
-    if file[-5]=='-':
-        continue
-    
     print('file: ', file)
 
-    ### load
     mesh = load_mesh(file)
     if mesh==None:
         continue
@@ -33,18 +28,13 @@ for file in files:
     print('  watertight:', mesh.is_watertight)
     print('  oriented:', mesh.is_winding_consistent)
 
-    #mesh.visual.to_color()
-
     ## export
     filebase = os.path.splitext(file)[0]
     print('  exporting:', filebase)
 
+    export_mesh(mesh, filebase+'.mesh')
     try:
-        #export_mesh_h5(mesh, 'tmp/'+filebase+'.h5')
-        mesh.export(filebase+'-.ply')
-        os.system('meshTool ' + filebase+'-.ply -hide'
-                  ' && mv z.ply ' + filebase + '-.ply' )
+        mesh.export(filebase+'.ply')
     except:
         print('==== ply export failed ====')
-    #export_mesh(mesh, filebase+'.mesh')
     #test_read(filebase+'-.mesh')
