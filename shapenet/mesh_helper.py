@@ -149,5 +149,10 @@ def import_arr(filename):
     X = np.frombuffer(base64.decodebytes(bytearray(data[2].encode('utf-8'))), dtype=np.float32)
     X = X.reshape(data[1])
     return X
-    
+
+def conv_tuple_arr(data_tuple):
+    X = np.frombuffer(base64.decodebytes(bytearray(data_tuple[2].encode('utf-8'))), dtype=data_tuple[0])
+    X = X.reshape(data_tuple[1])
+    return X
+
         
