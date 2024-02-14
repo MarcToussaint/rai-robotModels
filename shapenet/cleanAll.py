@@ -4,19 +4,20 @@ import os
 import glob
 import signal
 from mesh_helper import *
-from test_h5 import *
 import yaml
 import h5py
 
-files = sorted(glob.glob('ply/*.ply'))
+files = sorted(glob.glob('models/*.obj'))
 
 signal.signal(signal.SIGALRM, timeout)
 
 for file in files:
     if file[-5]=='-':
         continue
-    # if file[:7]<'ply/ffe':
-    #     continue
+#    if file[:11]<'models/86ff':
+#        continue
+#    if file[:13]>'models/room00':
+#        continue
     
     print('=== file: ', file)
 
@@ -37,7 +38,7 @@ for file in files:
         trimesh.repair.fix_inversion(mesh, multibody=True)
     except Exception as e:
         print('  --- repair failed ---', e)
-        continue
+        exit(0) # this might be a trimesh bug: change order within mesh.process method
     print('  watertight:', mesh.is_watertight)
     print('  oriented:', mesh.is_winding_consistent)
     if not mesh.is_watertight or mesh.is_empty:
@@ -48,8 +49,8 @@ for file in files:
 
     ### export ply
     print('  exporting as ply and mesh')
-    mesh.export(filebase+'-.ply')
-    #export_mesh(mesh, filebase+'.mesh', True)
+    #mesh.export(filebase+'-.ply')
+    export_mesh(mesh, filebase+'.mesh', False)
 
     ### create sdf
     '''
@@ -78,8 +79,11 @@ for file in files:
     #export_arr(np.hstack((pts, normals)), filename)
     
     ### create decomposition
-    os.system('meshTool ' + filebase+'-.ply' + ' -decomp -hide -quiet'
-              ' && mv z.arr ' + filebase + '.decomp' )
+    ret = os.system('meshTool ' + filebase+'.mesh' + ' -decomp -hide -quiet'
+                    ' && mv z.arr ' + filebase + '.decomp' )
+    if ret>0:
+        print('  --- decomposition failed --- return:', ret)
+        continue
 
     ### load decomposition
     with open(filebase+'.decomp', 'r') as fil:

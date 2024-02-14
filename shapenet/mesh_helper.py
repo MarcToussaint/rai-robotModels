@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import trimesh
 import base64
-import hjson
 
 def timeout(signum, frame):
     raise Exception("timeout handler")
@@ -136,19 +135,19 @@ def export_arr(X, filename):
     with open(filename, 'w', encoding='utf-8') as fil:
         write_arr(X,fil)
 
-def test_read(filename):
-    with open(filename, 'r', encoding='utf-8') as fil:
-        data = hjson.load(fil)
-    print(data)
+#def test_read(filename):
+#    with open(filename, 'r', encoding='utf-8') as fil:
+#        data = hjson.load(fil)
+#    print(data)
 
-def import_arr(filename):
-    with open(filename, 'r', encoding='utf-8') as fil:
-        data = hjson.load(fil)
+#def import_arr(filename):
+#    with open(filename, 'r', encoding='utf-8') as fil:
+#        data = hjson.load(fil)
     
-    assert data[0]=='float32'
-    X = np.frombuffer(base64.decodebytes(bytearray(data[2].encode('utf-8'))), dtype=np.float32)
-    X = X.reshape(data[1])
-    return X
+#    assert data[0]=='float32'
+#    X = np.frombuffer(base64.decodebytes(bytearray(data[2].encode('utf-8'))), dtype=np.float32)
+#    X = X.reshape(data[1])
+#    return X
 
 def conv_tuple_arr(data_tuple):
     X = np.frombuffer(base64.decodebytes(bytearray(data_tuple[2].encode('utf-8'))), dtype=data_tuple[0])
