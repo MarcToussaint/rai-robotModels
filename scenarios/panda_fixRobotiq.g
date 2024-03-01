@@ -13,6 +13,7 @@ Edit panda_joint7: { q: -.5 }
 
 Delete panda_hand_joint_origin:
 Delete panda_hand_joint:
+Delete panda_hand:
 Delete panda_hand_0:
 Delete panda_finger_joint1_origin:
 Delete panda_finger_joint2_origin:
