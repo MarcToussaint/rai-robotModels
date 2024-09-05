@@ -33,18 +33,21 @@ panda_coll7(panda_joint7): { shape: capsule, color: [1.,1.,1.,.1], size: [.1, .0
 ## zero position
 
 Edit panda_joint1: { q: 0.0 }
-Edit panda_joint2: { q: -1. }
+Edit panda_joint2: { q: -.5 }
 Edit panda_joint3: { q: 0. }
 Edit panda_joint4: { q: -2. }
 Edit panda_joint5: { q: -0. }
 Edit panda_joint6: { q: 2., limits: [.5, 3.] }
-Edit panda_joint7: { q: 0.0 }
+Edit panda_joint7: { q: -.5 }
 Edit panda_finger_joint1: { q: .05 }
-
+        
 ## kill rigid hand joints
 
 Edit panda_joint8: { joint: none }
 Edit panda_hand_joint: { joint: none }
+
+## deactivate the gripper joint by default! control and simulation treats it differently
+Edit panda_finger_joint1: { joint_active: False }
 
 ## define a gripper, palm and fingers
 
