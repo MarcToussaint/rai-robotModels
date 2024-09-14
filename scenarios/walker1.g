@@ -1,5 +1,5 @@
-frame endeffA: {
- X: "t(0 0 .1)", ctrl_H: .1,
+handA: {
+ X: "t(0 0 .1)",
  shape: sphere, size: [.1], color: [1., .5, 0], contact: -1,
  logical:{gripper, support} }
 
