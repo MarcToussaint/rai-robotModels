@@ -13,9 +13,11 @@ Edit panda_hand(gripper_base): {}
 ## define a gripper, palm and fingers
 
 gripper(panda_hand): { Q: "d(180 0 1 0) d(90 0 0 1) t(0 0 -.1035)", shape: marker, size: [.03], color: [.9, .9, .9], logical: { is_gripper } }
-palm(panda_hand): { Q: "d(90 1 0 0)", shape: capsule, color: [1.,1.,1.,.2], size: [.14, .07], contact: -3 }
-finger1(panda_finger_joint1): { Q: [0, 0.028, .035], shape: capsule, size: [.02, .03], color: [1., 1., 1., .2], contact: -2 }
-finger2(panda_finger_joint2): { Q: [0, -.028, .035], shape: capsule, size: [.02, .03], color: [1., 1., 1., .2], contact: -2 }
+palm(panda_hand): { Q: "d(90 1 0 0)", shape: capsule, color: [1.,1.,1.,.1], size: [.14, .07], contact: -3 }
+#finger1(panda_finger_joint1): { Q: [0, 0.028, .035], shape: capsule, size: [.02, .03], color: [1., 1., 1., .2], contact: -2 }
+#finger2(panda_finger_joint2): { Q: [0, -.028, .035], shape: capsule, size: [.02, .03], color: [1., 1., 1., .2], contact: -2 }
+finger1(panda_finger_joint1): { Q: [0, 0.013 .03], shape: ssBox, size: [.02, .03, .05, .005], color: [1., 1., 1., .1], contact: -2 }
+finger2(panda_finger_joint2): { Q: [0, -.013, .03], shape: ssBox, size: [.02, .03, .05, .005], color: [1., 1., 1., .1], contact: -2 }
 
 dotA(panda_finger_joint1){ Q:[0, 0, .0451], shape:sphere, size:[.01], color:[1 0 0 .5] }
 dotB(panda_finger_joint2){ Q:[0, 0, .0451], shape:sphere, size:[.01], color:[1 0 0 .5] }

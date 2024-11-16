@@ -154,4 +154,3 @@ def conv_tuple_arr(data_tuple):
     X = X.reshape(data_tuple[1])
     return X
 
-        
