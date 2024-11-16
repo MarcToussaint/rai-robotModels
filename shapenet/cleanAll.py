@@ -38,7 +38,8 @@ for file in files:
         trimesh.repair.fix_inversion(mesh, multibody=True)
     except Exception as e:
         print('  --- repair failed ---', e)
-        exit(0) # this might be a trimesh bug: change order within mesh.process method
+	print('this might be a trimesh bug: change order within mesh.process method')
+        exit(0)
     print('  watertight:', mesh.is_watertight)
     print('  oriented:', mesh.is_winding_consistent)
     if not mesh.is_watertight or mesh.is_empty:
