@@ -7,16 +7,14 @@ from mesh_helper import *
 import yaml
 import h5py
 
-files = sorted(glob.glob('models/*.obj'))
+files = sorted(glob.glob('23-shapenet-ply/*.ply'))
 
 signal.signal(signal.SIGALRM, timeout)
 
 for file in files:
     if file[-5]=='-':
         continue
-#    if file[:11]<'models/86ff':
-#        continue
-#    if file[:13]>'models/room00':
+    #if file[:10]<'models/14d':
 #        continue
     
     print('=== file: ', file)
@@ -38,7 +36,7 @@ for file in files:
         trimesh.repair.fix_inversion(mesh, multibody=True)
     except Exception as e:
         print('  --- repair failed ---', e)
-	print('this might be a trimesh bug: change order within mesh.process method')
+        print('this might be a trimesh bug: debug into mesh.process method and change order of processing')
         exit(0)
     print('  watertight:', mesh.is_watertight)
     print('  oriented:', mesh.is_winding_consistent)
@@ -48,10 +46,20 @@ for file in files:
 
     filebase = os.path.splitext(file)[0]
 
-    ### export ply
-    print('  exporting as ply and mesh')
+    ### export .ply
+    print('  exporting as .mesh')
     #mesh.export(filebase+'-.ply')
-    export_mesh(mesh, filebase+'.mesh', False)
+    #export_mesh(mesh, filebase+'.mesh', True)
+
+    ### export .mesh.h5
+    print('  exporting as .mesh.h5')
+    with h5py.File(filebase+'.mesh.h5', 'w') as fil:
+        fil.create_dataset('mesh/vertices', data=mesh.vertices, dtype='float32')
+        assert mesh.faces.shape[1]==3, 'can only export triangle meshes'
+        if(mesh.vertices.shape[0]<65535):
+            fil.create_dataset('mesh/faces', data=mesh.faces, dtype='uint16')
+        else:
+            fil.create_dataset('mesh/faces', data=mesh.faces, dtype='uint32')
 
     ### create sdf
     '''
@@ -80,7 +88,7 @@ for file in files:
     #export_arr(np.hstack((pts, normals)), filename)
     
     ### create decomposition
-    ret = os.system('meshTool ' + filebase+'.mesh' + ' -decomp -hide -quiet'
+    ret = os.system('meshTool ' + filebase+'.mesh.h5' + ' -decomp -hide -quiet'
                     ' && mv z.arr ' + filebase + '.decomp' )
     if ret>0:
         print('  --- decomposition failed --- return:', ret)
@@ -106,14 +114,17 @@ for file in files:
         else:
             fil.create_dataset('mesh/faces', data=mesh.faces, dtype='uint32')
         #fil.create_dataset('colors', data=mesh.vertices, dtype='float16')
+
         fil.create_dataset('points/vertices', data=pts, dtype='float32')
         fil.create_dataset('points/normals', data=normals, dtype='float32')
+
         fil.create_dataset('decomp/vertices', data=decomp_vertices, dtype='float32')
         assert decomp_faces.shape[0]<65535
         fil.create_dataset('decomp/faces', data=decomp_faces, dtype='uint16')
         fil.create_dataset('decomp/colors', data=decomp_colors, dtype='uint8')
         assert decomp_parts.shape[0]<65535
         fil.create_dataset('decomp/parts', data=decomp_parts, dtype='uint16')
+
         fil.create_dataset('inertia/mass', data=[mesh.mass], dtype='float32')
         fil.create_dataset('inertia/com', data=mesh.center_mass, dtype='float32')
         fil.create_dataset('inertia/tensor', data=mesh.moment_inertia, dtype='float32')
