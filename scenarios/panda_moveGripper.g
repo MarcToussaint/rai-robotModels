@@ -25,14 +25,14 @@ Edit panda_finger_joint1: { q: .05 }
 
 ## delete original gripper
 
-Delete panda_hand_joint:
-Delete panda_hand_0:
-Delete panda_finger_joint1_origin:
-Delete panda_finger_joint2_origin:
-Delete panda_finger_joint1:
-Delete panda_finger_joint2:
-Delete panda_leftfinger_0:
-Delete panda_rightfinger_0:
+Delete: panda_hand_joint
+Delete: panda_hand_0
+Delete: panda_finger_joint1_origin
+Delete: panda_finger_joint2_origin
+Delete: panda_finger_joint1
+Delete: panda_finger_joint2
+Delete: panda_leftfinger_0
+Delete: panda_rightfinger_0
 
 Include: <gripper.g>
 
