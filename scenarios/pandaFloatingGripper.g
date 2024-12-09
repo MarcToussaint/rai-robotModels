@@ -3,7 +3,7 @@ base { multibody }
 floatX (base){ joint:transX, limits:[-2 2], mass:.01 }
 floatY (floatX){ joint:transY, limits:[-2 2], mass:.01 }
 floatZ (floatY){ joint:transZ, limits:[0 3], mass:.01, q: 1 }
-floatBall (floatZ){ joint:quatBall, limits:[-1 1 -1 1 -1 1 -1 1], mass:.01 }
+floatBall (floatZ){ joint:quatBall, limits:[-1 -1 -1 -1 1 1 1 1], mass:.01 }
 
 Include: <../panda/panda_gripper.g>
 

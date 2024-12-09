@@ -1,8 +1,5 @@
 Include: <baxter_clean2.g>
 
-Delete visual:
-#Delete shape collision:
-
 #Delete shape collision (head):
 
 #shape (head): { shape: mesh, size: [1, 1, 1, 1], Q: "T -0.0319886 -2.26154e-05 -0.00274816 -0.707107 0 -0.707107 0 ", mesh: <head/H0.STL>, color: [0.2, 0.2, 0.2, 1], rel_includes_mesh_center, }

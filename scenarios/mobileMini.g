@@ -3,7 +3,7 @@
 world: { X: "t (0 0 .2)" }
 
 base (world): {
- shape: ssBox, size: [.4, .4, .4, .05], joint: transXYPhi, limits: [-10,10,-10,10,-4,4], contact: 1 }
+ shape: ssBox, size: [.4, .4, .4, .05], joint: transXYPhi, limits: [-10,-10, -4,10, 10, 4], contact: 1 }
 
 arm0 (base): {
  Q: "t (0 0 .3)", shape: capsule, size: [.4, .08], contact: -1 }
