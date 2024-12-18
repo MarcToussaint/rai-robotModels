@@ -19,11 +19,16 @@ yaml-style. Here it is given as a simple, rai-native format
 bremenKitchen.g. The 3D models were originally loaded ussing assimp
 and are now saved as direct binaries to ensure very fast loading in
 the rai code. The large binary meshes are stored externally at
-https://www.user.tu-berlin.de/mtoussai/files/bremenKitchen-meshes.tgz. Call
+https://tubcloud.tu-berlin.de/s/Cq8bteDPeAS582p.
 ```
-make
+curl -o models.zip https://tubcloud.tu-berlin.de/s/Cq8bteDPeAS582p/download
+unzip models.zip
 ```
-to retrieve them.
+Then install the `robotic` python package and
+```
+ry-view bremenKitchen.g
+```
+and hit `a` to animate..
 
 ## License
 
