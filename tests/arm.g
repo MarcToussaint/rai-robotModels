@@ -9,14 +9,14 @@ arm5: { shape: capsule, size: [0.1, 0.1, .4, .1], contact: -1, }
 arm6: { shape: capsule, size: [0.1, 0.1, .4, .1], contact: -1, }
 arm7: { shape: capsule, size: [0.1, 0.1, .4, .1], contact: -1, }
 
-(stem arm1): { joint: hingeX, pre: "t(0 0 1) d(90 1 0 0)", post: "t(0 0 .2)", Q: "T d(1 0 0 0)" }
+(stem arm1): { joint: hingeX, limits:[-2,2], pre: "t(0 0 1) d(90 1 0 0)", post: "t(0 0 .2)", Q: "T d(1 0 0 0)" }
 
-(arm1 arm2): { joint: hingeX, pre: "t(0 0 0.2) d(45 0 0 1)", post: "t(0 0 .2)", Q: "T d(1 0 0 0)" }
-(arm2 arm3): { joint: hingeX, pre: "t(0 0 0.2) d(45 0 0 1)", post: "t(0 0 .2)", Q: "T d(1 0 0 0)" }
-(arm3 arm4): { joint: hingeX, pre: "t(0 0 0.2) d(45 0 0 1)", post: "t(0 0 .2)", Q: "T d(1 0 0 0)" }
-(arm4 arm5): { joint: quatBall, pre: "t(0 0 0.2) d(45 0 0 1)", post: "t(0 0 .2)", Q: "T d(1 0 0 0)" }
-(arm5 arm6): { joint: hingeX, pre: "t(0 0 0.2) d(45 0 0 1)", post: "t(0 0 .2)", Q: "T d(1 0 0 0)" }
-(arm6 arm7): { joint: hingeX, pre: "t(0 0 0.2) d(45 0 0 1)", post: "t(0 0 .2)", Q: "T d(1 0 0 0)" }
+(arm1 arm2): { joint: hingeX, limits:[-2,2], pre: "t(0 0 0.2) d(45 0 0 1)", post: "t(0 0 .2)", Q: "T d(1 0 0 0)" }
+(arm2 arm3): { joint: hingeX, limits:[-2,2], pre: "t(0 0 0.2) d(45 0 0 1)", post: "t(0 0 .2)", Q: "T d(1 0 0 0)" }
+(arm3 arm4): { joint: hingeX, limits:[-2,2], pre: "t(0 0 0.2) d(45 0 0 1)", post: "t(0 0 .2)", Q: "T d(1 0 0 0)" }
+(arm4 arm5): { joint: quatBall, limits:[-2,-2,-2,-2,2,2,2,2], pre: "t(0 0 0.2) d(45 0 0 1)", post: "t(0 0 .2)", Q: "T d(1 0 0 0)" }
+(arm5 arm6): { joint: hingeX, limits:[-2,2], pre: "t(0 0 0.2) d(45 0 0 1)", post: "t(0 0 .2)", Q: "T d(1 0 0 0)" }
+(arm6 arm7): { joint: hingeX, limits:[-2,2], pre: "t(0 0 0.2) d(45 0 0 1)", post: "t(0 0 .2)", Q: "T d(1 0 0 0)" }
 
 target: { X: "t(.7 -.5 1.2)", shape: sphere, size: [.1, .1, .1, .05], color: [0, .5, 0] }
 

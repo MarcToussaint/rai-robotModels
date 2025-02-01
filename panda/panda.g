@@ -39,8 +39,9 @@ Edit panda_joint4: { q: -2. }
 Edit panda_joint5: { q: -0. }
 Edit panda_joint6: { q: 2., limits: [.5, 3.] }
 Edit panda_joint7: { q: -.5 }
-Edit panda_finger_joint1: { q: .05 }
-        
+Edit panda_finger_joint1: { q: .04 }
+Edit panda_finger_joint2: { q: .04 }
+
 ## kill rigid hand joints
 
 Edit panda_joint8: { joint: none }
