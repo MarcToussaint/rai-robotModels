@@ -7,7 +7,7 @@ floatBall (floatZ){ joint:quatBall, limits:[-1 -1 -1 -1 1 1 1 1], mass:.01 }
 
 Include: <../panda/panda_gripper.g>
 
-gripper_base(floatBall): { Q:"t(0 0 .1035) d(180 1 0 0) d(-90 0 0 1)", shape: marker, size: [.1] }
+gripper_base(floatBall): { Q:"t(0 0 .1035) d(180 1 0 0) d(-90 0 0 1)", shape: marker, size: [.03] }
 Edit panda_hand(gripper_base): {}
 
 ## define a gripper, palm and fingers
