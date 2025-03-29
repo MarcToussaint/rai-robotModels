@@ -1,6 +1,9 @@
+*_description/
+
 %% BACKUP/temporary files
 *.tmp
 *.dat
+*.zip
 nogit*
 *~
 z.*

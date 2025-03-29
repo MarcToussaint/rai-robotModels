@@ -1,13 +1,17 @@
 base_footprint: { mass: 1, inertia: [0.01, 0.01, 0.01] }
+
 base_footprint_0(base_footprint): { shape: box, size: [0.01, 0.01, 0.01, 0], visual: True }
+
 base_link(base_footprint): { rel: [0, 0, 0.051, 1, 0, 0, 0], mass: 116, inertia: [5.65223, -0.00971993, 1.29399, 5.66947, -0.00737958, 3.6832] }
 base_link_0(base_footprint): { rel: [0, 0, 0.051, 1, 0, 0, 0], shape: mesh, mesh: <pr2_description/meshes/base_v0/base.ply>, meshscale: 0.1, visual: True }
 base_laser_link(base_footprint): { rel: [0.275, 0, 0.303, 1, 0, 0, 0], mass: 0.001, inertia: [0.0001, 1e-06, 0.0001] }
 base_laser_link_0(base_footprint): { rel: [0.275, 0, 0.303, 1, 0, 0, 0], shape: box, size: [0.001, 0.001, 0.001, 0], visual: True }
+
 fl_caster_rotation_joint_origin(base_footprint): { rel: [0.2246, 0.2246, 0.0792, 1, 0, 0, 0] }
 fr_caster_rotation_joint_origin(base_footprint): { rel: [0.2246, -0.2246, 0.0792, 1, 0, 0, 0] }
 bl_caster_rotation_joint_origin(base_footprint): { rel: [-0.2246, 0.2246, 0.0792, 1, 0, 0, 0] }
 br_caster_rotation_joint_origin(base_footprint): { rel: [-0.2246, -0.2246, 0.0792, 1, 0, 0, 0] }
+
 torso_lift_joint_origin(base_footprint): { rel: [-0.05, 0, 0.790675, 1, 0, 0, 0] }
 fl_caster_rotation_joint(fl_caster_rotation_joint_origin): { joint: hingeZ, limits: [0, 0, 0, 100, -1, 100], ctrl_limits: [100, -1, 100] }
 fr_caster_rotation_joint(fr_caster_rotation_joint_origin): { joint: hingeZ, limits: [0, 0, 0, 100, -1, 100], ctrl_limits: [100, -1, 100] }

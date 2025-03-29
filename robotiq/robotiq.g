@@ -1,11 +1,11 @@
 robotiq_base: { X: [0, 0, 1] }
 
-Include: <robotiq_clean.g>
+Include: <robotiq_arg2f_85_model_conv.g>
 Edit robotiq_arg2f_base_link (robotiq_base): {}
 
 # add F/T sensor
 
-ftsensor (robotiq_base): { Q: [0, 0, -.035], shape: mesh, color: [0.2, 0.2, 0.2], mesh: <meshes/visual/robotiq_ft300.ply> }
+ftsensor (robotiq_base): { Q: [0, 0, -.035], shape: mesh, color: [0.2, 0.2, 0.2], mesh: <meshes/robotiq_ft300.ply> }
  
 
 # define a gripper, palm and fingers

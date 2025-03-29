@@ -1,5 +1,5 @@
 Prefix: "ur_"
-Include: <ur10_clean.g>
+Include: <ur10_conv.g>
 Prefix: false
 
 Edit ur_world_joint_origin: { rel: [0, 0, 0] }

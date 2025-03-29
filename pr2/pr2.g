@@ -1,7 +1,7 @@
 world: {}
 worldTranslationRotation (world): { joint: transXYPhi, Q: "d(90 0 0 1)", gains: [1, 1], limits: [-10, -10, -6, 10, 10, 6], ctrl_limits: [1, 1, 1], ctrl_H: 10, base }
 
-Include: <pr2_clean.g>
+Include: <pr2_conv.g>
 
 Edit base_footprint (worldTranslationRotation): { Q: [0, 0, .05] }
 
