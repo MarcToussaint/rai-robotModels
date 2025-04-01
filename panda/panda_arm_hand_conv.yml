@@ -1,0 +1,24 @@
+panda_link0: {shape: mesh, mesh: <meshes/link0.h5>}
+panda_joint1_origin (panda_link0): {pose: [0.0, 0.0, 0.333]}
+panda_joint1 (panda_joint1_origin): {joint: hingeZ, limits: [-2.8973, 2.8973], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/link1.h5>}
+panda_joint2_origin (panda_joint1): {pose: [0.7071067811882787, -0.7071067811848163, 0.0, 0.0]}
+panda_joint2 (panda_joint2_origin): {joint: hingeZ, limits: [-1.7628, 1.7628], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/link2.h5>}
+panda_joint3_origin (panda_joint2): {pose: [0.0, -0.316, 0.0, 0.7071067811882787, 0.7071067811848163, 0.0, 0.0]}
+panda_joint3 (panda_joint3_origin): {joint: hingeZ, limits: [-2.8973, 2.8973], shape: mesh, mesh: <meshes/link3.h5>}
+panda_joint4_origin (panda_joint3): {pose: [0.0825, 0.0, 0.0, 0.7071067811882787, 0.7071067811848163, 0.0, 0.0]}
+panda_joint4 (panda_joint4_origin): {joint: hingeZ, limits: [-3.0718, -0.0698], shape: mesh, mesh: <meshes/link4.h5>}
+panda_joint5_origin (panda_joint4): {pose: [-0.0825, 0.384, 0.0, 0.7071067811882787, -0.7071067811848163, 0.0, 0.0]}
+panda_joint5 (panda_joint5_origin): {joint: hingeZ, limits: [-2.8973, 2.8973], shape: mesh, mesh: <meshes/link5.h5>}
+panda_joint6_origin (panda_joint5): {pose: [0.7071067811882787, 0.7071067811848163, 0.0, 0.0]}
+panda_joint6 (panda_joint6_origin): {joint: hingeZ, limits: [-0.0175, 3.7525], shape: mesh, mesh: <meshes/link6.h5>}
+panda_joint7_origin (panda_joint6): {pose: [0.088, 0.0, 0.0, 0.7071067811882787, 0.7071067811848163, 0.0, 0.0]}
+panda_joint7 (panda_joint7_origin): {joint: hingeZ, limits: [-2.8973, 2.8973], shape: mesh, mesh: <meshes/link7.h5>}
+panda_joint8_origin (panda_joint7): {pose: [0.0, 0.0, 0.107]}
+panda_joint8 (panda_joint8_origin): {joint: rigid}
+panda_hand_joint_origin (panda_joint8): {pose: [0.9238795325113726, 0.0, 0.0, -0.38268343236488267]}
+panda_hand_joint (panda_hand_joint_origin): {joint: rigid, shape: mesh, mesh: <meshes/hand.h5>}
+panda_finger_joint1_origin (panda_hand_joint): {pose: [0.0, 0.0, 0.0584]}
+panda_finger_joint2_origin (panda_hand_joint): {pose: [0.0, 0.0, 0.0584]}
+panda_finger_joint1 (panda_finger_joint1_origin): {joint: transY, limits: [0.0, 0.04], shape: mesh, mesh: <meshes/finger.h5>}
+panda_finger_joint2 (panda_finger_joint2_origin): {joint: transY, joint_scale: -1.0, limits: [0.0, 0.04], mimic: panda_finger_joint1}
+panda_rightfinger_0 (panda_finger_joint2): {pose: [-1.0341155355510722e-13, 0.0, 0.0, 1.0], shape: mesh, mesh: <meshes/finger.h5>}

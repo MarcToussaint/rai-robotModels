@@ -2,7 +2,7 @@ Prefix: "ur_"
 Include: <ur10_conv.g>
 Prefix: false
 
-Edit ur_world_joint_origin: { rel: [0, 0, 0] }
+Edit ur_world_joint_origin: { pose: [0, 0, 0] }
 
 Edit ur_shoulder_pan_joint: { q: 0.0 }
 Edit ur_shoulder_lift_joint: { q: -2.0 }
