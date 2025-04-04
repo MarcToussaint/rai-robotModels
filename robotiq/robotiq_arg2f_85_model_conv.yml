@@ -1,0 +1,19 @@
+robotiq_arg2f_base_link: {shape: mesh, color: [0.1, 0.1, 0.1, 1.0], mesh: <meshes/robotiq_arg2f_85_base_link.h5>, mass: 0.22652, inertia: [0.00020005, -4.2442e-10, -2.9069e-10, 0.00017832, -3.4402e-08, 0.00013478]}
+finger_joint_origin (robotiq_arg2f_base_link): {pose: [0.0, -0.0306011, 0.054904, 6.123233995736766e-17, 0.0, 0.0, 1.0]}
+left_inner_knuckle_joint_origin (robotiq_arg2f_base_link): {pose: [0.0, -0.0127, 0.06142, 6.123233995736766e-17, 0.0, 0.0, 1.0]}
+right_outer_knuckle_joint_origin (robotiq_arg2f_base_link): {pose: [0.0, 0.0306011, 0.054904]}
+right_inner_knuckle_joint_origin (robotiq_arg2f_base_link): {pose: [0.0, 0.0127, 0.06142]}
+finger_joint (finger_joint_origin): {joint: hingeX, limits: [0.0, 0.8], color: [0.792156862745098, 0.819607843137255, 0.933333333333333, 1.0] },
+finger_metal_l(finger_joint): {pose: [1 -1 0 0], mesh: <meshes/robotiq_arg2f_85_outer_knuckle.h5>}
+left_inner_knuckle_joint (left_inner_knuckle_joint_origin): {joint: hingeX, limits: [0.0, 0.8757], mimic: finger_joint, shape: mesh, color: [0.1, 0.1, 0.1, 1.0], mesh: <meshes/robotiq_arg2f_85_inner_knuckle.h5>}
+right_outer_knuckle_joint (right_outer_knuckle_joint_origin): {joint: hingeX, limits: [0.0, 0.81], mimic: finger_joint, color: [0.792156862745098, 0.819607843137255, 0.933333333333333, 1.0]}
+finger_metal_r(right_outer_knuckle_joint): {pose: [1 -1 0 0], mesh: <meshes/robotiq_arg2f_85_outer_knuckle.h5>}
+right_inner_knuckle_joint (right_inner_knuckle_joint_origin): {joint: hingeX, limits: [0.0, 0.8757], mimic: finger_joint, shape: mesh, color: [0.1, 0.1, 0.1, 1.0], mesh: <meshes/robotiq_arg2f_85_inner_knuckle.h5>}
+left_outer_finger_0 (finger_joint): {pose: [0.0, 0.0315, -0.0041], shape: mesh, color: [0.1, 0.1, 0.1, 1.0], mesh: <meshes/robotiq_arg2f_85_outer_finger.h5>}
+left_inner_finger_joint_origin (finger_joint): {pose: [0.0, 0.0376, 0.043000000000000003]}
+right_outer_finger_0 (right_outer_knuckle_joint): {pose: [0.0, 0.0315, -0.0041], shape: mesh, color: [0.1, 0.1, 0.1, 1.0], mesh: <meshes/robotiq_arg2f_85_outer_finger.h5>}
+right_inner_finger_joint_origin (right_outer_knuckle_joint): {pose: [0.0, 0.0376, 0.043000000000000003]}
+left_inner_finger_joint (left_inner_finger_joint_origin): {joint: hingeX, limits: [0.0, 0.8757], mimic: finger_joint, shape: mesh, color: [0.1, 0.1, 0.1, 1.0], mesh: <meshes/robotiq_arg2f_85_inner_finger.h5>}
+right_inner_finger_joint (right_inner_finger_joint_origin): {joint: hingeX, limits: [0.0, 0.8757], mimic: finger_joint, shape: mesh, color: [0.1, 0.1, 0.1, 1.0], mesh: <meshes/robotiq_arg2f_85_inner_finger.h5>}
+left_inner_finger_pad_0 (left_inner_finger_joint): {pose: [0.0, -0.0220203446692936, 0.03242], shape: box, size: [0.022, 0.00635, 0.0375], color: [0.9, 0.9, 0.9, 1.0]}
+right_inner_finger_pad_0 (right_inner_finger_joint): {pose: [0.0, -0.0220203446692936, 0.03242], shape: box, size: [0.022, 0.00635, 0.0375], color: [0.9, 0.9, 0.9, 1.0]}

@@ -1,6 +1,6 @@
 robotiq_base: { X: [0, 0, 1] }
 
-Include: <robotiq_arg2f_85_model_conv.g>
+Include: <robotiq_arg2f_85_model_conv.yml>
 Edit robotiq_arg2f_base_link (robotiq_base): {}
 
 # add F/T sensor
