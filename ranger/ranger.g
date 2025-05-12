@@ -5,8 +5,8 @@ ranger_base { multibody: true, multibody_gravity: false }
 ranger_transX(ranger_base) { joint: transX, limits: [-5 5], ctrl_H: 2., motorLambda:.02, motorMass:40 }
 ranger_transY(ranger_transX) { joint: transY, limits: [-5 5], ctrl_H: 2., motorLambda:.02, motorMass:40 }
 #ranger_rot(ranger_trans) { joint: hingeZ, limits: [-5 5] }
-#ranger_rot(ranger_trans) { joint: circleZ, limits: [-1.1 -1.1 1.1 1.1], ctrl_H: 2. }
-ranger_rot(ranger_transY) { }
+ranger_rot(ranger_transY) { joint: circleZ, limits: [-1.1 -1.1 1.1 1.1], ctrl_H: 2. }
+#ranger_rot(ranger_transY) { }
 
 Prefix: ranger_
 Include: <ranger_mini_conv.g>
