@@ -46,8 +46,8 @@ Edit l_gripper_r_finger_tip_joint: { gripL }
 Edit laser_tilt_mount_joint: { laser }
 
 ## FT sensors
-r_ft_sensor (r_wrist_roll_joint): { Q: "t(.01 0 0) d(-90 0 1 0) d(70.015 0 0 1)", shape: cylinder, color: [1, 0, 0], size: [.0, .0, .0356, .02] }
-l_ft_sensor (l_wrist_roll_joint): { Q: "t(.01 0 0) d(-90 0 1 0) d(70.015 0 0 1)", shape: cylinder, color: [1, 0, 0], size: [.0, .0, .0356, .02] }
+r_ft_sensor (r_wrist_roll_joint): { Q: "t(.01 0 0) d(-90 0 1 0) d(70.015 0 0 1)", shape: cylinder, color: [1, 0, 0], size: [.0356, .02] }
+l_ft_sensor (l_wrist_roll_joint): { Q: "t(.01 0 0) d(-90 0 1 0) d(70.015 0 0 1)", shape: cylinder, color: [1, 0, 0], size: [.0356, .02] }
 Edit r_wrist_roll_joint: { to: "t(.0356 0 0)" }
 Edit l_wrist_roll_joint: { to: "t(.0356 0 0)" }
 
