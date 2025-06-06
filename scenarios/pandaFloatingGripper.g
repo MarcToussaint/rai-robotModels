@@ -1,4 +1,4 @@
-base { multibody, multibody_gravity: false }
+base { multibody, multibody_gravity: false, mass: 1. }
 
 floatX (base){ joint:transX, limits:[-2 2], mass:.01 }
 floatY (floatX){ joint:transY, limits:[-2 2], mass:.01 }
