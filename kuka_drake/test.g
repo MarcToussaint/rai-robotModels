@@ -1,9 +1,9 @@
 Include: <z.5.g>
 
-#Delete iiwa_link_6_0:
-Delete iiwa_link_7_0:
-Delete iiwa_link_1_0:
-Delete iiwa_link_2_0:
+#Delete: iiwa_link_6_0
+Delete: iiwa_link_7_0
+Delete: iiwa_link_1_0
+Delete: iiwa_link_2_0
 #Delete shape visual:
 #Delete shape collision:
 

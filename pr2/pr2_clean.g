@@ -1,11 +1,11 @@
 base_footprint: { mass: 1, inertia: [0.01, 0.01, 0.01] }
 
-base_footprint_0(base_footprint): { shape: box, size: [0.01, 0.01, 0.01, 0], visual: True }
+base_footprint_0(base_footprint): { shape: box, size: [0.01, 0.01, 0.01], visual: True }
 
 base_link(base_footprint): { pose: [0, 0, 0.051, 1, 0, 0, 0], mass: 116, inertia: [5.65223, -0.00971993, 1.29399, 5.66947, -0.00737958, 3.6832] }
 base_link_0(base_footprint): { pose: [0, 0, 0.051, 1, 0, 0, 0], shape: mesh, mesh: <meshes/base.h5>, visual: True }
 base_laser_link(base_footprint): { pose: [0.275, 0, 0.303, 1, 0, 0, 0], mass: 0.001, inertia: [0.0001, 1e-06, 0.0001] }
-base_laser_link_0(base_footprint): { pose: [0.275, 0, 0.303, 1, 0, 0, 0], shape: box, size: [0.001, 0.001, 0.001, 0], visual: True }
+base_laser_link_0(base_footprint): { pose: [0.275, 0, 0.303, 1, 0, 0, 0], shape: box, size: [0.001, 0.001, 0.001], visual: True }
 
 fl_caster_rotation_joint_origin(base_footprint): { pose: [0.2246, 0.2246, 0.0792, 1, 0, 0, 0] }
 fr_caster_rotation_joint_origin(base_footprint): { pose: [0.2246, -0.2246, 0.0792, 1, 0, 0, 0] }
@@ -37,7 +37,7 @@ br_caster_r_wheel_joint_origin(br_caster_rotation_joint): { pose: [0, -0.049, 0,
 torso_lift_link(torso_lift_joint): { mass: 36.248, inertia: [2.77165, 0.00428452, -0.160419, 2.51002, 0.0296645, 0.526432] }
 torso_lift_link_0(torso_lift_joint): { shape: mesh, mesh: <meshes/torso_lift.h5>, visual: True }
 imu_link(torso_lift_joint): { pose: [-0.02977, -0.1497, 0.164, -1.03412e-13, 0, 1, 0], mass: 0.001, inertia: [0.0001, 1e-06, 0.0001] }
-imu_link_0(torso_lift_joint): { pose: [-0.02977, -0.1497, 0.164, -1.03412e-13, 0, 1, 0], shape: box, size: [0.001, 0.001, 0.001, 0], visual: True }
+imu_link_0(torso_lift_joint): { pose: [-0.02977, -0.1497, 0.164, -1.03412e-13, 0, 1, 0], shape: box, size: [0.001, 0.001, 0.001], visual: True }
 head_pan_joint_origin(torso_lift_joint): { pose: [-0.01707, 0, 0.38145, 1, 0, 0, 0] }
 laser_tilt_mount_joint_origin(torso_lift_joint): { pose: [0.09893, 0, 0.227, 1, 0, 0, 0] }
 r_shoulder_pan_joint_origin(torso_lift_joint): { pose: [0, -0.188, 0, 1, 0, 0, 0] }
@@ -76,7 +76,7 @@ head_tilt_joint_origin(head_pan_joint): { pose: [0.068, 0, 0, 1, 0, 0, 0] }
 laser_tilt_mount_link(laser_tilt_mount_joint): { mass: 0.05, inertia: [0.0001, 1e-05, 0.0001] }
 laser_tilt_mount_link_0(laser_tilt_mount_joint): { shape: mesh, mesh: <meshes/tilting_hokuyo.h5>, visual: True }
 laser_tilt_link(laser_tilt_mount_joint): { pose: [0, 0, 0.03, 1, 0, 0, 0], mass: 0.001, inertia: [0.0001, 1e-06, 0.0001] }
-laser_tilt_link_0(laser_tilt_mount_joint): { pose: [0, 0, 0.03, 1, 0, 0, 0], shape: box, size: [0.001, 0.001, 0.001, 0], visual: True }
+laser_tilt_link_0(laser_tilt_mount_joint): { pose: [0, 0, 0.03, 1, 0, 0, 0], shape: box, size: [0.001, 0.001, 0.001], visual: True }
 r_shoulder_pan_link(r_shoulder_pan_joint): { mass: 25.7993, inertia: [0.866179, -0.0608651, -0.121181, 0.874217, -0.0588661, 0.273538] }
 r_shoulder_pan_link_0(r_shoulder_pan_joint): { shape: mesh, mesh: <meshes/shoulder_pan.h5>, visual: True }
 r_shoulder_lift_joint_origin(r_shoulder_pan_joint): { pose: [0.1, 0, 0, 1, 0, 0, 0] }
@@ -89,27 +89,27 @@ l_shoulder_lift_joint(l_shoulder_lift_joint_origin): { joint: hingeY, limits: [-
 head_tilt_link(head_tilt_joint): { mass: 1.74973, inertia: [0.0106023, -0.000408814, 0.00198304, 0.0118744, 0.000197909, 0.00551679] }
 head_tilt_link_0(head_tilt_joint): { shape: mesh, mesh: <meshes/head_tilt.h5>, visual: True }
 head_plate_frame(head_tilt_joint): { pose: [0.0232, 0, 0.0645, 1, 0, 0, 0], mass: 0.01, inertia: [0.001, 0.001, 0.001] }
-head_plate_frame_0(head_tilt_joint): { pose: [0.0232, 0, 0.0645, 1, 0, 0, 0], shape: box, size: [0.01, 0.01, 0.01, 0], visual: True }
+head_plate_frame_0(head_tilt_joint): { pose: [0.0232, 0, 0.0645, 1, 0, 0, 0], shape: box, size: [0.01, 0.01, 0.01], visual: True }
 sensor_mount_link(head_tilt_joint): { pose: [0.0232, 0, 0.0645, 1, 0, 0, 0], mass: 0.05, inertia: [0.001, 0.001, 0.01] }
-sensor_mount_link_0(head_tilt_joint): { pose: [0.0232, 0, 0.0645, 1, 0, 0, 0], shape: box, size: [0.01, 0.01, 0.01, 0], visual: True }
+sensor_mount_link_0(head_tilt_joint): { pose: [0.0232, 0, 0.0645, 1, 0, 0, 0], shape: box, size: [0.01, 0.01, 0.01], visual: True }
 high_def_frame(head_tilt_joint): { pose: [0.0232, -0.109, 0.0995, 1, 0, 0, 0], mass: 0.01, inertia: [0.001, 0.001, 0.001] }
-high_def_frame_0(head_tilt_joint): { pose: [0.0032, -0.109, 0.0995, 1, 0, 0, 0], shape: box, size: [0.04, 0.04, 0.04, 0], visual: True }
+high_def_frame_0(head_tilt_joint): { pose: [0.0032, -0.109, 0.0995, 1, 0, 0, 0], shape: box, size: [0.04, 0.04, 0.04], visual: True }
 high_def_optical_frame(head_tilt_joint): { pose: [0.0232, -0.109, 0.0995, 0.5, -0.5, 0.5, -0.5], mass: 0.01, inertia: [0.001, 0.001, 0.001] }
-high_def_optical_frame_0(head_tilt_joint): { pose: [0.0232, -0.109, 0.0995, 0.707107, -3.46245e-12, 0.707107, -5.55112e-17], shape: cylinder, size: [0, 0, 0.05, 0.02], visual: True }
+high_def_optical_frame_0(head_tilt_joint): { pose: [0.0232, -0.109, 0.0995, 0.707107, -3.46245e-12, 0.707107, -5.55112e-17], shape: cylinder, size: [0.05, 0.02], visual: True }
 double_stereo_link(head_tilt_joint): { pose: [0.0232, 0, 0.0675, 1, 0, 0, 0], mass: 0.1, inertia: [0.001, 0.001, 0.01] }
-double_stereo_link_0(head_tilt_joint): { pose: [0.0132, 0, 0.0925, 1, 0, 0, 0], shape: box, size: [0.02, 0.12, 0.05, 0], visual: True }
+double_stereo_link_0(head_tilt_joint): { pose: [0.0132, 0, 0.0925, 1, 0, 0, 0], shape: box, size: [0.02, 0.12, 0.05], visual: True }
 wide_stereo_link(head_tilt_joint): { pose: [0.0232, 0.03, 0.098, 1, 0, 0, 0], mass: 0.1, inertia: [0.01, 0.01, 0.01] }
-wide_stereo_link_0(head_tilt_joint): { pose: [0.0232, 0.03, 0.098, 1, 0, 0, 0], shape: box, size: [0.001, 0.001, 0.001, 0], visual: True }
+wide_stereo_link_0(head_tilt_joint): { pose: [0.0232, 0.03, 0.098, 1, 0, 0, 0], shape: box, size: [0.001, 0.001, 0.001], visual: True }
 wide_stereo_gazebo_l_stereo_camera_frame(head_tilt_joint): { pose: [0.0232, 0.03, 0.098, 1, 0, 0, 0], mass: 0.01, inertia: [0.001, 0.001, 0.001] }
-wide_stereo_gazebo_l_stereo_camera_frame_0(head_tilt_joint): { pose: [0.0232, 0.03, 0.098, 1, 0, 0, 0], shape: box, size: [0.01, 0.01, 0.01, 0], visual: True }
+wide_stereo_gazebo_l_stereo_camera_frame_0(head_tilt_joint): { pose: [0.0232, 0.03, 0.098, 1, 0, 0, 0], shape: box, size: [0.01, 0.01, 0.01], visual: True }
 wide_stereo_gazebo_r_stereo_camera_frame(head_tilt_joint): { pose: [0.0232, -0.06, 0.098, 1, 0, 0, 0], mass: 0.01, inertia: [0.001, 0.001, 0.001] }
-wide_stereo_gazebo_r_stereo_camera_frame_0(head_tilt_joint): { pose: [0.0232, -0.06, 0.098, 1, 0, 0, 0], shape: box, size: [0.01, 0.01, 0.01, 0], visual: True }
+wide_stereo_gazebo_r_stereo_camera_frame_0(head_tilt_joint): { pose: [0.0232, -0.06, 0.098, 1, 0, 0, 0], shape: box, size: [0.01, 0.01, 0.01], visual: True }
 narrow_stereo_link(head_tilt_joint): { pose: [0.0232, 0.06, 0.098, 1, 0, 0, 0], mass: 0.1, inertia: [0.01, 0.01, 0.01] }
-narrow_stereo_link_0(head_tilt_joint): { pose: [0.0232, 0.06, 0.098, 1, 0, 0, 0], shape: box, size: [0.001, 0.001, 0.001, 0], visual: True }
+narrow_stereo_link_0(head_tilt_joint): { pose: [0.0232, 0.06, 0.098, 1, 0, 0, 0], shape: box, size: [0.001, 0.001, 0.001], visual: True }
 narrow_stereo_gazebo_l_stereo_camera_frame(head_tilt_joint): { pose: [0.0232, 0.06, 0.098, 1, 0, 0, 0], mass: 0.01, inertia: [0.001, 0.001, 0.001] }
-narrow_stereo_gazebo_l_stereo_camera_frame_0(head_tilt_joint): { pose: [0.0232, 0.06, 0.098, 1, 0, 0, 0], shape: box, size: [0.01, 0.01, 0.01, 0], visual: True }
+narrow_stereo_gazebo_l_stereo_camera_frame_0(head_tilt_joint): { pose: [0.0232, 0.06, 0.098, 1, 0, 0, 0], shape: box, size: [0.01, 0.01, 0.01], visual: True }
 narrow_stereo_gazebo_r_stereo_camera_frame(head_tilt_joint): { pose: [0.0232, -0.03, 0.098, 1, 0, 0, 0], mass: 0.01, inertia: [0.001, 0.001, 0.001] }
-narrow_stereo_gazebo_r_stereo_camera_frame_0(head_tilt_joint): { pose: [0.0232, -0.03, 0.098, 1, 0, 0, 0], shape: box, size: [0.01, 0.01, 0.01, 0], visual: True }
+narrow_stereo_gazebo_r_stereo_camera_frame_0(head_tilt_joint): { pose: [0.0232, -0.03, 0.098, 1, 0, 0, 0], shape: box, size: [0.01, 0.01, 0.01], visual: True }
 r_shoulder_lift_link(r_shoulder_lift_joint): { mass: 2.74988, inertia: [0.0210558, 0.00496704, -0.00194809, 0.0212722, 0.00110425, 0.0197575] }
 r_shoulder_lift_link_0(r_shoulder_lift_joint): { shape: mesh, mesh: <meshes/shoulder_lift.h5>, visual: True }
 l_shoulder_lift_link(l_shoulder_lift_joint): { mass: 2.74988, inertia: [0.0210558, 0.00496704, -0.00194809, 0.0212722, 0.00110425, 0.0197575] }
@@ -139,14 +139,14 @@ r_forearm_roll_link_0(r_forearm_roll_joint): { shape: mesh, mesh: <meshes/forear
 r_forearm_link(r_forearm_roll_joint): { mass: 2.57968, inertia: [0.00364857, 5.21588e-05, 0.000715348, 0.0150774, -1.31077e-05, 0.0165931] }
 r_forearm_link_0(r_forearm_roll_joint): { shape: mesh, mesh: <meshes/forearm.h5>, visual: True }
 r_forearm_cam_frame(r_forearm_roll_joint): { pose: [0.135, 0, 0.044, 0.679288, 0.679288, -0.196387, 0.196387], mass: 0.01, inertia: [0.001, 0.001, 0.001] }
-r_forearm_cam_frame_0(r_forearm_roll_joint): { pose: [0.135, 0, 0.044, 0.679288, 0.679288, -0.196387, 0.196387], shape: box, size: [0.01, 0.01, 0.01, 0], visual: True }
+r_forearm_cam_frame_0(r_forearm_roll_joint): { pose: [0.135, 0, 0.044, 0.679288, 0.679288, -0.196387, 0.196387], shape: box, size: [0.01, 0.01, 0.01], visual: True }
 r_wrist_flex_joint_origin(r_forearm_roll_joint): { pose: [0.321, 0, 0, 1, 0, 0, 0] }
 l_forearm_roll_link(l_forearm_roll_joint): { mass: 0.1, inertia: [0.01, 0.01, 0.01] }
 l_forearm_roll_link_0(l_forearm_roll_joint): { shape: mesh, mesh: <meshes/forearm_roll.h5>, visual: True }
 l_forearm_link(l_forearm_roll_joint): { mass: 2.57968, inertia: [0.00364857, 5.21588e-05, 0.000715348, 0.0150774, -1.31077e-05, 0.0165931] }
 l_forearm_link_0(l_forearm_roll_joint): { shape: mesh, mesh: <meshes/forearm.h5>, visual: True }
 l_forearm_cam_frame(l_forearm_roll_joint): { pose: [0.135, 0, 0.044, 0.679288, -0.679288, -0.196387, -0.196387], mass: 0.01, inertia: [0.001, 0.001, 0.001] }
-l_forearm_cam_frame_0(l_forearm_roll_joint): { pose: [0.135, 0, 0.044, 0.679288, -0.679288, -0.196387, -0.196387], shape: box, size: [0.01, 0.01, 0.01, 0], visual: True }
+l_forearm_cam_frame_0(l_forearm_roll_joint): { pose: [0.135, 0, 0.044, 0.679288, -0.679288, -0.196387, -0.196387], shape: box, size: [0.01, 0.01, 0.01], visual: True }
 l_wrist_flex_joint_origin(l_forearm_roll_joint): { pose: [0.321, 0, 0, 1, 0, 0, 0] }
 r_wrist_flex_joint(r_wrist_flex_joint_origin): { joint: hingeY, limits: [-2.094, 0, 3.078, -1, 10], ctrl_limits: [3.078, -1, 10] }
 l_wrist_flex_joint(l_wrist_flex_joint_origin): { joint: hingeY, limits: [-2.094, 0, 3.078, -1, 10], ctrl_limits: [3.078, -1, 10] }
@@ -161,7 +161,7 @@ r_wrist_roll_link_0(r_wrist_roll_joint): { shape: mesh, mesh: <meshes/wrist_roll
 r_gripper_palm_link(r_wrist_roll_joint): { mass: 0.58007, inertia: [0.000352239, -1.58048e-05, -9.175e-07, 0.000677413, -5.9554e-07, 0.000865633] }
 r_gripper_palm_link_0(r_wrist_roll_joint): { shape: mesh, mesh: <meshes/gripper_palm.h5>, visual: True }
 r_gripper_motor_accelerometer_link(r_wrist_roll_joint): { mass: 0.001, inertia: [0.001, 0.001, 0.001] }
-r_gripper_motor_accelerometer_link_0(r_wrist_roll_joint): { shape: box, size: [0.001, 0.001, 0.001, 0], visual: True }
+r_gripper_motor_accelerometer_link_0(r_wrist_roll_joint): { shape: box, size: [0.001, 0.001, 0.001], visual: True }
 r_gripper_l_finger_joint_origin(r_wrist_roll_joint): { pose: [0.07691, 0.01, 0, 1, 0, 0, 0] }
 r_gripper_r_finger_joint_origin(r_wrist_roll_joint): { pose: [0.07691, -0.01, 0, 1, 0, 0, 0] }
 r_gripper_l_parallel_root_joint_origin(r_wrist_roll_joint): { pose: [0.05891, 0.031, 0, 1, 0, 0, 0] }
@@ -171,7 +171,7 @@ l_wrist_roll_link_0(l_wrist_roll_joint): { shape: mesh, mesh: <meshes/wrist_roll
 l_gripper_palm_link(l_wrist_roll_joint): { mass: 0.58007, inertia: [0.000352239, -1.58048e-05, -9.175e-07, 0.000677413, -5.9554e-07, 0.000865633] }
 l_gripper_palm_link_0(l_wrist_roll_joint): { shape: mesh, mesh: <meshes/gripper_palm.h5>, visual: True }
 l_gripper_motor_accelerometer_link(l_wrist_roll_joint): { mass: 0.001, inertia: [0.001, 0.001, 0.001] }
-l_gripper_motor_accelerometer_link_0(l_wrist_roll_joint): { shape: box, size: [0.001, 0.001, 0.001, 0], visual: True }
+l_gripper_motor_accelerometer_link_0(l_wrist_roll_joint): { shape: box, size: [0.001, 0.001, 0.001], visual: True }
 l_gripper_l_finger_joint_origin(l_wrist_roll_joint): { pose: [0.07691, 0.01, 0, 1, 0, 0, 0] }
 l_gripper_r_finger_joint_origin(l_wrist_roll_joint): { pose: [0.07691, -0.01, 0, 1, 0, 0, 0] }
 l_gripper_l_parallel_root_joint_origin(l_wrist_roll_joint): { pose: [0.05891, 0.031, 0, 1, 0, 0, 0] }

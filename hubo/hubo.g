@@ -1,6 +1,6 @@
 Include: <hubo_clean.g>
 
-frame hubo_base: {}
-(hubo_base Body_Torso): { Q: "t(0 0 1.)" }
+hubo_base: {}
+Edig Body_Torso(hubo_base): { Q: "t(0 0 1.)" }
 
-Delete shape collision:
+Delete collision: {}

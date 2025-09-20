@@ -15,8 +15,8 @@ sonar_s0_origin(torso): { pose: [0.0947, 0, 0.817, 1, 0, 0, 0] }
 right_torso_arm_mount_origin(torso): { pose: [0.024645, -0.219645, 0.118588, 0.923879, 0, 0, -0.382684] }
 left_torso_arm_mount_origin(torso): { pose: [0.024645, 0.219645, 0.118588, 0.923879, 0, 0, 0.382684] }
 pedestal_fixed_origin(torso): {  }
-collision_head_link_1_0(collision_head_link_1): { shape: sphere, size: [0, 0, 0, 0.001], color: [0.8, 0.3, 0.3, 0.3], visual: True }
-collision_head_link_2_0(collision_head_link_2): { shape: sphere, size: [0, 0, 0, 0.001], color: [0.8, 0.3, 0.3, 0.3], visual: True }
+collision_head_link_1_0(collision_head_link_1): { shape: sphere, size: [0.001], color: [0.8, 0.3, 0.3, 0.3], visual: True }
+collision_head_link_2_0(collision_head_link_2): { shape: sphere, size: [0.001], color: [0.8, 0.3, 0.3, 0.3], visual: True }
 left_torso_itb_fixed(left_torso_itb_fixed_origin): { joint: rigid }
 right_torso_itb_fixed(right_torso_itb_fixed_origin): { joint: rigid }
 head_pan(head_pan_origin): { joint: hingeZ, limits: [-1.3963, 1.3963, 10000, -1, 50000], ctrl_limits: [10000, -1, 50000] }
@@ -35,7 +35,7 @@ head_0(head): { pose: [0, 0, 0.00953, 1, 0, 0, 0], shape: mesh, color: [0.2, 0.2
 dummy(head): { joint: rigid }
 head_nod_origin(head): { pose: [0.1227, 0, 0, 0.453099, 0.542864, 0.542864, 0.453099] }
 head_camera_origin(head): { pose: [0.12839, 0, 0.06368, 0.453099, 0.542864, 0.542864, 0.453099] }
-sonar_ring_0(sonar_ring): { pose: [-0.0347, 0, 0.00953, 1, 0, 0, 0], shape: cylinder, size: [0, 0, 0.01, 0.085], color: [0.2, 0.2, 0.2, 1], visual: True }
+sonar_ring_0(sonar_ring): { pose: [-0.0347, 0, 0.00953, 1, 0, 0, 0], shape: cylinder, size: [0.01, 0.085], color: [0.2, 0.2, 0.2, 1], visual: True }
 right_s0_origin(right_arm_mount): { pose: [0.055695, 0, 0.011038, 1, 0, 0, 0] }
 left_s0_origin(left_arm_mount): { pose: [0.055695, 0, 0.011038, 1, 0, 0, 0] }
 pedestal_0(pedestal): { shape: mesh, color: [0.2, 0.2, 0.2, 1], mesh: <baxter_description/meshes/base/PEDESTAL.ply>, visual: True }
@@ -60,7 +60,7 @@ left_s1(left_s1_origin): { joint: hingeZ, limits: [-2.147, 1.047, 1.5, -1, 50], 
 display(display_joint): { mass: 0.0001, inertia: [1e-08, 1e-08, 1e-08] }
 right_lower_shoulder(right_s1): { mass: 3.22698, inertia: [0.0117521, -0.000300964, 0.00207676, 0.027886, -0.00018822, 0.0207875] }
 left_lower_shoulder(left_s1): { mass: 3.22698, inertia: [0.0117521, -0.000300964, 0.00207676, 0.027886, -0.00018822, 0.0207875] }
-display_0(display): { pose: [0, 0, 0, 0.991445, 0.130526, 0, 0], shape: box, size: [0.218, 0.16, 0.001, 0], color: [0, 0, 0, 1], visual: True }
+display_0(display): { pose: [0, 0, 0, 0.991445, 0.130526, 0, 0], shape: box, size: [0.218, 0.16, 0.001], color: [0, 0, 0, 1], visual: True }
 right_lower_shoulder_0(right_lower_shoulder): { shape: mesh, color: [0.5, 0.1, 0.1, 1], mesh: <baxter_description/meshes/lower_shoulder/S1.ply>, visual: True }
 right_e0_origin(right_lower_shoulder): { pose: [0.102, 0, 0, 0.5, 0.5, 0.5, 0.5] }
 right_e0_fixed_origin(right_lower_shoulder): { pose: [0.107, 0, 0, 0.5, 0.5, 0.5, 0.5] }
@@ -157,16 +157,16 @@ left_hand_camera_axis_155(left_hand_camera_axis): { mass: 0.0001, inertia: [1e-0
 left_hand_range_156(left_hand_range): { mass: 0.0001, inertia: [1e-08, 1e-08, 1e-08] }
 left_hand_accelerometer_157(left_hand_accelerometer): { mass: 0.0001, inertia: [1e-08, 1e-08, 1e-08] }
 left_gripper_base_158(left_gripper_base): { mass: 0.3, inertia: [2e-08, 3e-08, 2e-08] }
-right_hand_camera_0(right_hand_camera_149): { shape: cylinder, size: [0, 0, 0.01, 0.02], color: [0, 0, 1, 0.8], visual: True }
-right_hand_range_0(right_hand_range_151): { shape: box, size: [0.005, 0.02, 0.005, 0], color: [0, 0, 1, 0.8], visual: True }
-right_hand_accelerometer_0(right_hand_accelerometer_152): { shape: box, size: [0.01, 0.01, 0.01, 0], color: [0, 0, 0, 1], visual: True }
+right_hand_camera_0(right_hand_camera_149): { shape: cylinder, size: [0.01, 0.02], color: [0, 0, 1, 0.8], visual: True }
+right_hand_range_0(right_hand_range_151): { shape: box, size: [0.005, 0.02, 0.005], color: [0, 0, 1, 0.8], visual: True }
+right_hand_accelerometer_0(right_hand_accelerometer_152): { shape: box, size: [0.01, 0.01, 0.01], color: [0, 0, 0, 1], visual: True }
 right_gripper_base_0(right_gripper_base_153): { pose: [0, 0, 0, -7.3123e-14, 7.3123e-14, 0.707107, 0.707107], shape: mesh, color: [0.8, 0.8, 0.8], mesh: <rethink_ee_description/meshes/electric_gripper/electric_gripper_base.ply>, visual: True }
 right_endpoint_origin(right_gripper_base_153): { pose: [0, 0, 0.1327, 1, 0, 0, 0] }
 r_gripper_l_finger_joint_origin(right_gripper_base_153): { pose: [0, -0.0015, 0.02, 1, 0, 0, 0] }
 r_gripper_r_finger_joint_origin(right_gripper_base_153): { pose: [0, 0.0015, 0.02, 1, 0, 0, 0] }
-left_hand_camera_0(left_hand_camera_154): { shape: cylinder, size: [0, 0, 0.01, 0.02], color: [0, 0, 1, 0.8], visual: True }
-left_hand_range_0(left_hand_range_156): { shape: box, size: [0.005, 0.02, 0.005, 0], color: [0, 0, 1, 0.8], visual: True }
-left_hand_accelerometer_0(left_hand_accelerometer_157): { shape: box, size: [0.01, 0.01, 0.01, 0], color: [0, 0, 0, 1], visual: True }
+left_hand_camera_0(left_hand_camera_154): { shape: cylinder, size: [0.01, 0.02], color: [0, 0, 1, 0.8], visual: True }
+left_hand_range_0(left_hand_range_156): { shape: box, size: [0.005, 0.02, 0.005], color: [0, 0, 1, 0.8], visual: True }
+left_hand_accelerometer_0(left_hand_accelerometer_157): { shape: box, size: [0.01, 0.01, 0.01], color: [0, 0, 0, 1], visual: True }
 left_gripper_base_0(left_gripper_base_158): { pose: [0, 0, 0, -7.3123e-14, 7.3123e-14, 0.707107, 0.707107], shape: mesh, color: [0.8, 0.8, 0.8], mesh: <rethink_ee_description/meshes/electric_gripper/electric_gripper_base.ply>, visual: True }
 left_endpoint_origin(left_gripper_base_158): { pose: [0, 0, 0.1327, 1, 0, 0, 0] }
 l_gripper_l_finger_joint_origin(left_gripper_base_158): { pose: [0, -0.0015, 0.02, 1, 0, 0, 0] }

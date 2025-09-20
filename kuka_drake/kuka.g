@@ -2,7 +2,7 @@ frame base: { }
 frame iiwa_base_joint(base): { joint: rigid, ctrl_H: 1 }
 frame iiwa_link_0(iiwa_base_joint): { mass: 5, inertiaTensor: [0.05, 0, 0, 0.06, 0, 0.03] }
 frame iiwa_link_0_1(iiwa_base_joint): { shape: mesh, size: [1, 1, 1, 0.1], mesh: <kuka_meshes/visual/link_0_x.tri>, colorName: [0.4, 0.4, 0.4, 1] }
-frame iiwa_link_0_0(iiwa_base_joint): { shape: capsule, size: [0, 0, 0.3, 0.139], color: [1.,1.,1.,.2], contact: -1, Q: [-0.015, 0, 0.19, 1, 0, 0, 0], colorName: [0.4, 0.4, 0.4, 1] }
+frame iiwa_link_0_0(iiwa_base_joint): { shape: capsule, size: [0.3, 0.139], color: [1.,1.,1.,.2], contact: -1, Q: [-0.015, 0, 0.19, 1, 0, 0, 0], colorName: [0.4, 0.4, 0.4, 1] }
 frame >iiwa_joint_1(iiwa_base_joint): { Q: [0, 0, 0.1575, 0.707107, 0, -0.707107, 0] }
 frame iiwa_joint_1(>iiwa_joint_1): { joint: hingeX, ctrl_H: 1, limits: [-2.93215, 2.93215, 10, 300, 1, 10, 300, 1], ctrl_limits: [10, 300, 1] }
 frame iiwa_link_1(iiwa_joint_1): { mass: 5.76, Q: [0, 0, 0, -0.707107, 0, -0.707107, 0], inertiaTensor: [0.033, 0, 0, 0.0333, 0, 0.0123] }

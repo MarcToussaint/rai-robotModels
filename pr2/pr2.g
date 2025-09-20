@@ -1,5 +1,5 @@
 world: {}
-worldTranslationRotation (world): { joint: transXYPhi, Q: "d(90 0 0 1)", gains: [1, 1], limits: [-10, -10, -6, 10, 10, 6], ctrl_limits: [1, 1, 1], ctrl_H: 10, base }
+worldTranslationRotation (world): { joint: transXYPhi, Q: "d(90 0 0 1)", gains: [1, 1], limits: [-10, -10, -6, 10, 10, 6], ctrl_H: 10, base }
 
 Include: <pr2_conv.g>
 
@@ -28,10 +28,10 @@ Edit bl_caster_r_wheel_joint: { joint: none }
 Edit br_caster_l_wheel_joint: { joint: none }
 Edit br_caster_r_wheel_joint: { joint: none }
 
-#Delete l_gripper_r_parallel_link_1: {}:
-#Delete l_gripper_l_parallel_link_1: {}:
-#Delete r_gripper_r_parallel_link_1: {}:
-#Delete r_gripper_l_parallel_link_1: {}:
+#Delete: l_gripper_r_parallel_link_1
+#Delete: l_gripper_l_parallel_link_1
+#Delete: r_gripper_r_parallel_link_1
+#Delete: r_gripper_l_parallel_link_1
 
 Edit r_gripper_l_finger_joint: { q: .1 }
 Edit l_gripper_l_finger_joint: { q: .1 }

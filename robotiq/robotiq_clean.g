@@ -19,6 +19,6 @@ right_inner_knuckle_0(right_inner_knuckle_joint): { shape: mesh, color: [0.1, 0.
 left_inner_finger_joint(left_outer_finger>left_inner_finger_joint): { joint: hingeX, limits: [0, 0.8757, 2, -1, 1000], mimic: "finger_joint", ctrl_limits: [2, -1, 1000] }
 right_inner_finger_joint(right_outer_finger>right_inner_finger_joint): { joint: hingeX, limits: [0, 0.8757, 2, -1, 1000], mimic: "finger_joint", ctrl_limits: [2, -1, 1000] }
 left_inner_finger_0(left_inner_finger_joint): { shape: mesh, color: [0.1, 0.1, 0.1, 1], mesh: <meshes/visual/robotiq_arg2f_85_inner_finger.ply>, meshscale: 0.001, visual: True }
-left_inner_finger_pad_0(left_inner_finger_joint): { Q: [0, -0.0220203, 0.03242, 1, 0, 0, 0], shape: box, size: [0.022, 0.00635, 0.0375, 0], color: [0.9, 0.9, 0.9, 1], visual: True }
+left_inner_finger_pad_0(left_inner_finger_joint): { Q: [0, -0.0220203, 0.03242, 1, 0, 0, 0], shape: box, size: [0.022, 0.00635, 0.0375], color: [0.9, 0.9, 0.9, 1], visual: True }
 right_inner_finger_0(right_inner_finger_joint): { shape: mesh, color: [0.1, 0.1, 0.1, 1], mesh: <meshes/visual/robotiq_arg2f_85_inner_finger.ply>, meshscale: 0.001, visual: True }
-right_inner_finger_pad_0(right_inner_finger_joint): { Q: [0, -0.0220203, 0.03242, 1, 0, 0, 0], shape: box, size: [0.022, 0.00635, 0.0375, 0], color: [0.9, 0.9, 0.9, 1], visual: True }
+right_inner_finger_pad_0(right_inner_finger_joint): { Q: [0, -0.0220203, 0.03242, 1, 0, 0, 0], shape: box, size: [0.022, 0.00635, 0.0375], color: [0.9, 0.9, 0.9, 1], visual: True }

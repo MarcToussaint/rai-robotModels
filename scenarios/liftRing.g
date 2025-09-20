@@ -1,4 +1,4 @@
-world: { multibody: true }
+world: {}
 
 table (world): {
  shape: ssBox, Q: "t(0 0. .6)", size: [1., 2., .1, .02], color: [.3, .3, .3]
@@ -41,6 +41,6 @@ target (table): {
 #Include: <panda_fixGripper.g>
 #Include: <panda_fixRobotiq.g>
 Include: <../panda/panda.g>
-(table panda_base): { joint: rigid, Q: "t(.3 .8 .05) d(-90 0 0 1)" }
+Edit panda_base(table): { joint: rigid, Q: "t(.3 .8 .05) d(-90 0 0 1)" }
 
 Edit panda_finger_joint1: { joint_active: false }

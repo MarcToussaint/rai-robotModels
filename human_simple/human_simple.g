@@ -1,22 +1,22 @@
 
 ## torso & arms
 
-waist: { X: "t(0 0 1.) d(180 0 0 1)", shape: capsule, mass: 1, size: [0., 0., .2, .15] }
+waist: { X: "t(0 0 1.) d(180 0 0 1)", shape: capsule, mass: 1, size: [.2, .15] }
 
-back: { shape: capsule, mass: 1, size: [0., 0., .15, .15] }
-chest: { shape: capsule, mass: 1, size: [0., 0., .3, .15] }
-shoulders: { shape: capsule, mass: 1, size: [0., 0., .3, .15] }
-shoulderL: { shape: sphere, mass: .1, size: [0., 0., .15, .12] }
-shoulderR: { shape: sphere, mass: .1, size: [0., 0., .15, .12] }
-upArmL: { shape: capsule, mass: .1, size: [.15, .15, .15, .075] }
-upArmR: { shape: capsule, mass: .1, size: [.15, .15, .15, .075] }
-dnArmL: { shape: capsule, mass: .1, size: [.15, .15, .15, .075] }
-dnArmR: { shape: capsule, mass: .1, size: [.15, .15, .15, .075] }
-upWristL: { shape: capsule, mass: .1, size: [.15, .15, .15, .06], contact }
-upWristR: { shape: capsule, mass: .1, size: [.15, .15, .15, .06], contact }
+back: { shape: capsule, mass: 1, size: [.15, .15] }
+chest: { shape: capsule, mass: 1, size: [.3, .15] }
+shoulders: { shape: capsule, mass: 1, size: [.3, .15] }
+shoulderL: { shape: sphere, mass: .1, size: [.12] }
+shoulderR: { shape: sphere, mass: .1, size: [.12] }
+upArmL: { shape: capsule, mass: .1, size: [.15, .075] }
+upArmR: { shape: capsule, mass: .1, size: [.15, .075] }
+dnArmL: { shape: capsule, mass: .1, size: [.15, .075] }
+dnArmR: { shape: capsule, mass: .1, size: [.15, .075] }
+upWristL: { shape: capsule, mass: .1, size: [.15, .06], contact }
+upWristR: { shape: capsule, mass: .1, size: [.15, .06], contact }
 
-neck: { shape: capsule, mass: .1, size: [.0, .0, .1, .08] }
-manhead: { shape: sphere, mass: .1, size: [0, 0, 0, .2] }
+neck: { shape: capsule, mass: .1, size: [.1, .08] }
+manhead: { shape: sphere, mass: .1, size: [.2] }
 
 (waist back): { joint: hingeX, pre: "t(0 0 .075)", post: "t(0 0 .075)" }
 (back chest): { joint: hingeX, pre: "t(0 0 .075) d(90 0 0 1)", post: "d(-90 0 0 1) t(0 0 .15)" }
@@ -53,12 +53,12 @@ handL: { shape: ssBox, mass: .01, size: [.1, .04, .1, .02] }
 
 ## legs
 
-lhip: { mass: 1, size: [.15, .15, .03, .12], shape: capsule }
-rhip: { mass: 1, size: [.15, .15, .03, .12], shape: capsule }
-lup: { mass: 1, size: [.15, .15, .26, .11], shape: capsule } 
-rup: { mass: 1, size: [.15, .15, .26, .11], shape: capsule } 
-ldn: { mass: 1, size: [.15, .15, .45, .09], shape: capsule } 
-rdn: { mass: 1, size: [.15, .15, .45, .09], shape: capsule } 
+lhip: { mass: 1, size: [.03, .12], shape: capsule }
+rhip: { mass: 1, size: [.03, .12], shape: capsule }
+lup: { mass: 1, size: [.26, .11], shape: capsule } 
+rup: { mass: 1, size: [.26, .11], shape: capsule } 
+ldn: { mass: 1, size: [.45, .09], shape: capsule } 
+rdn: { mass: 1, size: [.45, .09], shape: capsule } 
 lfoot: { mass: 1, size: [.15, .45, .05, .02], shape: ssBox }
 rfoot: { mass: 1, size: [.15, .45, .05, .02], shape: ssBox fixed }
 
