@@ -1,0 +1,32 @@
+base_link: {shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/base.ply>, mass: 6.923000000000001, com: [8.348981655351724e-05, 0.0, -7.222302470027445e-06], inertia: [0.024502899638884874, 0.00012166, 0.0014996258255091722, 0.0982669253817709, -3.12e-05, 0.10718622574288603]}
+FL_hip_joint_origin(base_link): {pose: [0.1934, 0.0465, 0.0]}
+FR_hip_joint_origin(base_link): {pose: [0.1934, -0.0465, 0.0]}
+RL_hip_joint_origin(base_link): {pose: [-0.1934, 0.0465, 0.0]}
+RR_hip_joint_origin(base_link): {pose: [-0.1934, -0.0465, 0.0]}
+FL_hip_joint(FL_hip_joint_origin): {joint: hingeX, limits: [-1.0472, 1.0472], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/hip.ply>, mass: 0.678, inertia: [0.00048, -3.01e-06, 1.11e-06, 0.000884, -1.42e-06, 0.000596]}
+FR_hip_joint(FR_hip_joint_origin): {joint: hingeX, limits: [-1.0472, 1.0472], mass: 0.678, inertia: [0.00048, 3.01e-06, 1.11e-06, 0.000884, 1.42e-06, 0.000596]}
+RL_hip_joint(RL_hip_joint_origin): {joint: hingeX, limits: [-1.0472, 1.0472], mass: 0.678, inertia: [0.00048, 3.01e-06, -1.11e-06, 0.000884, -1.42e-06, 0.000596]}
+RR_hip_joint(RR_hip_joint_origin): {joint: hingeX, limits: [-1.0472, 1.0472], mass: 0.678, inertia: [0.00048, -3.01e-06, -1.11e-06, 0.000884, 1.42e-06, 0.000596]}
+FL_thigh_joint_origin(FL_hip_joint): {pose: [0.0, 0.0955, 0.0]}
+FR_hip_0(FR_hip_joint): {pose: [4.632679487995776e-05, 0.999999998926914, 0.0, 0.0], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/hip.ply>}
+FR_thigh_joint_origin(FR_hip_joint): {pose: [0.0, -0.0955, 0.0]}
+RL_hip_0(RL_hip_joint): {pose: [4.632679487995776e-05, 0.0, 0.999999998926914, 0.0], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/hip.ply>}
+RL_thigh_joint_origin(RL_hip_joint): {pose: [0.0, 0.0955, 0.0]}
+RR_hip_0(RR_hip_joint): {pose: [2.14617192384968e-09, 4.632679483024512e-05, 4.632679483024512e-05, 0.9999999978538281], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/hip.ply>}
+RR_thigh_joint_origin(RR_hip_joint): {pose: [0.0, -0.0955, 0.0]}
+FL_thigh_joint(FL_thigh_joint_origin): {joint: hingeY, limits: [-1.5708, 3.4907], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/thigh.ply>, mass: 1.152, inertia: [0.00584, 8.72e-05, -0.000289, 0.0058, 0.000808, 0.00103]}
+FR_thigh_joint(FR_thigh_joint_origin): {joint: hingeY, limits: [-1.5708, 3.4907], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/thigh_mirror.ply>, mass: 1.152, inertia: [0.00584, -8.72e-05, -0.000289, 0.0058, -0.000808, 0.00103]}
+RL_thigh_joint(RL_thigh_joint_origin): {joint: hingeY, limits: [-0.5236, 4.5379], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/thigh.ply>, mass: 1.152, inertia: [0.00584, 8.72e-05, -0.000289, 0.0058, 0.000808, 0.00103]}
+RR_thigh_joint(RR_thigh_joint_origin): {joint: hingeY, limits: [-0.5236, 4.5379], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/thigh_mirror.ply>, mass: 1.152, inertia: [0.00584, -8.72e-05, -0.000289, 0.0058, -0.000808, 0.00103]}
+FL_calf_joint_origin(FL_thigh_joint): {pose: [0.0, 0.0, -0.213]}
+FR_calf_joint_origin(FR_thigh_joint): {pose: [0.0, 0.0, -0.213]}
+RL_calf_joint_origin(RL_thigh_joint): {pose: [0.0, 0.0, -0.213]}
+RR_calf_joint_origin(RR_thigh_joint): {pose: [0.0, 0.0, -0.213]}
+FL_calf_joint(FL_calf_joint_origin): {joint: hingeY, limits: [-2.7227, -0.83776], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/calf.ply>, mass: 0.194, com: [0.0, 0.0, -0.04391752577319587], inertia: [0.002530182680412371, 3.4e-07, 1.72e-05, 0.002550182680412371, 8.28e-06, 4.25e-05]}
+FR_calf_joint(FR_calf_joint_origin): {joint: hingeY, limits: [-2.7227, -0.83776], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/calf_mirror.ply>, mass: 0.194, com: [0.0, 0.0, -0.04391752577319587], inertia: [0.002530182680412371, -3.4e-07, 1.72e-05, 0.002550182680412371, -8.28e-06, 4.25e-05]}
+RL_calf_joint(RL_calf_joint_origin): {joint: hingeY, limits: [-2.7227, -0.83776], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/calf.ply>, mass: 0.194, com: [0.0, 0.0, -0.04391752577319587], inertia: [0.002530182680412371, 3.4e-07, 1.72e-05, 0.002550182680412371, 8.28e-06, 4.25e-05]}
+RR_calf_joint(RR_calf_joint_origin): {joint: hingeY, limits: [-2.7227, -0.83776], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/calf_mirror.ply>, mass: 0.194, com: [0.0, 0.0, -0.04391752577319587], inertia: [0.002530182680412371, -3.4e-07, 1.72e-05, 0.002550182680412371, -8.28e-06, 4.25e-05]}
+FL_foot_0(FL_calf_joint): {pose: [0.0, 0.0, -0.213], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/foot.ply>}
+FR_foot_0(FR_calf_joint): {pose: [0.0, 0.0, -0.213], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/foot.ply>}
+RL_foot_0(RL_calf_joint): {pose: [0.0, 0.0, -0.213], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/foot.ply>}
+RR_foot_0(RR_calf_joint): {pose: [0.0, 0.0, -0.213], shape: mesh, color: [1.0, 1.0, 1.0, 1.0], mesh: <meshes/foot.ply>}
