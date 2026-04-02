@@ -5,4 +5,5 @@ mv -f unitree_ros-master/robots/z1_description .
 xacrodoc z1_description/xacro/robot.xacro -p 'z1_description:=z1_description/' UnitreeGripper:=true > z1.urdf
 #mv -f z1_description/xacro/z1.urdf .
 rm -Rf unitree_ros-master/
-~/git/lis/data-tools/sample/import_urdf.py z1.urdf -pruneRigidJoints
+#~/git/lis/data-tools/sample/import_urdf.py z1.urdf -pruneRigidJoints
+ry-import-urdf z1.urdf -pruneRigidJoints
