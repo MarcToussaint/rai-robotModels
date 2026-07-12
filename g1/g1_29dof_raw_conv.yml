@@ -1,0 +1,189 @@
+pelvis: {}
+pelvis_inertia(pelvis): {pose: [0., 0., -0.07605], mass: 3.813, inertia: [0.010549, 0., 2.1e-06, 0.0093089, 0., 0.0079184]}
+pelvis_0(pelvis): {shape: mesh, color: [0.2, 0.2, 0.2, 1.], mesh: <meshes/pelvis.STL>}
+pelvis_contour_link(pelvis_contour_joint): {}
+pelvis_contour_link_inertia(pelvis_contour_link): {mass: 0.001, inertia: [1e-07, 1e-07, 1e-07]}
+pelvis_contour_link_0(pelvis_contour_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/pelvis_contour_link.STL>}
+left_hip_pitch_link(left_hip_pitch_joint): {}
+left_hip_pitch_link_inertia(left_hip_pitch_link): {pose: [0.002741, 0.047791, -0.02606], mass: 1.35, inertia: [0.001811, 3.68e-05, -3.44e-05, 0.0014193, 0.000171, 0.0012812]}
+left_hip_pitch_link_0(left_hip_pitch_link): {shape: mesh, color: [0.2, 0.2, 0.2, 1.], mesh: <meshes/left_hip_pitch_link.STL>}
+left_hip_roll_link(left_hip_roll_joint): {}
+left_hip_roll_link_inertia(left_hip_roll_link): {pose: [0.029812, -0.001045, -0.087934], mass: 1.52, inertia: [0.0023773, -3.8e-06, -0.0003908, 0.0024123, 1.84e-05, 0.0016595]}
+left_hip_roll_link_0(left_hip_roll_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/left_hip_roll_link.STL>}
+left_hip_yaw_link(left_hip_yaw_joint): {}
+left_hip_yaw_link_inertia(left_hip_yaw_link): {pose: [-0.057709, -0.010981, -0.15078], mass: 1.702, inertia: [0.0057774, -0.0005411, -0.0023948, 0.0076124, -0.0007072, 0.003149]}
+left_hip_yaw_link_0(left_hip_yaw_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/left_hip_yaw_link.STL>}
+left_knee_link(left_knee_joint): {}
+left_knee_link_inertia(left_knee_link): {pose: [0.005457, 0.003964, -0.12074], mass: 1.932, inertia: [0.011329, 4.82e-05, -4.49e-05, 0.011277, -0.0007146, 0.0015168]}
+left_knee_link_0(left_knee_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/left_knee_link.STL>}
+left_ankle_pitch_link(left_ankle_pitch_joint): {}
+left_ankle_pitch_link_inertia(left_ankle_pitch_link): {pose: [-0.007269, 0., 0.011137], mass: 0.074, inertia: [8.4e-06, 0., -2.9e-06, 1.89e-05, 0., 1.26e-05]}
+left_ankle_pitch_link_0(left_ankle_pitch_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/left_ankle_pitch_link.STL>}
+left_ankle_roll_link(left_ankle_roll_joint): {}
+left_ankle_roll_link_inertia(left_ankle_roll_link): {pose: [0.026505, 0., -0.016425], mass: 0.608, inertia: [0.0002231, 2e-07, 8.91e-05, 0.0016161, -1e-07, 0.0016667]}
+left_ankle_roll_link_0(left_ankle_roll_link): {shape: mesh, color: [0.2, 0.2, 0.2, 1.], mesh: <meshes/left_ankle_roll_link.STL>}
+right_hip_pitch_link(right_hip_pitch_joint): {}
+right_hip_pitch_link_inertia(right_hip_pitch_link): {pose: [0.002741, -0.047791, -0.02606], mass: 1.35, inertia: [0.001811, -3.68e-05, -3.44e-05, 0.0014193, -0.000171, 0.0012812]}
+right_hip_pitch_link_0(right_hip_pitch_link): {shape: mesh, color: [0.2, 0.2, 0.2, 1.], mesh: <meshes/right_hip_pitch_link.STL>}
+right_hip_roll_link(right_hip_roll_joint): {}
+right_hip_roll_link_inertia(right_hip_roll_link): {pose: [0.029812, 0.001045, -0.087934], mass: 1.52, inertia: [0.0023773, 3.8e-06, -0.0003908, 0.0024123, -1.84e-05, 0.0016595]}
+right_hip_roll_link_0(right_hip_roll_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/right_hip_roll_link.STL>}
+right_hip_yaw_link(right_hip_yaw_joint): {}
+right_hip_yaw_link_inertia(right_hip_yaw_link): {pose: [-0.057709, 0.010981, -0.15078], mass: 1.702, inertia: [0.0057774, 0.0005411, -0.0023948, 0.0076124, 0.0007072, 0.003149]}
+right_hip_yaw_link_0(right_hip_yaw_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/right_hip_yaw_link.STL>}
+right_knee_link(right_knee_joint): {}
+right_knee_link_inertia(right_knee_link): {pose: [0.005457, -0.003964, -0.12074], mass: 1.932, inertia: [0.011329, -4.82e-05, 4.49e-05, 0.011277, 0.0007146, 0.0015168]}
+right_knee_link_0(right_knee_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/right_knee_link.STL>}
+right_ankle_pitch_link(right_ankle_pitch_joint): {}
+right_ankle_pitch_link_inertia(right_ankle_pitch_link): {pose: [-0.007269, 0., 0.011137], mass: 0.074, inertia: [8.4e-06, 0., -2.9e-06, 1.89e-05, 0., 1.26e-05]}
+right_ankle_pitch_link_0(right_ankle_pitch_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/right_ankle_pitch_link.STL>}
+right_ankle_roll_link(right_ankle_roll_joint): {}
+right_ankle_roll_link_inertia(right_ankle_roll_link): {pose: [0.026505, 0., -0.016425], mass: 0.608, inertia: [0.0002231, -2e-07, 8.91e-05, 0.0016161, 1e-07, 0.0016667]}
+right_ankle_roll_link_0(right_ankle_roll_link): {shape: mesh, color: [0.2, 0.2, 0.2, 1.], mesh: <meshes/right_ankle_roll_link.STL>}
+waist_yaw_link(waist_yaw_joint): {}
+waist_yaw_link_inertia(waist_yaw_link): {pose: [0.003964, 0., 0.018769], mass: 0.244, inertia: [9.9587e-05, -1.833e-06, -1.2617e-05, 0.00012411, -1.18e-07, 0.00015586]}
+waist_yaw_link_0(waist_yaw_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/waist_yaw_link.STL>}
+waist_roll_link(waist_roll_joint): {}
+waist_roll_link_inertia(waist_roll_link): {pose: [0., -0.000236, 0.010111], mass: 0.047, inertia: [7.515e-06, 0., 0., 6.398e-06, 9.9e-08, 3.988e-06]}
+waist_roll_link_0(waist_roll_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/waist_roll_link.STL>}
+torso_link(waist_pitch_joint): {}
+torso_link_inertia(torso_link): {pose: [0.002601, 0.000257, 0.153719], mass: 8.562, inertia: [0.065674966, -8.597e-05, -0.001737252, 0.053535188, 8.6899e-05, 0.030808125]}
+torso_link_0(torso_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/torso_link.STL>}
+logo_link(logo_joint): {}
+logo_link_inertia(logo_link): {mass: 0.001, inertia: [1e-07, 1e-07, 1e-07]}
+logo_link_0(logo_link): {shape: mesh, color: [0.2, 0.2, 0.2, 1.], mesh: <meshes/logo_link.STL>}
+head_link(head_joint): {}
+head_link_inertia(head_link): {pose: [0.005267, 0.000299, 0.449869], mass: 1.036, inertia: [0.004085051, -2.543e-06, -6.9455e-05, 0.004185212, -3.726e-06, 0.001807911]}
+head_link_0(head_link): {shape: mesh, color: [0.2, 0.2, 0.2, 1.], mesh: <meshes/head_link.STL>}
+waist_support_link(waist_support_joint): {}
+waist_support_link_inertia(waist_support_link): {mass: 0.001, inertia: [1e-07, 1e-07, 1e-07]}
+waist_support_link_0(waist_support_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/waist_support_link.STL>}
+imu_in_torso(imu_in_torso_joint): {}
+imu_in_pelvis(imu_in_pelvis_joint): {}
+d435_link(d435_joint): {}
+mid360_link(mid360_joint): {}
+left_shoulder_pitch_link(left_shoulder_pitch_joint): {}
+left_shoulder_pitch_link_inertia(left_shoulder_pitch_link): {pose: [0., 0.035892, -0.011628], mass: 0.718, inertia: [0.0004291, -9.2e-06, 6.4e-06, 0.000453, 2.26e-05, 0.000423]}
+left_shoulder_pitch_link_0(left_shoulder_pitch_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/left_shoulder_pitch_link.STL>}
+left_shoulder_roll_link(left_shoulder_roll_joint): {}
+left_shoulder_roll_link_inertia(left_shoulder_roll_link): {pose: [-0.000227, 0.00727, -0.063243], mass: 0.643, inertia: [0.0006177, -1e-06, 8.7e-06, 0.0006912, -5.3e-06, 0.0003894]}
+left_shoulder_roll_link_0(left_shoulder_roll_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/left_shoulder_roll_link.STL>}
+left_shoulder_yaw_link(left_shoulder_yaw_joint): {}
+left_shoulder_yaw_link_inertia(left_shoulder_yaw_link): {pose: [0.010773, -0.002949, -0.072009], mass: 0.734, inertia: [0.0009988, 7.9e-06, 0.0001412, 0.0010605, -2.86e-05, 0.0004354]}
+left_shoulder_yaw_link_0(left_shoulder_yaw_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/left_shoulder_yaw_link.STL>}
+left_elbow_link(left_elbow_joint): {}
+left_elbow_link_inertia(left_elbow_link): {pose: [0.064956, 0.004454, -0.010062], mass: 0.6, inertia: [0.0002891, 6.53e-05, 1.72e-05, 0.0004152, -5.6e-06, 0.0004197]}
+left_elbow_link_0(left_elbow_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/left_elbow_link.STL>}
+left_wrist_roll_link(left_wrist_roll_joint): {}
+left_wrist_roll_link_inertia(left_wrist_roll_link): {pose: [0.017139448, 0.00053759094, 4.8864e-07], mass: 0.08544498, inertia: [4.821544e-05, -4.2451102e-06, 5.10599e-09, 3.7228991e-05, -1.23525e-09, 5.4821065e-05]}
+left_wrist_roll_link_0(left_wrist_roll_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/left_wrist_roll_link.STL>}
+left_wrist_pitch_link(left_wrist_pitch_joint): {}
+left_wrist_pitch_link_inertia(left_wrist_pitch_link): {pose: [0.022999898, -0.0011168531, -0.001116581], mass: 0.48404956, inertia: [0.00016579646, -1.2312067e-05, 1.2316992e-05, 0.00042954057, 8.1417712e-07, 0.00042953698]}
+left_wrist_pitch_link_0(left_wrist_pitch_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/left_wrist_pitch_link.STL>}
+left_wrist_yaw_link(left_wrist_yaw_joint): {}
+left_wrist_yaw_link_inertia(left_wrist_yaw_link): {pose: [0.022003816, 0.00049485096, 0.00053861123], mass: 0.08457647, inertia: [4.9291288e-05, -4.5735494e-07, 4.4586759e-06, 5.9733381e-05, 4.3217198e-07, 3.9280838e-05]}
+left_wrist_yaw_link_0(left_wrist_yaw_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/left_wrist_yaw_link.STL>}
+left_rubber_hand(left_hand_palm_joint): {}
+left_rubber_hand_inertia(left_rubber_hand): {pose: [0.053613108, -0.0029590524, 0.0021541309], mass: 0.17, inertia: [0.00010099485, 3.6185908e-05, -7.4301519e-07, 0.00028135872, 3.3018974e-06, 0.0002189477]}
+left_rubber_hand_0(left_rubber_hand): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/left_rubber_hand.STL>}
+right_shoulder_pitch_link(right_shoulder_pitch_joint): {}
+right_shoulder_pitch_link_inertia(right_shoulder_pitch_link): {pose: [0., -0.035892, -0.011628], mass: 0.718, inertia: [0.0004291, 9.2e-06, 6.4e-06, 0.000453, -2.26e-05, 0.000423]}
+right_shoulder_pitch_link_0(right_shoulder_pitch_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/right_shoulder_pitch_link.STL>}
+right_shoulder_roll_link(right_shoulder_roll_joint): {}
+right_shoulder_roll_link_inertia(right_shoulder_roll_link): {pose: [-0.000227, -0.00727, -0.063243], mass: 0.643, inertia: [0.0006177, 1e-06, 8.7e-06, 0.0006912, 5.3e-06, 0.0003894]}
+right_shoulder_roll_link_0(right_shoulder_roll_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/right_shoulder_roll_link.STL>}
+right_shoulder_yaw_link(right_shoulder_yaw_joint): {}
+right_shoulder_yaw_link_inertia(right_shoulder_yaw_link): {pose: [0.010773, 0.002949, -0.072009], mass: 0.734, inertia: [0.0009988, -7.9e-06, 0.0001412, 0.0010605, 2.86e-05, 0.0004354]}
+right_shoulder_yaw_link_0(right_shoulder_yaw_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/right_shoulder_yaw_link.STL>}
+right_elbow_link(right_elbow_joint): {}
+right_elbow_link_inertia(right_elbow_link): {pose: [0.064956, -0.004454, -0.010062], mass: 0.6, inertia: [0.0002891, -6.53e-05, 1.72e-05, 0.0004152, 5.6e-06, 0.0004197]}
+right_elbow_link_0(right_elbow_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/right_elbow_link.STL>}
+right_wrist_roll_link(right_wrist_roll_joint): {}
+right_wrist_roll_link_inertia(right_wrist_roll_link): {pose: [0.017139448, -0.00053759094, 4.8864e-07], mass: 0.08544498, inertia: [4.821544e-05, 4.2451102e-06, 5.10599e-09, 3.7228991e-05, 1.23525e-09, 5.4821065e-05]}
+right_wrist_roll_link_0(right_wrist_roll_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/right_wrist_roll_link.STL>}
+right_wrist_pitch_link(right_wrist_pitch_joint): {}
+right_wrist_pitch_link_inertia(right_wrist_pitch_link): {pose: [0.022999898, 0.0011168531, -0.001116581], mass: 0.48404956, inertia: [0.00016579646, 1.2312067e-05, 1.2316992e-05, 0.00042954057, -8.1417712e-07, 0.00042953698]}
+right_wrist_pitch_link_0(right_wrist_pitch_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/right_wrist_pitch_link.STL>}
+right_wrist_yaw_link(right_wrist_yaw_joint): {}
+right_wrist_yaw_link_inertia(right_wrist_yaw_link): {pose: [0.022003816, -0.00049485096, 0.00053861123], mass: 0.08457647, inertia: [4.9291288e-05, 4.5735494e-07, 4.4586759e-06, 5.9733381e-05, -4.3217198e-07, 3.9280838e-05]}
+right_wrist_yaw_link_0(right_wrist_yaw_link): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/right_wrist_yaw_link.STL>}
+right_rubber_hand(right_hand_palm_joint): {}
+right_rubber_hand_inertia(right_rubber_hand): {pose: [0.053613108, 0.0029590524, 0.0021541309], mass: 0.17, inertia: [0.00010099485, -3.6185908e-05, -7.4301519e-07, 0.00028135872, -3.3018974e-06, 0.0002189477]}
+right_rubber_hand_0(right_rubber_hand): {shape: mesh, color: [0.7, 0.7, 0.7, 1.], mesh: <meshes/right_rubber_hand.STL>}
+pelvis_contour_joint(pelvis): {joint: rigid}
+left_hip_pitch_joint_origin(pelvis): {pose: [0., 0.064452, -0.1027]}
+left_hip_pitch_joint(left_hip_pitch_joint_origin): {joint: hingeY, limits: [-2.5307, 2.8798]}
+left_hip_roll_joint_origin(left_hip_pitch_link): {pose: [0., 0.052, -0.030465, 0.99617868, 0., -0.08733858, 0.]}
+left_hip_roll_joint(left_hip_roll_joint_origin): {joint: hingeX, limits: [-0.5236, 2.9671]}
+left_hip_yaw_joint_origin(left_hip_roll_link): {pose: [0.025001, 0., -0.12412]}
+left_hip_yaw_joint(left_hip_yaw_joint_origin): {joint: hingeZ, limits: [-2.7576, 2.7576]}
+left_knee_joint_origin(left_hip_yaw_link): {pose: [-0.078273, 0.0021489, -0.17734, 0.99617868, 0., 0.08733858, 0.]}
+left_knee_joint(left_knee_joint_origin): {joint: hingeY, limits: [-0.087267, 2.8798]}
+left_ankle_pitch_joint_origin(left_knee_link): {pose: [0., -9.4445e-05, -0.30001]}
+left_ankle_pitch_joint(left_ankle_pitch_joint_origin): {joint: hingeY, limits: [-0.87267, 0.5236]}
+left_ankle_roll_joint_origin(left_ankle_pitch_link): {pose: [0., 0., -0.017558]}
+left_ankle_roll_joint(left_ankle_roll_joint_origin): {joint: hingeX, limits: [-0.2618, 0.2618]}
+right_hip_pitch_joint_origin(pelvis): {pose: [0., -0.064452, -0.1027]}
+right_hip_pitch_joint(right_hip_pitch_joint_origin): {joint: hingeY, limits: [-2.5307, 2.8798]}
+right_hip_roll_joint_origin(right_hip_pitch_link): {pose: [0., -0.052, -0.030465, 0.99617868, 0., -0.08733858, 0.]}
+right_hip_roll_joint(right_hip_roll_joint_origin): {joint: hingeX, limits: [-2.9671, 0.5236]}
+right_hip_yaw_joint_origin(right_hip_roll_link): {pose: [0.025001, 0., -0.12412]}
+right_hip_yaw_joint(right_hip_yaw_joint_origin): {joint: hingeZ, limits: [-2.7576, 2.7576]}
+right_knee_joint_origin(right_hip_yaw_link): {pose: [-0.078273, -0.0021489, -0.17734, 0.99617868, 0., 0.08733858, 0.]}
+right_knee_joint(right_knee_joint_origin): {joint: hingeY, limits: [-0.087267, 2.8798]}
+right_ankle_pitch_joint_origin(right_knee_link): {pose: [0., 9.4445e-05, -0.30001]}
+right_ankle_pitch_joint(right_ankle_pitch_joint_origin): {joint: hingeY, limits: [-0.87267, 0.5236]}
+right_ankle_roll_joint_origin(right_ankle_pitch_link): {pose: [0., 0., -0.017558]}
+right_ankle_roll_joint(right_ankle_roll_joint_origin): {joint: hingeX, limits: [-0.2618, 0.2618]}
+waist_yaw_joint_origin(pelvis): {}
+waist_yaw_joint(waist_yaw_joint_origin): {joint: hingeZ, limits: [-2.618, 2.618]}
+waist_roll_joint_origin(waist_yaw_link): {pose: [-0.0039635, 0., 0.035]}
+waist_roll_joint(waist_roll_joint_origin): {joint: hingeX, limits: [-0.52, 0.52]}
+waist_pitch_joint_origin(waist_roll_link): {pose: [0., 0., 0.019]}
+waist_pitch_joint(waist_pitch_joint_origin): {joint: hingeY, limits: [-0.52, 0.52]}
+logo_joint_origin(torso_link): {pose: [0.0039635, 0., -0.054]}
+logo_joint(logo_joint_origin): {joint: rigid}
+head_joint_origin(torso_link): {pose: [0.0039635, 0., -0.054]}
+head_joint(head_joint_origin): {joint: rigid}
+waist_support_joint_origin(torso_link): {pose: [0.0039635, 0., -0.054]}
+waist_support_joint(waist_support_joint_origin): {joint: rigid}
+imu_in_torso_joint_origin(torso_link): {pose: [-0.03959, -0.00224, 0.13792]}
+imu_in_torso_joint(imu_in_torso_joint_origin): {joint: rigid}
+imu_in_pelvis_joint_origin(pelvis): {pose: [0.04525, 0., -0.08339]}
+imu_in_pelvis_joint(imu_in_pelvis_joint_origin): {joint: rigid}
+d435_joint_origin(torso_link): {pose: [0.0576235, 0.01753, 0.41987, 0.91495967, 0., 0.4035453, 0.]}
+d435_joint(d435_joint_origin): {joint: rigid}
+mid360_joint_origin(torso_link): {pose: [0.0002835, 3e-05, 0.40618, 0.99979858, 0., 0.020069939, 0.]}
+mid360_joint(mid360_joint_origin): {joint: rigid}
+left_shoulder_pitch_joint_origin(torso_link): {pose: [0.0039563, 0.10022, 0.23778, 0.99026407, 0.13920148, 1.3872204e-05, -9.8686838e-05]}
+left_shoulder_pitch_joint(left_shoulder_pitch_joint_origin): {joint: hingeY, limits: [-3.0892, 2.6704]}
+left_shoulder_roll_joint_origin(left_shoulder_pitch_link): {pose: [0., 0.038, -0.013831, 0.99026826, -0.13917177, 0., 0.]}
+left_shoulder_roll_joint(left_shoulder_roll_joint_origin): {joint: hingeX, limits: [-1.5882, 2.2515]}
+left_shoulder_yaw_joint_origin(left_shoulder_roll_link): {pose: [0., 0.00624, -0.1032]}
+left_shoulder_yaw_joint(left_shoulder_yaw_joint_origin): {joint: hingeZ, limits: [-2.618, 2.618]}
+left_elbow_joint_origin(left_shoulder_yaw_link): {pose: [0.015783, 0., -0.080518]}
+left_elbow_joint(left_elbow_joint_origin): {joint: hingeY, limits: [-1.0472, 2.0944]}
+left_wrist_roll_joint_origin(left_elbow_link): {pose: [0.1, 0.00188791, -0.01]}
+left_wrist_roll_joint(left_wrist_roll_joint_origin): {joint: hingeX, limits: [-1.9722221, 1.9722221]}
+left_wrist_pitch_joint_origin(left_wrist_roll_link): {pose: [0.038, 0., 0.]}
+left_wrist_pitch_joint(left_wrist_pitch_joint_origin): {joint: hingeY, limits: [-1.6144296, 1.6144296]}
+left_wrist_yaw_joint_origin(left_wrist_pitch_link): {pose: [0.046, 0., 0.]}
+left_wrist_yaw_joint(left_wrist_yaw_joint_origin): {joint: hingeZ, limits: [-1.6144296, 1.6144296]}
+left_hand_palm_joint_origin(left_wrist_yaw_link): {pose: [0.0415, 0.003, 0.]}
+left_hand_palm_joint(left_hand_palm_joint_origin): {joint: rigid}
+right_shoulder_pitch_joint_origin(torso_link): {pose: [0.0039563, -0.10021, 0.23778, 0.99026407, -0.13920148, 1.3872204e-05, 9.8686838e-05]}
+right_shoulder_pitch_joint(right_shoulder_pitch_joint_origin): {joint: hingeY, limits: [-3.0892, 2.6704]}
+right_shoulder_roll_joint_origin(right_shoulder_pitch_link): {pose: [0., -0.038, -0.013831, 0.99026826, 0.13917177, 0., 0.]}
+right_shoulder_roll_joint(right_shoulder_roll_joint_origin): {joint: hingeX, limits: [-2.2515, 1.5882]}
+right_shoulder_yaw_joint_origin(right_shoulder_roll_link): {pose: [0., -0.00624, -0.1032]}
+right_shoulder_yaw_joint(right_shoulder_yaw_joint_origin): {joint: hingeZ, limits: [-2.618, 2.618]}
+right_elbow_joint_origin(right_shoulder_yaw_link): {pose: [0.015783, 0., -0.080518]}
+right_elbow_joint(right_elbow_joint_origin): {joint: hingeY, limits: [-1.0472, 2.0944]}
+right_wrist_roll_joint_origin(right_elbow_link): {pose: [0.1, -0.00188791, -0.01]}
+right_wrist_roll_joint(right_wrist_roll_joint_origin): {joint: hingeX, limits: [-1.9722221, 1.9722221]}
+right_wrist_pitch_joint_origin(right_wrist_roll_link): {pose: [0.038, 0., 0.]}
+right_wrist_pitch_joint(right_wrist_pitch_joint_origin): {joint: hingeY, limits: [-1.6144296, 1.6144296]}
+right_wrist_yaw_joint_origin(right_wrist_pitch_link): {pose: [0.046, 0., 0.]}
+right_wrist_yaw_joint(right_wrist_yaw_joint_origin): {joint: hingeZ, limits: [-1.6144296, 1.6144296]}
+right_hand_palm_joint_origin(right_wrist_yaw_link): {pose: [0.0415, -0.003, 0.]}
+right_hand_palm_joint(right_hand_palm_joint_origin): {joint: rigid}
