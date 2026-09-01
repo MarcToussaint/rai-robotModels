@@ -3,7 +3,7 @@ world: {}
 ### table
 
 origin (world): { Q: [0, 0, .6], shape: marker, size: [.03] }
-table (origin): { Q: [0, 0, -.05], shape: ssBox, size: [2.3, 1.24, .1, .02], color: [.3, .3, .3], contact, logical:{ } }
+table (origin): { Q: [0, 0, -.05], shape: ssBox, size: [2.3, 1.24, .1, .02], color: [1.], contact, logical:{ } }
 
 ## two pandas
 Prefix: "l_"
