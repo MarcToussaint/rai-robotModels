@@ -1,9 +1,9 @@
 ## create standard base frame before including
 
-panda_base: { multibody: true, multibody_gravity: false }
+panda_base: { multibody: true, multibody_gravity: false, franka_ip: "none" }
 Include: <panda_arm_hand_conv.yml>
 Edit panda_link0(panda_base): {}
-
+        
 ## simpler collision models
 
 #Delete panda_link0_0:

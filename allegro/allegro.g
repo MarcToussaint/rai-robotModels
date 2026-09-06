@@ -1,6 +1,6 @@
 Include: <allegro_conv.yml>
 
-Edit base_link: { X: [0., 0., .2] }
+Edit(base_link): { X: [0., 0., .2], allegro_ip: "none" }
 
 Edit joint_0.0: { q: .0, mj_actuator_kp: "1.", mj_joint_damping: ".1" }
 Edit joint_1.0: { q: .7, mj_actuator_kp: "1.", mj_joint_damping: ".1" }

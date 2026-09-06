@@ -1,0 +1,10 @@
+basler: { basler_sn: "none" }
+#basler_body0(basler): { mesh: <basler_body.h5>, Q: [0, 0, .01, 0, 0., 0., 1.], color: [1., 0., 0., .5] }
+#basler_lens0(basler): { mesh: <basler_lens.h5>, Q: [0, 0, .022, 1, 0, 1, 0] }
+
+basler_body(basler): { Q: [0, 0, -.004], shape: box, size: [.029, .029, .036], color: [.0] }
+basler_mount(basler): { Q: [0., 0., .018], shape: cylinder, size: [.01, .013], color: [.8] }
+basler_lens(basler): { Q: [0., 0., .037], shape: cylinder, size: [.029, .015], color: [.0] }
+basler_cable(basler): { Q: [.006, .008, -.024], shape: cylinder, size: [.006, .005], color: [.8] }
+basler_usb(basler): { Q: [-.008, .0, -.022], shape: box, size: [.008, .021, .002], color: [.8] }
+basler_top(basler): { Q: [0, -.014, 0], shape: box, size: [.024, .002, .024], color: [1.] }

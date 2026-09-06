@@ -1,4 +1,4 @@
-trossen_base: { multibody: true, multibody_gravity: false }
+trossen_base: { multibody: true, multibody_gravity: false, trossen_ip: "none" }
 Include: <wxai_arm_conv.yml>
 Edit base_link(trossen_base): {}
 
