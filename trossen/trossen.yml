@@ -1,0 +1,13 @@
+trossen_base: { multibody: true, multibody_gravity: false }
+Include: <wxai_arm_conv.yml>
+Edit base_link(trossen_base): {}
+
+Edit(joint_1): { q: 1. }
+Edit(joint_2): { q: -1. }
+Edit(joint_3): { q: .5 }
+Edit(joint_4): { q: .0 }
+Edit(joint_5): { q: .0 }
+Edit(right_carriage_joint): { q: .03 }
+Edit(left_carriage_joint): { joint_scale: -1., mimic: right_carriage_joint  }
+
+# box: { X: [0., .0, 1.], mass: 10., shape: ssBox, size: [.1, .1, .1, .02] }
