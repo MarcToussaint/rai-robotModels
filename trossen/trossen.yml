@@ -1,13 +1,17 @@
 trossen_base: { multibody: true, multibody_gravity: false, trossen_ip: "none" }
-Include: <wxai_arm_conv.yml>
-Edit base_link(trossen_base): {}
+Include: <trossen_conv.yml>
+Edit base_link(trossen_base): { color: [.2] }
 
-Edit(joint_1): { q: 1. }
-Edit(joint_2): { q: -1. }
-Edit(joint_3): { q: .5 }
-Edit(joint_4): { q: .0 }
-Edit(joint_5): { q: .0 }
+Edit(joint_0): { q: .0, color: [.2] }
+Edit(joint_1): { q: 1., color: [.2] }
+Edit(joint_2): { q: 1., color: [.2] }
+Edit(joint_3): { q: -.5, color: [.2] }
+Edit(joint_4): { q: .0, color: [.2] }
+Edit(joint_5): { q: .0, color: [.3] }
 Edit(right_carriage_joint): { q: .03 }
 Edit(left_carriage_joint): { joint_scale: -1., mimic: right_carriage_joint  }
+Edit(gripper_left_0): { color: [.5] }
+Edit(gripper_right_0): { color: [.5] }
+Edit(camera_mount_d405_0): { color: [.5] }
 
 # box: { X: [0., .0, 1.], mass: 10., shape: ssBox, size: [.1, .1, .1, .02] }

@@ -1,0 +1,77 @@
+base_link:
+  mesh: <meshes/base_link.h5>
+  mass: 0.45969858
+  com: [-0.00014175, -5.228e-05, 0.03175177]
+  inertia: [0.0004166, 1.1e-07, -4.54e-06, 0.00044896, -7.8e-07, 0.00021403]
+joint_0(base_link):
+  origin: [0., 0., 0.05725]
+  joint: hingeZ
+  limits: [-3.0543262, 3.0543262]
+  mesh: <meshes/link_1.h5>
+  mass: 0.15270428
+  com: [-0.00011075, 0.00171176, 0.02044592]
+  inertia: [0.00018509, -1.91e-06, -1.436e-05, 8.358e-05, -1.3e-06, 0.00019219]
+joint_1(joint_0):
+  origin: [0.02, 0., 0.04625]
+  joint: hingeY
+  limits: [0., 3.1415927]
+  mesh: <meshes/link_2.h5>
+  mass: 1.1531632
+  com: [-0.13121451, -0.00292583, 0.00021345]
+  inertia: [0.00102632, -3.19e-06, -2.679e-05, 0.01736118, -1.93e-06, 0.01794489]
+joint_2(joint_1):
+  origin: [-0.264, 0., 0.]
+  joint: hinge
+  limits: [0., 2.3561945]
+  axis: [0., -1., 0.]
+  mesh: <meshes/link_3.h5>
+  mass: 0.68666638
+  com: [0.18083602, -0.0009409, 0.05554937]
+  inertia: [0.00064876, 9.128e-05, -0.00052002, 0.00547407, 1.159e-05, 0.00561509]
+joint_3(joint_2):
+  origin: [0.245, 0., 0.06]
+  joint: hinge
+  limits: [-1.5707963, 1.5707963]
+  axis: [0., -1., 0.]
+  mesh: <meshes/link_4.h5>
+  mass: 0.45789905
+  com: [0.05797842, 0.00027145, 0.05884447]
+  inertia: [0.00053839, 6.9e-06, -0.00018164, 0.00066138, 7.24e-06, 0.00042116]
+joint_4(joint_3):
+  origin: [0.06775, 0., 0.0455]
+  joint: hinge
+  limits: [-1.5707963, 1.5707963]
+  axis: [0., 0., -1.]
+  mesh: <meshes/link_5.h5>
+  mass: 0.3669391
+  com: [0.00412447, -1.138e-05, -0.04283184]
+  inertia: [0.00018912, -4.5e-07, 9e-07, 0.00032062, 3e-08, 0.0002675]
+joint_5(joint_4):
+  origin: [0.02895, 0., -0.0455]
+  joint: hingeX
+  limits: [-3.1415927, 3.1415927]
+  mesh: <meshes/link_6.h5>
+  mass: 0.67187359
+  com: [0.046877549, 0.0014156282, 0.009194286]
+  inertia: [0.0011539561, -6.9869671e-06, -4.0861619e-05, 0.00080136394, -4.4951443e-05, 0.0011435852]
+right_carriage_joint(joint_5):
+  origin: [0.0865, -0.023, 0.]
+  joint: transY
+  joint_scale: -1.
+  limits: [0., 0.044]
+  mesh: <meshes/carriage_right.h5>
+  mass: 0.08127099
+  com: [0.0016901487, 0.0059279315, 0.0020181727]
+  inertia: [2.6392891e-05, -7.5135111e-06, 2.8400469e-06, 3.6489234e-05, -8.7810486e-07, 4.0935231e-05]
+gripper_right_0(right_carriage_joint): {mesh: <meshes/gripper_right.h5>}
+left_carriage_joint(joint_5):
+  origin: [0.0865, 0.023, 0.]
+  joint: transY
+  limits: [0., 0.044]
+  mesh: <meshes/carriage_left.h5>
+  mass: 0.081271
+  com: [0.001690166, -0.0059279647, -0.0036570085]
+  inertia: [2.5637048e-05, 4.2135474e-06, -2.0426572e-06, 3.5733425e-05, -1.6888723e-06, 4.0935289e-05]
+gripper_left_0(left_carriage_joint): {mesh: <meshes/gripper_left.h5>}
+camera_mount_d405_0(joint_5): {pose: [0.012, 0., 0.], mesh: <meshes/camera_mount_d405.h5>}
+camera_link_0(joint_5): {pose: [0.062220998, 0., 0.052972462, 0.40557979, 0.57922797, 0.57922797, 0.40557979], mesh: <meshes/d405.h5>}
