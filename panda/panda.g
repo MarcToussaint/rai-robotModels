@@ -1,6 +1,6 @@
 ## create standard base frame before including
 
-panda_base: { multibody: true, multibody_gravity: false, franka_ip: "none" }
+panda_base: { multibody: true, multibody_gravity: false, franka: "none" }
 Include: <panda_arm_hand_conv.yml>
 Edit panda_link0(panda_base): {}
         
