@@ -1,37 +1,138 @@
-base_link: {shape: mesh, color: [.2], mesh: <meshes/base_link.h5>}
-joint_0.0_origin(base_link): {pose: [0., 0.0435, -0.001542, 0.99904822, -0.043619387, 0., 0.]}
-joint_0.0(joint_0.0_origin): {joint: hingeZ, limits: [-0.47, 0.47], shape: mesh, color: [.2], mesh: <meshes/link_0.0.h5>, mass: 0.013808056, inertia: [0.001, -2.36086e-21, 1.2847501e-07, 0.001, -6.5073319e-22, 0.001]}
-joint_1.0_origin(joint_0.0): {pose: [0., 0., 0.0164]}
-joint_1.0(joint_1.0_origin): {joint: hingeY, limits: [-0.196, 1.61], shape: mesh, color: [.2], mesh: <meshes/link_1.0.h5>, mass: 0.035244466, inertia: [0.001, -5.1778028e-23, 9.0599421e-22, 0.001, -2.0207947e-11, 0.001]}
-joint_2.0_origin(joint_1.0): {pose: [0., 0., 0.054]}
-joint_2.0(joint_2.0_origin): {joint: hingeY, limits: [-0.174, 1.709], shape: mesh, color: [.2], mesh: <meshes/link_2.0.h5>, mass: 0.027070958, inertia: [0.001, -2.1644045e-10, -2.6686901e-07, 0.001, -1.206249e-08, 0.001]}
-joint_3.0_origin(joint_2.0): {pose: [0., 0., 0.0384]}
-joint_3.0(joint_3.0_origin): {joint: hingeY, limits: [-0.227, 1.618], shape: mesh, color: [.2], mesh: <meshes/link_3.0.h5>, mass: 0.024970286, com: [-0.00042809556, -3.050846e-08, 0.014141276], inertia: [0.002002206, 3.2612533e-13, -1.9908924e-07, 0.0020022096, 8.1338441e-12, 0.0020000035]}
-link_3.0_tip_0(joint_3.0): {pose: [0., 0., 0.0267], shape: mesh, color: [1.], mesh: <meshes/link_3.0_tip.h5>}
-joint_4.0_origin(base_link): {pose: [0., 0., 0.0007]}
-joint_4.0(joint_4.0_origin): {joint: hingeZ, limits: [-0.47, 0.47], shape: mesh, color: [.2], mesh: <meshes/link_0.0.h5>, mass: 0.013808056, inertia: [0.001, -2.36086e-21, 1.2847501e-07, 0.001, -6.5073319e-22, 0.001]}
-joint_5.0_origin(joint_4.0): {pose: [0., 0., 0.0164]}
-joint_5.0(joint_5.0_origin): {joint: hingeY, limits: [-0.196, 1.61], shape: mesh, color: [.2], mesh: <meshes/link_1.0.h5>, mass: 0.035244466, inertia: [0.001, -5.1778028e-23, 9.0599421e-22, 0.001, -2.0207947e-11, 0.001]}
-joint_6.0_origin(joint_5.0): {pose: [0., 0., 0.054]}
-joint_6.0(joint_6.0_origin): {joint: hingeY, limits: [-0.174, 1.709], shape: mesh, color: [.2], mesh: <meshes/link_2.0.h5>, mass: 0.027070958, inertia: [0.001, -2.1644045e-10, -2.6686901e-07, 0.001, -1.206249e-08, 0.001]}
-joint_7.0_origin(joint_6.0): {pose: [0., 0., 0.0384]}
-joint_7.0(joint_7.0_origin): {joint: hingeY, limits: [-0.227, 1.618], shape: mesh, color: [.2], mesh: <meshes/link_3.0.h5>, mass: 0.024970286, com: [-0.00042809556, -3.050846e-08, 0.014141276], inertia: [0.002002206, 3.2612533e-13, -1.9908924e-07, 0.0020022096, 8.1338441e-12, 0.0020000035]}
-link_7.0_tip_0(joint_7.0): {pose: [0., 0., 0.0267], shape: mesh, color: [1.], mesh: <meshes/link_3.0_tip.h5>}
-joint_8.0_origin(base_link): {pose: [0., -0.0435, -0.001542, 0.99904822, 0.043619387, 0., 0.]}
-joint_8.0(joint_8.0_origin): {joint: hingeZ, limits: [-0.47, 0.47], shape: mesh, color: [.2], mesh: <meshes/link_0.0.h5>, mass: 0.013808056, inertia: [0.001, -2.36086e-21, 1.2847501e-07, 0.001, -6.5073319e-22, 0.001]}
-joint_9.0_origin(joint_8.0): {pose: [0., 0., 0.0164]}
-joint_9.0(joint_9.0_origin): {joint: hingeY, limits: [-0.196, 1.61], shape: mesh, color: [.2], mesh: <meshes/link_1.0.h5>, mass: 0.035244466, inertia: [0.001, -5.1778028e-23, 9.0599421e-22, 0.001, -2.0207947e-11, 0.001]}
-joint_10.0_origin(joint_9.0): {pose: [0., 0., 0.054]}
-joint_10.0(joint_10.0_origin): {joint: hingeY, limits: [-0.174, 1.709], shape: mesh, color: [.2], mesh: <meshes/link_2.0.h5>, mass: 0.027070958, inertia: [0.001, -2.1644045e-10, -2.6686901e-07, 0.001, -1.206249e-08, 0.001]}
-joint_11.0_origin(joint_10.0): {pose: [0., 0., 0.0384]}
-joint_11.0(joint_11.0_origin): {joint: hingeY, limits: [-0.227, 1.618], shape: mesh, color: [.2], mesh: <meshes/link_3.0.h5>, mass: 0.024970286, com: [-0.00042809556, -3.050846e-08, 0.014141276], inertia: [0.002002206, 3.2612533e-13, -1.9908924e-07, 0.0020022096, 8.1338441e-12, 0.0020000035]}
-link_11.0_tip_0(joint_11.0): {pose: [0., 0., 0.0267], shape: mesh, color: [1.], mesh: <meshes/link_3.0_tip.h5>}
-joint_12.0_origin(base_link): {pose: [-0.0182, 0.019333, -0.045987, 0.47771442, -0.5213338, -0.5213338, -0.47771442]}
-joint_12.0(joint_12.0_origin): {joint: hinge, limits: [0.263, 1.396], axis: [-1., 0., 0.], shape: mesh, color: [.2], mesh: <meshes/link_12.0_right.h5>, mass: 0.041444798, inertia: [0.001, 2.1143879e-08, -6.0908481e-08, 0.001, 8.0817949e-07, 0.001]}
-joint_13.0_origin(joint_12.0): {pose: [-0.027, 0.005, 0.0399]}
-joint_13.0(joint_13.0_origin): {joint: hingeZ, limits: [-0.105, 1.163], shape: mesh, color: [.2], mesh: <meshes/link_13.0.h5>, mass: 0.013797361, inertia: [0.001, -1.3964297e-23, 1.2856931e-07, 0.001, -4.628878e-23, 0.001]}
-joint_14.0_origin(joint_13.0): {pose: [0., 0., 0.0177]}
-joint_14.0(joint_14.0_origin): {joint: hingeY, limits: [-0.189, 1.644], shape: mesh, color: [.2], mesh: <meshes/link_14.0.h5>, mass: 0.033124485, inertia: [0.001, -1.7765851e-10, 3.3767911e-07, 0.001, 1.5622048e-08, 0.001]}
-joint_15.0_origin(joint_14.0): {pose: [0., 0., 0.0514]}
-joint_15.0(joint_15.0_origin): {joint: hingeY, limits: [-0.162, 1.719], shape: mesh, color: [.2], mesh: <meshes/link_15.0.h5>, mass: 0.033174351, com: [8.0569023e-19, 4.9981746e-05, 0.021744914], inertia: [0.0020056626, -9.4137653e-24, -1.0282183e-21, 0.0020056625, 2.4284052e-08, 0.002]}
-link_15.0_tip_0(joint_15.0): {pose: [0., 0., 0.0423], shape: mesh, color: [1.], mesh: <meshes/link_15.0_tip.h5>}
+base_link: {mesh: <meshes/base_link.h5>, color: [0.2, 0.2, 0.2, 1.]}
+joint_0.0(base_link):
+  origin: [0., 0.0435, -0.001542, 0.99904822, -0.043619387, 0., 0.]
+  joint: hingeZ
+  limits: [-0.47, 0.47]
+  mesh: <meshes/link_0.0.h5>
+  color: [1., 1., 1., 1.]
+  mass: 0.013808056
+  inertia: [2.1022637e-06, -2.36086e-21, 1.2847501e-07, 1.4970893e-06, -6.5073319e-22, 1.957371e-06]
+joint_1.0(joint_0.0):
+  origin: [0., 0., 0.0164]
+  joint: hingeY
+  limits: [-0.196, 1.61]
+  mesh: <meshes/link_1.0.h5>
+  color: [1., 1., 1., 1.]
+  mass: 0.035244466
+  inertia: [2.0568314e-05, -5.1778028e-23, 9.0599421e-22, 1.934911e-05, -2.0207947e-11, 5.6123498e-06]
+joint_2.0(joint_1.0):
+  origin: [0., 0., 0.054]
+  joint: hingeY
+  limits: [-0.174, 1.709]
+  mesh: <meshes/link_2.0.h5>
+  color: [1., 1., 1., 1.]
+  mass: 0.027070958
+  inertia: [1.0264501e-05, -2.1644045e-10, -2.6686901e-07, 9.2145404e-06, -1.206249e-08, 4.2471391e-06]
+joint_3.0(joint_2.0):
+  origin: [0., 0., 0.0384]
+  joint: hingeY
+  limits: [-0.227, 1.618]
+  mesh: <meshes/link_3.0.h5>
+  color: [1., 1., 1., 1.]
+  mass: 0.024970286
+  com: [-0.00042809556, -3.050846e-08, 0.014141276]
+  inertia: [5.575506e-06, 3.2612533e-13, -1.9908924e-07, 4.9829053e-06, 8.1338441e-12, 3.2227442e-06]
+link_3.0_tip_0(joint_3.0): {pose: [0., 0., 0.0267], mesh: <meshes/link_3.0_tip.h5>, color: [0.9, 0.9, 0.9, 1.]}
+joint_4.0(base_link):
+  origin: [0., 0., 0.0007]
+  joint: hingeZ
+  limits: [-0.47, 0.47]
+  mesh: <meshes/link_0.0.h5>
+  color: [1., 1., 1., 1.]
+  mass: 0.013808056
+  inertia: [2.1022637e-06, -2.36086e-21, 1.2847501e-07, 1.4970893e-06, -6.5073319e-22, 1.957371e-06]
+joint_5.0(joint_4.0):
+  origin: [0., 0., 0.0164]
+  joint: hingeY
+  limits: [-0.196, 1.61]
+  mesh: <meshes/link_1.0.h5>
+  color: [1., 1., 1., 1.]
+  mass: 0.035244466
+  inertia: [2.0568314e-05, -5.1778028e-23, 9.0599421e-22, 1.934911e-05, -2.0207947e-11, 5.6123498e-06]
+joint_6.0(joint_5.0):
+  origin: [0., 0., 0.054]
+  joint: hingeY
+  limits: [-0.174, 1.709]
+  mesh: <meshes/link_2.0.h5>
+  color: [1., 1., 1., 1.]
+  mass: 0.027070958
+  inertia: [1.0264501e-05, -2.1644045e-10, -2.6686901e-07, 9.2145404e-06, -1.206249e-08, 4.2471391e-06]
+joint_7.0(joint_6.0):
+  origin: [0., 0., 0.0384]
+  joint: hingeY
+  limits: [-0.227, 1.618]
+  mesh: <meshes/link_3.0.h5>
+  color: [1., 1., 1., 1.]
+  mass: 0.024970286
+  com: [-0.00042809556, -3.050846e-08, 0.014141276]
+  inertia: [5.575506e-06, 3.2612533e-13, -1.9908924e-07, 4.9829053e-06, 8.1338441e-12, 3.2227442e-06]
+link_7.0_tip_0(joint_7.0): {pose: [0., 0., 0.0267], mesh: <meshes/link_3.0_tip.h5>, color: [0.9, 0.9, 0.9, 1.]}
+joint_8.0(base_link):
+  origin: [0., -0.0435, -0.001542, 0.99904822, 0.043619387, 0., 0.]
+  joint: hingeZ
+  limits: [-0.47, 0.47]
+  mesh: <meshes/link_0.0.h5>
+  color: [1., 1., 1., 1.]
+  mass: 0.013808056
+  inertia: [2.1022637e-06, -2.36086e-21, 1.2847501e-07, 1.4970893e-06, -6.5073319e-22, 1.957371e-06]
+joint_9.0(joint_8.0):
+  origin: [0., 0., 0.0164]
+  joint: hingeY
+  limits: [-0.196, 1.61]
+  mesh: <meshes/link_1.0.h5>
+  color: [1., 1., 1., 1.]
+  mass: 0.035244466
+  inertia: [2.0568314e-05, -5.1778028e-23, 9.0599421e-22, 1.934911e-05, -2.0207947e-11, 5.6123498e-06]
+joint_10.0(joint_9.0):
+  origin: [0., 0., 0.054]
+  joint: hingeY
+  limits: [-0.174, 1.709]
+  mesh: <meshes/link_2.0.h5>
+  color: [1., 1., 1., 1.]
+  mass: 0.027070958
+  inertia: [1.0264501e-05, -2.1644045e-10, -2.6686901e-07, 9.2145404e-06, -1.206249e-08, 4.2471391e-06]
+joint_11.0(joint_10.0):
+  origin: [0., 0., 0.0384]
+  joint: hingeY
+  limits: [-0.227, 1.618]
+  mesh: <meshes/link_3.0.h5>
+  color: [1., 1., 1., 1.]
+  mass: 0.024970286
+  com: [-0.00042809556, -3.050846e-08, 0.014141276]
+  inertia: [5.575506e-06, 3.2612533e-13, -1.9908924e-07, 4.9829053e-06, 8.1338441e-12, 3.2227442e-06]
+link_11.0_tip_0(joint_11.0): {pose: [0., 0., 0.0267], mesh: <meshes/link_3.0_tip.h5>, color: [0.9, 0.9, 0.9, 1.]}
+joint_12.0(base_link):
+  origin: [-0.0182, 0.019333, -0.045987, 0.47771442, -0.5213338, -0.5213338, -0.47771442]
+  joint: hinge
+  limits: [0.263, 1.396]
+  axis: [-1., 0., 0.]
+  mesh: <meshes/link_12.0_right.h5>
+  color: [0.2, 0.2, 0.2, 1.]
+  mass: 0.041444798
+  inertia: [1.6818661e-05, 2.1143879e-08, -6.0908481e-08, 1.9764212e-05, 8.0817949e-07, 1.4564616e-05]
+joint_13.0(joint_12.0):
+  origin: [-0.027, 0.005, 0.0399]
+  joint: hingeZ
+  limits: [-0.105, 1.163]
+  mesh: <meshes/link_13.0.h5>
+  color: [0.2, 0.2, 0.2, 1.]
+  mass: 0.013797361
+  inertia: [2.0988339e-06, -1.3964297e-23, 1.2856931e-07, 1.4938862e-06, -4.628878e-23, 1.9548297e-06]
+joint_14.0(joint_13.0):
+  origin: [0., 0., 0.0177]
+  joint: hingeY
+  limits: [-0.189, 1.644]
+  mesh: <meshes/link_14.0.h5>
+  color: [1., 1., 1., 1.]
+  mass: 0.033124485
+  inertia: [1.7288432e-05, -1.7765851e-10, 3.3767911e-07, 1.5980393e-05, 1.5622048e-08, 5.3430005e-06]
+joint_15.0(joint_14.0):
+  origin: [0., 0., 0.0514]
+  joint: hingeY
+  limits: [-0.162, 1.719]
+  mesh: <meshes/link_15.0.h5>
+  color: [1., 1., 1., 1.]
+  mass: 0.033174351
+  com: [8.0569023e-19, 4.9981746e-05, 0.021744914]
+  inertia: [1.2987e-05, -9.4137653e-24, -1.0282183e-21, 1.2215653e-05, 2.4284052e-08, 4.6008459e-06]
+link_15.0_tip_0(joint_15.0): {pose: [0., 0., 0.0423], mesh: <meshes/link_15.0_tip.h5>, color: [0.9, 0.9, 0.9, 1.]}

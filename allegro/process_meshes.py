@@ -24,7 +24,7 @@ for file in files:
         mesh.view()
 
     ### trimesh repair
-    mesh.repair_meshlab(merge_threshold=.005, make_convex=True)
+    mesh.repair_meshlab(merge_threshold=-1., make_convex=True)
     mesh.report()
     if view:
         mesh.view()
