@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from robotic.src.mesh_tool import MeshTool
+from robotic.tools.mesh_tool import MeshTool
 from pathlib import PurePath, Path
 import os
 import glob
