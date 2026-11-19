@@ -3,7 +3,7 @@ wget https://github.com/Unitree-Go2-Robot/go2_description/archive/refs/heads/hum
 unzip humble.zip go2_description-humble/urdf/go2_description.urdf go2_description-humble/dae/*
 mv go2_description-humble/urdf/go2_description.urdf .
 mv go2_description-humble go2_description
-ry-urdfConvert.py go2_description.urdf -pruneRigidJoints
+ry-urdfConvert.py go2_description.urdf
 
 # better meshes
 python process_meshes.py

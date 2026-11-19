@@ -2,9 +2,9 @@ Include: <../ranger/ranger.g>
 
 ## pandas
 Prefix: "l_"
-Include: <../panda/panda.g>
+Include: <../panda/panda.yml>
 #Prefix: "r_"
-#Include: <../panda/panda.g>
+#Include: <../panda/panda.yml>
 Prefix: False
 
 ## position them on the table

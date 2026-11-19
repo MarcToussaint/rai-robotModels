@@ -2,7 +2,7 @@ world: {}
 
 mobileBase (world): { joint: transXYPhi, ctrl_H: 0.01 }
 
-Include: <../panda/panda.g>
+Include: <../panda/panda.yml>
 Edit panda_link0 (mobileBase): { Q: "t(0 0 .65)" }
 #(mobileBase): { Q: "t(0 0 .7)", shape: ssBox, size: [.32, .32, .04, .01] }
  

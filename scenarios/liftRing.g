@@ -40,7 +40,7 @@ target (table): {
 
 #Include: <panda_fixGripper.g>
 #Include: <panda_fixRobotiq.g>
-Include: <../panda/panda.g>
+Include: <../panda/panda.yml>
 Edit panda_base(table): { joint: rigid, Q: "t(.3 .8 .05) d(-90 0 0 1)" }
 
 Edit panda_finger_joint1: { joint_active: false }

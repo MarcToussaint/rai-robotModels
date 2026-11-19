@@ -1,7 +1,7 @@
 ## this should be the default panda we use on the real system
 # with NO dofs for the gripper
 
-Include: <../panda/panda.g>
+Include: <../panda/panda.yml>
 
 # modify default home pose
 
